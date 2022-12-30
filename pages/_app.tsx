@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 
-import { darkTheme, lightTheme } from "../components/UI/Theme";
+import { darkTheme, lightTheme } from "../utils/Theme";
 
 import "../styles/globals.css";
 import Layout from "../components/Layout/Layout";
@@ -19,9 +19,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={themeMode === "dark" ? darkTheme : lightTheme}>
       <CssBaseline enableColorScheme />
-      <Layout onToggleTheme={toggleTheme}>
-        <Component {...pageProps} />
-      </Layout>
+      <Layout onToggleTheme={toggleTheme} />
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }
