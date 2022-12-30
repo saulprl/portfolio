@@ -1,0 +1,14 @@
+.main-container {
+  height: 100vh;
+  /* width: calc(100% - 280px); */
+  margin-left: 280px;
+  padding: 8px;
+  overflow: auto;
+}
+
+.main-card {
+  min-height: 100%;
+  margin: auto;
+  border-radius: 16px;
+  transition: background-color 250ms linear, border 250ms linear;
+}
