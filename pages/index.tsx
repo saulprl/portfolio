@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import MainContent from "../components/UI/MainContent";
+
 const Home = () => {
   return (
     <>
@@ -9,7 +11,9 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <MainDrawer /> */}
+      <MainContent title="Home">
+        <p>Finally</p>
+      </MainContent>
     </>
   );
 };
