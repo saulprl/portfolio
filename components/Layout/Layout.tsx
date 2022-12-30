@@ -1,17 +1,16 @@
 import { FC, ReactNode } from "react";
+import MainContent from "../UI/MainContent";
 
-import MainDrawer from "./MainDrawer";
+import MainDrawer from "../UI/MainDrawer";
 
 interface Props {
   onToggleTheme: () => void;
-  children: ReactNode;
 }
 
 const Layout: FC<Props> = (props: Props) => {
   return (
     <>
       <MainDrawer onToggleTheme={props.onToggleTheme} />
-      <main>{props.children}</main>
     </>
   );
 };
