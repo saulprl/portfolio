@@ -55,7 +55,6 @@ const Presentation = () => {
           className={classes.socials}
           sx={{
             flexDirection: { xs: "column", sm: "row" },
-            mt: { sm: "8px" },
             background: theme.palette.background.default,
             border: border,
           }}
