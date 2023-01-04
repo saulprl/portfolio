@@ -1,7 +1,33 @@
 import Head from "next/head";
+import { FC } from "react";
+import ProjectList from "../../components/Projects/ProjectList";
 import MainContent from "../../components/UI/MainContent";
+import { loadProjects } from "../../lib/loadProjects";
 
-const ProjectsPage = () => {
+interface Project {
+  id: number;
+  name: string;
+  excerpt: string;
+  description: string;
+  languages: string;
+  frameworks: string | null;
+  database: string | null;
+  images: string[];
+  repo: string;
+}
+
+interface ProjectData {
+  message: string;
+  content: {
+    projects: Project[];
+  };
+}
+
+interface Props {
+  data: ProjectData;
+}
+
+const ProjectsPage: FC<Props> = (props: Props) => {
   return (
     <>
       <Head>
@@ -14,10 +40,20 @@ const ProjectsPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContent title="Projects">
-        <p>Pog</p>
+        <ProjectList projects={props.data.content.projects} />
       </MainContent>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const data = await loadProjects();
+
+  return {
+    props: {
+      data,
+    },
+  };
 };
 
 export default ProjectsPage;
