@@ -1,0 +1,8 @@
+.tech-card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  margin: auto;
+  transition: all 250ms linear;
+}
