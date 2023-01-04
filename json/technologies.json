@@ -1,0 +1,11 @@
+{
+  "languages": {
+    "name": ["Dart", "Java", "C#", "JavaScript", "TypeScript", "Node.js"]
+  },
+  "frameworks": {
+    "name": ["Flutter", "React", "Angular", "JavaFX"]
+  },
+  "databases": {
+    "name": ["MySQL", "PostgreSQL", "SQL Server", "MongoDB", "Firebase"]
+  }
+}

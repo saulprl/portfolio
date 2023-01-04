@@ -1,0 +1,19 @@
+{
+  "about": {
+    "title": "About me",
+    "content": [
+      "I am a Software/Web Developer based in Sonora, México. At the beginning of my journey, I mainly focused on desktop apps and back-end, but have since branched out to designing and building full-stack web/mobile apps.",
+      "I am passionate about learning, and I believe there is no better way to do it than through practice."
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "content": [
+      "I have mainly worked on personal and school projects built on Angular, Flutter, React, and Java, while also exploring languages such as C# and Visual Basic.",
+      "Regarding database engines, I've worked with MySQL, SQL Server, PostgreSQL, Firebase RTDB, Firebase Firestore, and MongoDB."
+    ]
+  },
+  "technologies": {
+    "title": "Technologies & languages"
+  }
+}

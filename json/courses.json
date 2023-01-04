@@ -1,0 +1,44 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "React - The Complete Guide",
+      "platform": "Udemy",
+      "link": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+      "totalHours": 49.5,
+      "status": "Completed",
+      "description": "This is the latest course I've taken. After learning Flutter, I wanted to be able to build something more universal than mobile apps, and so I opted for learning React. It was fairly easy to pick up due to its conceptual similarities to Flutter (components instead of widgets), making it a really fun learning experience.",
+      "certificate": "/images/certificates/React-course-certificate.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Flutter & Dart - The Complete Guide",
+      "platform": "Udemy",
+      "link": "https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/",
+      "totalHours": 42.5,
+      "status": "Completed",
+      "description": "I started this course near the end of the pandemic, after a pretty long hiatus from coding. This course on Flutter helped me pick programming back up and essentially taught all of the process from planning (on surface level) to deploying a mobile application.",
+      "certificate": "/images/certificates/Flutter-course-certificate.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Angular & NodeJS - The MEAN Stack Guide",
+      "platform": "Udemy",
+      "link": "https://www.udemy.com/course/angular-2-and-nodejs-the-practical-guide/",
+      "totalHours": 12.5,
+      "status": "Completed",
+      "description": "This one was the first online course I ever took. Even though it's pretty short, I remember it fondly since it taught me the basis for web development; specifically, declarative programming and REST APIs.",
+      "certificate": "/images/certificates/MEAN-course-certificate.jpg"
+    },
+    {
+      "id": 4,
+      "name": "NodeJS - The Complete Guide",
+      "platform": "Udemy",
+      "link": "https://www.udemy.com/course/nodejs-the-complete-guide/",
+      "totalHours": 40.5,
+      "status": "In progress",
+      "description": "Sort of a low priority course for me right now, since I'm focusing way more on front-end development, but I'll eventually get back to it because I love back-end programming!",
+      "certificate": null
+    }
+  ]
+}
