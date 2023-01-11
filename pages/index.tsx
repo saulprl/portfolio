@@ -11,12 +11,9 @@ import { loadHome } from "../lib/loadHome";
 import classes from "../styles/Home.module.css";
 
 interface HomeData {
-  message: string;
-  content: {
-    about: { title: string; content: string[] };
-    experience: { title: string; content: string[] };
-    technologies: { title: string };
-  };
+  about: { title: string; content: string[] };
+  experience: { title: string; content: string[] };
+  technologies: { title: string };
 }
 
 interface Props {
@@ -28,21 +25,6 @@ interface Props {
 const HomePage: FC<Props> = (props: Props) => {
   // const { data, error } = useSWR<HomeData, any, string>("/api/home", fetcher);
 
-  // const skeletons = (
-  //   <>
-  //     <Skeleton animation="wave" sx={{ fontSize: "2rem" }} />
-  //     <Skeleton animation="wave" sx={{ fontSize: "1rem" }} />
-  //     <Skeleton animation="wave" sx={{ fontSize: "1rem", width: "70%" }} />
-  //     <Skeleton animation="wave" sx={{ fontSize: "1rem" }} />
-  //     <Skeleton animation="wave" sx={{ fontSize: "2rem" }} />
-  //     <Skeleton animation="wave" sx={{ fontSize: "1rem" }} />
-  //     <Skeleton animation="wave" sx={{ fontSize: "1rem", width: "70%" }} />
-  //     <Skeleton animation="wave" sx={{ fontSize: "1rem" }} />
-  //     <Skeleton animation="wave" sx={{ fontSize: "2rem" }} />
-  //     <Skeleton animation="wave" variant="rounded" sx={{ height: "150px" }} />
-  //   </>
-  // );
-
   return (
     <>
       <Head>
@@ -52,33 +34,22 @@ const HomePage: FC<Props> = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContent title="Home">
-        {/* {error && (
-          <Typography variant="body1" textAlign="center">
-            Failed to load
-          </Typography>
-        )} */}
-        {/* {!error && !data && skeletons} */}
-        {/* {!error && data && ( */}
         <>
           <Box component="section" className={classes["page-content"]}>
-            <Typography variant="h5">
-              {props.data.content.about.title}
-            </Typography>
-            {props.data.content.about.content.map((para, index) => (
-              <Typography key={index} variant="body1">
+            <Typography variant="h5">{props.data.about.title}</Typography>
+            {props.data.about.content.map((para, index) => (
+              <Typography key={index} variant="body1" textAlign="justify">
+                {para}
+              </Typography>
+            ))}
+            <Typography variant="h5">{props.data.experience.title}</Typography>
+            {props.data.experience.content.map((para, index) => (
+              <Typography key={index} variant="body1" textAlign="justify">
                 {para}
               </Typography>
             ))}
             <Typography variant="h5">
-              {props.data.content.experience.title}
-            </Typography>
-            {props.data.content.experience.content.map((para, index) => (
-              <Typography key={index} variant="body1">
-                {para}
-              </Typography>
-            ))}
-            <Typography variant="h5">
-              {props.data.content.technologies.title}
+              {props.data.technologies.title}
             </Typography>
             <TechnologyGrid />
           </Box>
@@ -90,6 +61,7 @@ const HomePage: FC<Props> = (props: Props) => {
 };
 
 export const getStaticProps = async () => {
+  // switch over to SWR fetching
   const data: HomeData = await loadHome();
 
   return {
