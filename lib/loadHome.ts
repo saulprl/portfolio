@@ -1,15 +1,15 @@
+import path from "path";
+import { promises as fs } from "fs";
+
 interface Data {
-  message: string;
-  content: {
-    about: { title: string; content: string[] };
-    experience: { title: string; content: string[] };
-    technologies: { title: string };
-  };
+  about: { title: string; content: string[] };
+  experience: { title: string; content: string[] };
+  technologies: { title: string };
 }
 
-export const loadHome = async () => {
-  const res = await fetch("http:localhost:3000/api/home");
-  const data: Data = await res.json();
+export const loadHome = async (): Promise<Data> => {
+  const jsonDirectory = path.join(process.cwd(), "json");
+  const fileContent = await fs.readFile(jsonDirectory + "/home.json", "utf8");
 
-  return data;
+  return JSON.parse(fileContent) as Data;
 };

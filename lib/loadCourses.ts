@@ -1,22 +1,15 @@
-interface Course {
-  id: number;
-  name: string;
-  platform: "Udemy";
-  link: string;
-  totalHours: number;
-  status: "Completed" | "In progress";
-  description: string;
-  certificate: string | null;
-}
+import path from "path";
+import { promises as fs } from "fs";
+
+import type { Course } from "../models/Course";
 
 interface Data {
-  message: string;
-  content: Course[];
+  courses: Course[];
 }
 
 export const loadCourses = async (): Promise<Data> => {
-  const res = await fetch("http://localhost:3000/api/courses");
-  const data: Data = await res.json();
+  const jsonPath = path.join(process.cwd(), "json", "courses.json");
+  const fileContent = await fs.readFile(jsonPath, "utf8");
 
-  return data;
+  return JSON.parse(fileContent) as Data;
 };
