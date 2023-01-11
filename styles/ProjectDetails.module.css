@@ -1,0 +1,63 @@
+.page-content {
+  animation: dropIn 375ms ease-out, fadeIn 850ms;
+  will-change: transform;
+}
+
+.page-content>h5 {
+  margin-bottom: 4px;
+}
+
+.middle-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.technologies {
+  /* margin-top: 8px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.technologies>* {
+  margin-right: 6px;
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.image-container>div {
+  position: unset !important;
+}
+
+.image-item {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

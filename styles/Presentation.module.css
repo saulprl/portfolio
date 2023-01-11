@@ -3,7 +3,7 @@
 }
 
 .avatar {
-  margin: 8px auto;
+  /* margin: 8px auto; */
   transition: border 250ms linear;
 }
 

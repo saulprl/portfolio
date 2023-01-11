@@ -3,12 +3,14 @@
   will-change: transform;
 }
 
-.page-content > h5:not(:first-of-type) {
-  margin-top: 1rem;
+.course-item {
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background-color 250ms linear, border 250ms linear;
 }
 
-.page-content > h5 {
-  margin-bottom: 4px;
+.chip {
+  cursor: default;
 }
 
 @keyframes dropIn {
