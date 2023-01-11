@@ -32,7 +32,7 @@ import { TbCSharp } from "react-icons/tb";
 import classes from "../../styles/Technology.module.css";
 
 interface Technology {
-  name: string[];
+  main: string[];
 }
 
 interface TechnologyItem {
@@ -95,7 +95,7 @@ const TechnologyGrid = () => {
     fetcher
   );
   const themeMode = theme.palette.mode;
-  const iconColor = themeMode === "dark" ? "#FFFFFF" : "#2C2C2C";
+  const iconColor = themeMode === "dark" ? "#FFFFFF" : "#FFFFFF";
 
   let content = <Skeleton animation="wave" variant="rounded" height={100} />;
 
@@ -110,29 +110,23 @@ const TechnologyGrid = () => {
   if (!error && data) {
     const technologies: TechnologyItem[] = [];
 
-    for (const lang of data.languages.name) {
+    for (const lang of data.languages.main) {
       technologies.push({
         name: lang,
-        color:
-          themeMode === "dark"
-            ? theme.palette.secondary.main
-            : theme.palette.secondary.light,
+        color: theme.palette.secondary.main,
         icon: getTechIcon(lang),
       });
     }
 
-    for (const framework of data.frameworks.name) {
+    for (const framework of data.frameworks.main) {
       technologies.push({
         name: framework,
-        color:
-          themeMode === "dark"
-            ? theme.palette.info.dark
-            : theme.palette.info.light,
+        color: theme.palette.info.main,
         icon: getTechIcon(framework),
       });
     }
 
-    for (const db of data.databases.name) {
+    for (const db of data.databases.main) {
       technologies.push({
         name: db,
         color: theme.palette.warning.main,
@@ -146,7 +140,12 @@ const TechnologyGrid = () => {
         className={classes["tech-card"]}
         sx={{ background: theme.palette.background.default }}
       >
-        <Grid container spacing={1} justifyContent="center" marginLeft="0px">
+        <Grid
+          container
+          spacing={1}
+          justifyContent="center"
+          sx={{ ml: { xs: "-8px", sm: 0 } }}
+        >
           {technologies.map((tech) => (
             <Grid item key={tech.name} sm={1.5}>
               <Tooltip title={tech.name} placement="top">
