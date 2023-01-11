@@ -39,6 +39,16 @@
       "status": "In progress",
       "description": "Sort of a low priority course for me right now, since I'm focusing way more on front-end development, but I'll eventually get back to it because I love back-end programming!",
       "certificate": null
+    },
+    {
+      "id": 5,
+      "name": "CSS - The Complete Guide",
+      "platform": "Udemy",
+      "link": "https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/",
+      "totalHours": 22.5,
+      "status": "In progress",
+      "description": "After finishing my React course and started this portfolio project, I realized I had to really take CSS a bit more seriously to make my web apps stand out visually.",
+      "certificate": null
     }
   ]
 }
