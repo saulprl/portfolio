@@ -1,26 +1,20 @@
-import Head from "next/head";
 import { FC } from "react";
+
+import Head from "next/head";
+
 import ProjectList from "../../components/Projects/ProjectList";
 import MainContent from "../../components/UI/MainContent";
+
 import { loadProjects } from "../../lib/loadProjects";
 
-interface Project {
-  id: number;
-  name: string;
-  excerpt: string;
-  description: string;
-  languages: string;
-  frameworks: string | null;
-  database: string | null;
-  images: string[];
-  repo: string;
-}
+import type { Project } from "../../models/Project";
+import ProjectFilters from "../../components/Projects/ProjectFilters";
+
+import classes from "../../styles/Projects.module.css";
+import { Box } from "@mui/material";
 
 interface ProjectData {
-  message: string;
-  content: {
-    projects: Project[];
-  };
+  projects: Project[];
 }
 
 interface Props {
@@ -40,14 +34,17 @@ const ProjectsPage: FC<Props> = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContent title="Projects">
-        <ProjectList projects={props.data.content.projects} />
+        <Box component="section" className={classes["page-content"]}>
+          <ProjectFilters />
+          <ProjectList projects={props.data.projects} />
+        </Box>
       </MainContent>
     </>
   );
 };
 
 export const getStaticProps = async () => {
-  const data = await loadProjects();
+  const data: ProjectData = await loadProjects();
 
   return {
     props: {
