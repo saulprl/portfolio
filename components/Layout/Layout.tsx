@@ -1,6 +1,8 @@
-import { FC, ReactNode } from "react";
-import MainContent from "../UI/MainContent";
+import { FC } from "react";
 
+import { useMediaQuery, useTheme } from "@mui/material";
+
+import MainAppBar from "../UI/MainAppBar";
 import MainDrawer from "../UI/MainDrawer";
 
 interface Props {
@@ -8,9 +10,13 @@ interface Props {
 }
 
 const Layout: FC<Props> = (props: Props) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <>
-      <MainDrawer onToggleTheme={props.onToggleTheme} />
+      {isMobile && <MainAppBar onToggleTheme={props.onToggleTheme} />}
+      {!isMobile && <MainDrawer onToggleTheme={props.onToggleTheme} />}
     </>
   );
 };
