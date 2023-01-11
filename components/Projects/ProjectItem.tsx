@@ -12,9 +12,10 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 
-import classes from "../../styles/ProjectItem.module.css";
+import classes from "../../styles/Projects.module.css";
 
 interface Props {
+  id: number;
   name: string;
   excerpt: string;
   languages: string;
@@ -23,26 +24,21 @@ interface Props {
 }
 
 const ProjectItem: FC<Props> = (props: Props) => {
-  const { name, excerpt, languages, frameworks, database } = props;
+  const { id, name, excerpt, languages, frameworks, database } = props;
   const theme = useTheme();
 
   const projectItemBackground =
-    theme.palette.mode === "dark" ? "default" : theme.palette.secondary.light;
-
-  const border =
-    theme.palette.mode === "dark" ? "1px solid #282c34" : "1px solid #c3c8cb";
+    theme.palette.mode === "dark" ? "default" : "#F3F3F3";
 
   return (
     <Card
+      className={classes["project-item"]}
       sx={{
         background: projectItemBackground,
-        borderRadius: "8px",
-        border: border,
-        mb: "8px",
-        transition: "background-color 250ms linear, border 250ms linear",
+        border: theme.border.default,
       }}
     >
-      <CardActionArea LinkComponent={Link} href="/projects">
+      <CardActionArea LinkComponent={Link} href={`/projects/${id}`}>
         <CardHeader
           title={name}
           titleTypographyProps={{ variant: "h6", fontWeight: "bold" }}
@@ -59,9 +55,13 @@ const ProjectItem: FC<Props> = (props: Props) => {
             padding: "0 16px 16px",
           }}
         >
-          <Chip label={languages} className={classes.chip} />
-          {frameworks && <Chip label={frameworks} className={classes.chip} />}
-          {database && <Chip label={database} className={classes.chip} />}
+          <Chip label={languages} className={classes.chip} color="secondary" />
+          {frameworks && (
+            <Chip label={frameworks} className={classes.chip} color="info" />
+          )}
+          {database && (
+            <Chip label={database} className={classes.chip} color="warning" />
+          )}
         </CardActions>
       </CardActionArea>
     </Card>

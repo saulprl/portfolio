@@ -1,45 +1,61 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 
 import { List, useMediaQuery, useTheme } from "@mui/material";
+
 import ProjectItem from "./ProjectItem";
 
-interface Project {
-  id: number;
-  name: string;
-  excerpt: string;
-  description: string;
-  languages: string;
-  frameworks: string | null;
-  database: string | null;
-  images: string[];
-  repo: string;
-}
+import type { Project } from "../../models/Project";
+import { FiltersContext } from "../../context/FiltersContext";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+import classes from "../../styles/Projects.module.css";
 
 interface Props {
-  filters?: string[];
   projects: Project[];
 }
 
 const ProjectList: FC<Props> = (props: Props) => {
   const theme = useTheme();
+  const filters = useContext(FiltersContext).filters;
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const { projects } = props;
 
-  if (props.filters) {
-  }
+  const filteredProjects = projects.filter((proj) =>
+    filters.every(
+      (filter) =>
+        proj.languages === filter ||
+        proj.frameworks === filter ||
+        proj.database === filter
+    )
+  );
 
   return (
     <List disablePadding>
-      {projects.map((proj) => (
-        <ProjectItem
-          key={proj.id}
-          name={proj.name}
-          excerpt={proj.excerpt}
-          languages={proj.languages}
-          frameworks={proj.frameworks}
-          database={proj.database}
-        />
-      ))}
+      <TransitionGroup>
+        {filteredProjects.map((proj) => (
+          <CSSTransition
+            key={proj.id}
+            timeout={isMobile ? 550 : 250}
+            mountOnEnter
+            unmountOnExit
+            classNames={{
+              enter: classes["fade-enter"],
+              enterActive: classes["fade-enter-active"],
+              exit: classes["fade-exit"],
+              exitActive: classes["fade-exit-active"],
+            }}
+          >
+            <ProjectItem
+              id={proj.id}
+              name={proj.name}
+              excerpt={proj.excerpt}
+              languages={proj.languages}
+              frameworks={proj.frameworks}
+              database={proj.database}
+            />
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
     </List>
   );
 };
