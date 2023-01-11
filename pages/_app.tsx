@@ -2,12 +2,17 @@ import { useState } from "react";
 
 import type { AppProps } from "next/app";
 
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import {
+  CssBaseline,
+  StyledEngineProvider,
+  ThemeProvider,
+} from "@mui/material";
 
 import { darkTheme, lightTheme } from "../utils/Theme";
 
 import "../styles/globals.css";
 import Layout from "../components/Layout/Layout";
+import FiltersContext from "../context/FiltersContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [themeMode, setThemeMode] = useState<"light" | "dark">("dark");
@@ -17,10 +22,14 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <ThemeProvider theme={themeMode === "dark" ? darkTheme : lightTheme}>
-      <CssBaseline enableColorScheme />
-      <Layout onToggleTheme={toggleTheme} />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={themeMode === "dark" ? darkTheme : lightTheme}>
+        <FiltersContext>
+          <CssBaseline enableColorScheme />
+          <Layout onToggleTheme={toggleTheme} />
+          <Component {...pageProps} />
+        </FiltersContext>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
