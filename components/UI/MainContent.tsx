@@ -10,18 +10,19 @@ import {
   Tooltip,
   useTheme,
 } from "@mui/material";
+import { Article } from "@mui/icons-material";
 
 import classes from "../../styles/MainContent.module.css";
-import { Article } from "@mui/icons-material";
 
 interface Props {
   title: string;
   children: ReactNode;
+  avatar?: ReactNode;
 }
 
 const MainContent: FC<Props> = (props: Props) => {
   const theme = useTheme();
-  const { title } = props;
+  const { title, avatar } = props;
 
   const iconColor = theme.palette.mode === "dark" ? "#FFFFFF" : "#2C2C2C";
   const border =
@@ -30,15 +31,12 @@ const MainContent: FC<Props> = (props: Props) => {
   return (
     <Box
       component="main"
-      // sx={{
-      //   height: { sm: "100vh" },
-      //   width: { sm: "calc(100% - 280px)" },
-      //   ml: { sm: "280px" },
-      //   padding: "8px",
-      //   overflow: "auto",
-      // }}
       className={classes["main-container"]}
-      sx={{ width: { sm: "calc(100% - 280px)" } }}
+      sx={{
+        width: { sm: "calc(100% - 280px)" },
+        ml: { sm: "280px" },
+        height: { xs: "calc(100vh - 48px)", sm: "100vh" },
+      }}
     >
       <Card
         variant="outlined"
@@ -47,10 +45,16 @@ const MainContent: FC<Props> = (props: Props) => {
       >
         <CardHeader
           title={title}
-          titleTypographyProps={{ fontWeight: "bold" }}
+          avatar={avatar}
+          titleTypographyProps={{ variant: "h5", fontWeight: "bold" }}
           action={
             <Tooltip title="Resume" placement="left">
-              <IconButton sx={{ color: iconColor }}>
+              <IconButton
+                LinkComponent="a"
+                href="https://drive.google.com/file/d/1CUI2A35QdO5em1i3ycHzgtu3hm2R57su/view?usp=sharing"
+                target="_blank"
+                sx={{ color: iconColor }}
+              >
                 <Article />
               </IconButton>
             </Tooltip>

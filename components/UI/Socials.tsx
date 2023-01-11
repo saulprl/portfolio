@@ -14,7 +14,9 @@ const Socials: FC<Props> = ({ iconColor, hoverColor }: Props) => {
       <Tooltip title="Twitter">
         <IconButton
           aria-label="twitter.com"
-          onClick={() => window.open("https://twitter.com/saulpxrl", "_blank")}
+          LinkComponent="a"
+          href="https://twitter.com/saulpxrl"
+          target="_blank"
           sx={{
             color: iconColor,
             "&.MuiIconButton-root:hover": { color: hoverColor },
@@ -26,7 +28,9 @@ const Socials: FC<Props> = ({ iconColor, hoverColor }: Props) => {
       <Tooltip title="GitHub">
         <IconButton
           aria-label="github.com"
-          onClick={() => window.open("https://github.com/saulprl", "_blank")}
+          LinkComponent="a"
+          href="https://github.com/saulprl"
+          target="_blank"
           sx={{
             color: iconColor,
             "&.MuiIconButton-root:hover": { color: hoverColor },
@@ -38,7 +42,8 @@ const Socials: FC<Props> = ({ iconColor, hoverColor }: Props) => {
       <Tooltip title="Email">
         <IconButton
           aria-label="e-mail"
-          onClick={() => window.open("mailto:saulramos378@gmail.com", "_blank")}
+          LinkComponent="a"
+          href="mailto:saulramos378@gmail.com"
           sx={{
             color: iconColor,
             "&.MuiIconButton-root:hover": { color: hoverColor },

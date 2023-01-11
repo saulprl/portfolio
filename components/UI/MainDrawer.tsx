@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useRouter } from "next/router";
 
 import {
   AppBar,
@@ -16,12 +17,22 @@ import {
   useMediaQuery,
   ListItem,
   Switch,
+  alpha,
 } from "@mui/material";
-import { Class, DarkMode, Folder, Home, LightMode } from "@mui/icons-material";
-import { useRouter } from "next/router";
+import {
+  Class,
+  ClassOutlined,
+  DarkMode,
+  Folder,
+  FolderOutlined,
+  Home,
+  HomeOutlined,
+  LightMode,
+} from "@mui/icons-material";
+
+import Presentation from "./Presentation";
 
 import classes from "../../styles/MainDrawer.module.css";
-import Presentation from "./Presentation";
 
 interface Props {
   onToggleTheme: () => void;
@@ -35,20 +46,20 @@ const MainDrawer: FC<Props> = (props: Props) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const iconColor = theme.palette.mode === "dark" ? "#FFFFFF" : "#2C2C2C";
+  const selectedHoverAlpha = theme.palette.mode === "dark" ? 0.65 : 0.87;
+  const hoverAlpha = theme.palette.mode === "dark" ? selectedHoverAlpha : 0.52;
 
   const navButtonStyle = {
     "&.Mui-selected": {
-      backgroundColor:
-        theme.palette.mode === "dark"
-          ? theme.palette.primary.dark
-          : theme.palette.primary.light,
+      backgroundColor: theme.palette.primary.main,
+      color: "white",
       transition: "background-color 250ms linear",
     },
     "&.Mui-selected:hover": {
-      backgroundColor: "rgba(233, 30, 99, 0.65)",
+      backgroundColor: alpha(theme.palette.primary.main, selectedHoverAlpha),
     },
     "&:hover": {
-      backgroundColor: "rgba(125, 161, 160, 0.65)",
+      backgroundColor: alpha(theme.palette.secondary.main, hoverAlpha),
     },
   };
 
@@ -74,29 +85,44 @@ const MainDrawer: FC<Props> = (props: Props) => {
       </ListItem>
       <ListItemButton
         className={classes["nav-button"]}
-        onClick={() => router.push("/")}
+        onClick={() => {
+          router.push("/");
+          if (isMobile) props.onClose!();
+        }}
         selected={router.pathname === "/"}
         sx={navButtonStyle}
       >
-        <ListItemIcon sx={{ color: iconColor }}>{<Home />}</ListItemIcon>
+        <ListItemIcon sx={{ color: "inherit" }}>
+          {router.pathname === "/" ? <Home /> : <HomeOutlined />}
+        </ListItemIcon>
         <ListItemText primary="Home" />
       </ListItemButton>
       <ListItemButton
         className={classes["nav-button"]}
-        onClick={() => router.push("/projects")}
+        onClick={() => {
+          router.push("/projects");
+          if (isMobile) props.onClose!();
+        }}
         selected={/projects/i.test(router.pathname)}
         sx={navButtonStyle}
       >
-        <ListItemIcon sx={{ color: iconColor }}>{<Folder />}</ListItemIcon>
+        <ListItemIcon sx={{ color: "inherit" }}>
+          {/projects/i.test(router.pathname) ? <Folder /> : <FolderOutlined />}
+        </ListItemIcon>
         <ListItemText primary="Projects" />
       </ListItemButton>
       <ListItemButton
         className={classes["nav-button"]}
-        onClick={() => router.push("/courses")}
+        onClick={() => {
+          router.push("/courses");
+          if (isMobile) props.onClose!();
+        }}
         selected={/courses/i.test(router.pathname)}
         sx={navButtonStyle}
       >
-        <ListItemIcon sx={{ color: iconColor }}>{<Class />}</ListItemIcon>
+        <ListItemIcon sx={{ color: "inherit" }}>
+          {/courses/i.test(router.pathname) ? <Class /> : <ClassOutlined />}
+        </ListItemIcon>
         <ListItemText primary="Courses" />
       </ListItemButton>
     </List>
@@ -109,7 +135,10 @@ const MainDrawer: FC<Props> = (props: Props) => {
         anchor={isMobile ? "top" : "left"}
         open={isMobile ? props.open! : true}
         onClose={isMobile ? props.onClose! : undefined}
-        ModalProps={{ keepMounted: true }}
+        ModalProps={{
+          keepMounted: true,
+          onClose: isMobile ? props.onClose! : undefined,
+        }}
         sx={{
           "& .MuiDrawer-paper": {
             width: { xs: "100%", sm: "280px" },
@@ -118,29 +147,35 @@ const MainDrawer: FC<Props> = (props: Props) => {
         }}
       >
         <>
-          <AppBar
-            position="static"
-            color="primary"
-            enableColorOnDark
-            sx={{ display: { xs: "none", sm: "flex" } }}
-          >
-            <Toolbar variant="dense" sx={{ justifyContent: "space-between" }}>
-              <Typography variant="h6">saulprl's portfolio</Typography>
-              <Tooltip
-                title={
-                  theme.palette.mode === "dark" ? "Light mode" : "Dark mode"
-                }
-                placement="right"
-              >
-                <IconButton
-                  onClick={props.onToggleTheme}
-                  sx={{ color: "white" }}
+          {!isMobile && (
+            <AppBar
+              position="static"
+              color="primary"
+              enableColorOnDark
+              sx={{ display: { xs: "none", sm: "flex" } }}
+            >
+              <Toolbar variant="dense" sx={{ justifyContent: "space-between" }}>
+                <Typography variant="h6">saulprl&apos;s portfolio</Typography>
+                <Tooltip
+                  title={
+                    theme.palette.mode === "dark" ? "Light mode" : "Dark mode"
+                  }
+                  placement="right"
                 >
-                  {theme.palette.mode === "dark" ? <LightMode /> : <DarkMode />}
-                </IconButton>
-              </Tooltip>
-            </Toolbar>
-          </AppBar>
+                  <IconButton
+                    onClick={props.onToggleTheme}
+                    sx={{ color: "white" }}
+                  >
+                    {theme.palette.mode === "dark" ? (
+                      <LightMode className={classes["theme-icon"]} />
+                    ) : (
+                      <DarkMode className={classes["theme-icon"]} />
+                    )}
+                  </IconButton>
+                </Tooltip>
+              </Toolbar>
+            </AppBar>
+          )}
           <Box component="div" sx={{ padding: "8px" }}>
             <Presentation />
             {navButtons}

@@ -8,16 +8,15 @@ import {
   useTheme,
 } from "@mui/material";
 
-import classes from "../../styles/Presentation.module.css";
 import Socials from "./Socials";
+
+import classes from "../../styles/Presentation.module.css";
 
 const Presentation = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const iconColor = theme.palette.mode === "dark" ? "#FFFFFF" : "#2C2C2C";
-  const border =
-    theme.palette.mode === "dark" ? "1px solid #282C34" : "1px solid #C3C8CB";
 
   const avatar = (
     <Avatar
@@ -25,6 +24,8 @@ const Presentation = () => {
       sx={{
         width: { xs: "170px", sm: "220px" },
         height: { xs: "170px", sm: "220px" },
+        margin: { xs: "4px 0", sm: "8px auto" },
+        border: theme.border.default,
       }}
     >
       <Image
@@ -45,7 +46,7 @@ const Presentation = () => {
         sx={{
           display: "flex",
           flexDirection: { xs: "row", sm: "column" },
-          justifyContent: { xs: "center", sm: "flex-start" },
+          justifyContent: { xs: "space-evenly", sm: "flex-start" },
           alignItems: "center",
         }}
       >
@@ -56,7 +57,7 @@ const Presentation = () => {
           sx={{
             flexDirection: { xs: "column", sm: "row" },
             background: theme.palette.background.default,
-            border: border,
+            border: theme.border.default,
           }}
         >
           <Socials iconColor={iconColor} hoverColor={theme.palette.info.main} />
