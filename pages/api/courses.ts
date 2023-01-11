@@ -3,26 +3,14 @@ import { promises as fs } from "fs";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
-interface Course {
-  id: number;
-  name: string;
-  platform: "Udemy";
-  link: string;
-  totalHours: number;
-  status: "Completed" | "In progress";
-  description: string;
-  certificate: string | null;
-}
+import type { Course } from "../../models/Course";
 
 interface Data {
   message: string;
   content: Course[];
 }
 
-export const handler = async (
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const jsonDirectory = path.join(process.cwd(), "json");
   const fileContent = await fs.readFile(
     jsonDirectory + "/courses.json",
@@ -34,3 +22,5 @@ export const handler = async (
     content: JSON.parse(fileContent),
   });
 };
+
+export default handler;

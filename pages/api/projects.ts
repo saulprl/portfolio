@@ -3,17 +3,7 @@ import { promises as fs } from "fs";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
-interface Project {
-  id: number;
-  name: string;
-  excerpt: string;
-  description: string;
-  languages: string;
-  frameworks: string | null;
-  database: string | null;
-  images: string[];
-  repo: string;
-}
+import type { Project } from "../../models/Project";
 
 interface Data {
   message: string;
