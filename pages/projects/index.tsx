@@ -12,8 +12,11 @@ import ProjectFilters from "../../components/Projects/ProjectFilters";
 
 import classes from "../../styles/Projects.module.css";
 import { Box } from "@mui/material";
+import { GetStaticProps } from "next";
 
 interface ProjectData {
+  page: { title: string; description: string };
+  display: { filters: string; repo: string; images: string };
   projects: Project[];
 }
 
@@ -25,17 +28,14 @@ const ProjectsPage: FC<Props> = (props: Props) => {
   return (
     <>
       <Head>
-        <title>Projects</title>
-        <meta
-          name="description"
-          content="A page dedicated to saulprl's projects."
-        />
+        <title>{props.data.page.title}</title>
+        <meta name="description" content={props.data.page.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainContent title="Projects">
+      <MainContent title={props.data.page.title}>
         <Box component="section" className={classes["page-content"]}>
-          <ProjectFilters />
+          <ProjectFilters title={props.data.display.filters} />
           <ProjectList projects={props.data.projects} />
         </Box>
       </MainContent>
@@ -43,8 +43,14 @@ const ProjectsPage: FC<Props> = (props: Props) => {
   );
 };
 
-export const getStaticProps = async () => {
-  const data: ProjectData = await loadProjects();
+interface JSONProjectData {
+  "en-US": ProjectData;
+  "es-MX": ProjectData;
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const jsonData: JSONProjectData = await loadProjects();
+  const data = jsonData[context.locale! as keyof JSONProjectData];
 
   return {
     props: {
