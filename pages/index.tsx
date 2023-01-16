@@ -1,8 +1,8 @@
-import { Box, Skeleton, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
 
-import useSWR from "swr";
 import TechnologyGrid from "../components/Technology/TechnologyGrid";
 
 import MainContent from "../components/UI/MainContent";
@@ -11,6 +11,7 @@ import { loadHome } from "../lib/loadHome";
 import classes from "../styles/Home.module.css";
 
 interface HomeData {
+  page: { title: string; description: string };
   about: { title: string; content: string[] };
   experience: { title: string; content: string[] };
   technologies: { title: string };
@@ -28,12 +29,12 @@ const HomePage: FC<Props> = (props: Props) => {
   return (
     <>
       <Head>
-        <title>Home</title>
-        <meta name="description" content="Home page to saulprl's portfolio." />
+        <title>{props.data.page.title}</title>
+        <meta name="description" content={props.data.page.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainContent title="Home">
+      <MainContent title={props.data.page.title}>
         <>
           <Box component="section" className={classes["page-content"]}>
             <Typography variant="h5">{props.data.about.title}</Typography>
@@ -60,9 +61,14 @@ const HomePage: FC<Props> = (props: Props) => {
   );
 };
 
-export const getStaticProps = async () => {
-  // switch over to SWR fetching
-  const data: HomeData = await loadHome();
+interface JSONHomeData {
+  "en-US": HomeData;
+  "es-MX": HomeData;
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const jsonData: JSONHomeData = await loadHome();
+  const data = jsonData[context.locale! as keyof JSONHomeData];
 
   return {
     props: {
