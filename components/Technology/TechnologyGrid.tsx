@@ -92,7 +92,7 @@ const TechnologyGrid = () => {
   const themeMode = theme.palette.mode;
   const iconColor = themeMode === "dark" ? "#FFFFFF" : "#FFFFFF";
 
-  let content = <Skeleton animation="wave" variant="rounded" height={100} />;
+  let content = <Skeleton animation="wave" variant="rounded" height={101} />;
 
   if (data && data.err) {
     let errorMessage: string;
