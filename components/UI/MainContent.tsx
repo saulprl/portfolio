@@ -10,19 +10,35 @@ import {
   Tooltip,
   useTheme,
 } from "@mui/material";
-import { Article } from "@mui/icons-material";
+import { ArrowBack, Article } from "@mui/icons-material";
 
 import classes from "../../styles/MainContent.module.css";
+import { useRouter } from "next/router";
+
+const DICTIONARY = {
+  "en-US": {
+    resume: "Resume",
+    back: "Back",
+  },
+  "es-MX": {
+    resume: "Currículum",
+    back: "Regresar",
+  },
+};
 
 interface Props {
   title: string;
   children: ReactNode;
-  avatar?: ReactNode;
+  avatar?: boolean;
 }
 
 const MainContent: FC<Props> = (props: Props) => {
+  const { title, avatar = false } = props;
+
   const theme = useTheme();
-  const { title, avatar } = props;
+  const router = useRouter();
+
+  const dict = DICTIONARY[router.locale! as keyof typeof DICTIONARY];
 
   const iconColor = theme.palette.mode === "dark" ? "#FFFFFF" : "#2C2C2C";
   const border =
@@ -45,10 +61,21 @@ const MainContent: FC<Props> = (props: Props) => {
       >
         <CardHeader
           title={title}
-          avatar={avatar}
+          avatar={
+            avatar ? (
+              <Tooltip title={dict.back}>
+                <IconButton
+                  onClick={() => router.push("/projects")}
+                  sx={{ color: iconColor }}
+                >
+                  <ArrowBack />
+                </IconButton>
+              </Tooltip>
+            ) : undefined
+          }
           titleTypographyProps={{ variant: "h5", fontWeight: "bold" }}
           action={
-            <Tooltip title="Resume" placement="left">
+            <Tooltip title={dict.resume} placement="left">
               <IconButton
                 LinkComponent="a"
                 href="https://drive.google.com/file/d/1CUI2A35QdO5em1i3ycHzgtu3hm2R57su/view?usp=sharing"
