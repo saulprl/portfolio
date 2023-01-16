@@ -22,7 +22,6 @@ const handler = async (
 ) => {
   try {
     const jsonPath = path.join(process.cwd(), "json", "technologies.json");
-
     const fileContents = await fs.readFile(jsonPath, "utf8");
 
     res.status(200).json(Ok(JSON.parse(fileContents) as Data));
