@@ -15,6 +15,11 @@ import { Badge, CheckCircle, OpenInNew, Pending } from "@mui/icons-material";
 
 import classes from "../../styles/Courses.module.css";
 
+interface Dictionary {
+  courseCompleted: string;
+  courseOngoing: string;
+  showCertificate: string;
+}
 interface Props {
   name: string;
   status: string;
@@ -22,10 +27,11 @@ interface Props {
   description: string;
   link: string;
   onShowCertificate: () => void;
+  dictionary: Dictionary;
 }
 
 const CourseItem: FC<Props> = (props: Props) => {
-  const { name, status, certificate, description, link } = props;
+  const { name, status, certificate, description, link, dictionary } = props;
   const theme = useTheme();
 
   const cardBackground = theme.palette.mode === "dark" ? "default" : "#F3F3F3";
@@ -59,8 +65,14 @@ const CourseItem: FC<Props> = (props: Props) => {
         <Chip
           className={classes.chip}
           label={status}
-          icon={status === "Completed" ? <CheckCircle /> : <Pending />}
-          color={status === "Completed" ? "success" : "warning"}
+          icon={
+            status === dictionary.courseCompleted ? (
+              <CheckCircle />
+            ) : (
+              <Pending />
+            )
+          }
+          color={status === dictionary.courseCompleted ? "success" : "warning"}
           sx={{ my: { xs: "4px", sm: 0 } }}
         />
         <Button
@@ -70,7 +82,7 @@ const CourseItem: FC<Props> = (props: Props) => {
           onClick={props.onShowCertificate}
           sx={{ textTransform: "none", my: { xs: "4px", sm: 0 } }}
         >
-          Show certificate
+          {dictionary.showCertificate}
         </Button>
       </CardActions>
     </Card>
