@@ -5,6 +5,20 @@ import { ArrowBack, ArrowForward, Close } from "@mui/icons-material";
 
 import classes from "../../styles/ImageViewer.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
+const DICTIONARY = {
+  "en-US": {
+    close: "Close",
+    previous: "Previous",
+    next: "Next",
+  },
+  "es-MX": {
+    close: "Cerrar",
+    previous: "Anterior",
+    next: "Siguiente",
+  },
+};
 
 interface Props {
   name: string;
@@ -17,9 +31,11 @@ const ImageViewer: FC<Props> = (props: Props) => {
   const { name, open, onClose, images } = props;
 
   const theme = useTheme();
+  const { locale } = useRouter();
   const [index, setIndex] = useState(0);
 
   const imageSource = images[index];
+  const dict = DICTIONARY[locale! as keyof typeof DICTIONARY];
 
   const closeModalHandler = () => {
     onClose();
@@ -64,7 +80,7 @@ const ImageViewer: FC<Props> = (props: Props) => {
   return (
     <Modal open={open} onClose={closeModalHandler}>
       <div onKeyDown={keyPressHandler}>
-        <Tooltip title="Close" placement="bottom">
+        <Tooltip title={dict.close} placement="bottom">
           <IconButton
             onClick={closeModalHandler}
             className={classes["close-btn"]}
@@ -72,7 +88,7 @@ const ImageViewer: FC<Props> = (props: Props) => {
             <Close />
           </IconButton>
         </Tooltip>
-        <Tooltip title="Previous" placement="right">
+        <Tooltip title={dict.previous} placement="right">
           <span className={classes["previous-btn"]}>
             <IconButton
               disabled={images.length < 2}
@@ -83,13 +99,9 @@ const ImageViewer: FC<Props> = (props: Props) => {
             </IconButton>
           </span>
         </Tooltip>
-        <Tooltip title="Next" placement="left">
+        <Tooltip title={dict.next} placement="left">
           <span className={classes["next-btn"]}>
-            <IconButton
-              disabled={images.length < 2}
-              onClick={nextImageHandler}
-              
-            >
+            <IconButton disabled={images.length < 2} onClick={nextImageHandler}>
               <ArrowForward />
             </IconButton>
           </span>
