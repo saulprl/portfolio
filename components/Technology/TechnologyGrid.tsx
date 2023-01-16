@@ -1,10 +1,11 @@
+import { Result } from "ts-results/result";
+
 import useSWR from "swr";
 
 import {
   Alert,
   Avatar,
   Card,
-  CardContent,
   Grid,
   Skeleton,
   Tooltip,
@@ -47,10 +48,7 @@ interface TechData {
   databases: Technology;
 }
 
-const fetcher = (url: string) =>
-  fetch(url)
-    .then((res) => res.json())
-    .catch((error) => error.message);
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const getTechIcon = (techName: string) => {
   switch (techName) {
@@ -90,27 +88,34 @@ const getTechIcon = (techName: string) => {
 
 const TechnologyGrid = () => {
   const theme = useTheme();
-  const { data, error } = useSWR<TechData, any, string>(
-    "/api/technologies",
-    fetcher
-  );
+  const { data } = useSWR<Result<TechData, any>>("/api/technologies", fetcher);
   const themeMode = theme.palette.mode;
   const iconColor = themeMode === "dark" ? "#FFFFFF" : "#FFFFFF";
 
   let content = <Skeleton animation="wave" variant="rounded" height={100} />;
 
-  if (error) {
+  if (data && data.err) {
+    let errorMessage: string;
+    switch (data.val.code) {
+      case "ENOENT":
+        errorMessage = "File not found.";
+        break;
+      default:
+        errorMessage = `Unexpected error: ${data.val.code}`;
+        break;
+    }
+
     content = (
-      <Alert color="error" variant="outlined">
-        {error.message}
+      <Alert severity="error" variant="standard">
+        {errorMessage}
       </Alert>
     );
   }
 
-  if (!error && data) {
+  if (data && data.ok) {
     const technologies: TechnologyItem[] = [];
 
-    for (const lang of data.languages.main) {
+    for (const lang of (data.val as TechData).languages.main) {
       technologies.push({
         name: lang,
         color: theme.palette.secondary.main,
@@ -118,7 +123,7 @@ const TechnologyGrid = () => {
       });
     }
 
-    for (const framework of data.frameworks.main) {
+    for (const framework of (data.val as TechData).frameworks.main) {
       technologies.push({
         name: framework,
         color: theme.palette.info.main,
@@ -126,7 +131,7 @@ const TechnologyGrid = () => {
       });
     }
 
-    for (const db of data.databases.main) {
+    for (const db of (data.val as TechData).databases.main) {
       technologies.push({
         name: db,
         color: theme.palette.warning.main,
