@@ -18,6 +18,7 @@ import {
   ListItem,
   Switch,
   alpha,
+  Button,
 } from "@mui/material";
 import {
   Class,
@@ -27,6 +28,7 @@ import {
   FolderOutlined,
   Home,
   HomeOutlined,
+  Language,
   LightMode,
 } from "@mui/icons-material";
 
@@ -34,16 +36,35 @@ import Presentation from "./Presentation";
 
 import classes from "../../styles/MainDrawer.module.css";
 
+interface Dictionary {
+  buttons: {
+    home: string;
+    projects: string;
+    courses: string;
+    darkMode: string;
+  };
+  tooltips: {
+    lightMode: string;
+    darkMode: string;
+    locale: string;
+  };
+}
+
 interface Props {
+  dictionary: Dictionary;
   onToggleTheme: () => void;
   open?: boolean;
   onClose?: () => void;
 }
 
 const MainDrawer: FC<Props> = (props: Props) => {
+  const { dictionary } = props;
+
   const router = useRouter();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const { pathname, asPath, query } = router;
 
   const iconColor = theme.palette.mode === "dark" ? "#FFFFFF" : "#2C2C2C";
   const selectedHoverAlpha = theme.palette.mode === "dark" ? 0.65 : 0.87;
@@ -75,7 +96,12 @@ const MainDrawer: FC<Props> = (props: Props) => {
           <ListItemIcon sx={{ color: iconColor }}>
             <DarkMode />
           </ListItemIcon>
-          <ListItemText primary="Dark mode" />
+          <ListItemText
+            primary={dictionary.buttons.darkMode}
+            primaryTypographyProps={{
+              fontWeight: theme.palette.mode === "dark" ? "bold" : "normal",
+            }}
+          />
         </ListItemButton>
         <Switch
           edge="end"
@@ -89,13 +115,18 @@ const MainDrawer: FC<Props> = (props: Props) => {
           router.push("/");
           if (isMobile) props.onClose!();
         }}
-        selected={router.pathname === "/"}
+        selected={pathname === "/"}
         sx={navButtonStyle}
       >
         <ListItemIcon sx={{ color: "inherit" }}>
-          {router.pathname === "/" ? <Home /> : <HomeOutlined />}
+          {pathname === "/" ? <Home /> : <HomeOutlined />}
         </ListItemIcon>
-        <ListItemText primary="Home" />
+        <ListItemText
+          primary={dictionary.buttons.home}
+          primaryTypographyProps={{
+            fontWeight: pathname === "/" ? "bold" : "normal",
+          }}
+        />
       </ListItemButton>
       <ListItemButton
         className={classes["nav-button"]}
@@ -103,13 +134,18 @@ const MainDrawer: FC<Props> = (props: Props) => {
           router.push("/projects");
           if (isMobile) props.onClose!();
         }}
-        selected={/projects/i.test(router.pathname)}
+        selected={/projects/i.test(pathname)}
         sx={navButtonStyle}
       >
         <ListItemIcon sx={{ color: "inherit" }}>
-          {/projects/i.test(router.pathname) ? <Folder /> : <FolderOutlined />}
+          {/projects/i.test(pathname) ? <Folder /> : <FolderOutlined />}
         </ListItemIcon>
-        <ListItemText primary="Projects" />
+        <ListItemText
+          primary={dictionary.buttons.projects}
+          primaryTypographyProps={{
+            fontWeight: /projects/i.test(pathname) ? "bold" : "normal",
+          }}
+        />
       </ListItemButton>
       <ListItemButton
         className={classes["nav-button"]}
@@ -117,13 +153,18 @@ const MainDrawer: FC<Props> = (props: Props) => {
           router.push("/courses");
           if (isMobile) props.onClose!();
         }}
-        selected={/courses/i.test(router.pathname)}
+        selected={/courses/i.test(pathname)}
         sx={navButtonStyle}
       >
         <ListItemIcon sx={{ color: "inherit" }}>
-          {/courses/i.test(router.pathname) ? <Class /> : <ClassOutlined />}
+          {/courses/i.test(pathname) ? <Class /> : <ClassOutlined />}
         </ListItemIcon>
-        <ListItemText primary="Courses" />
+        <ListItemText
+          primary={dictionary.buttons.courses}
+          primaryTypographyProps={{
+            fontWeight: /courses/i.test(pathname) ? "bold" : "normal",
+          }}
+        />
       </ListItemButton>
     </List>
   );
@@ -158,7 +199,9 @@ const MainDrawer: FC<Props> = (props: Props) => {
                 <Typography variant="h6">saulprl&apos;s portfolio</Typography>
                 <Tooltip
                   title={
-                    theme.palette.mode === "dark" ? "Light mode" : "Dark mode"
+                    theme.palette.mode === "dark"
+                      ? dictionary.tooltips.lightMode
+                      : dictionary.tooltips.darkMode
                   }
                   placement="right"
                 >
@@ -179,6 +222,22 @@ const MainDrawer: FC<Props> = (props: Props) => {
           <Box component="div" sx={{ padding: "8px" }}>
             <Presentation />
             {navButtons}
+            <Tooltip title={dictionary.tooltips.locale} placement="right">
+              <Button
+                variant="outlined"
+                color="info"
+                startIcon={<Language />}
+                onClick={() =>
+                  router.push({ pathname, query }, asPath, {
+                    locale: router.locale === "en-US" ? "es-MX" : "en-US",
+                  })
+                }
+                className={classes["locale-btn"]}
+                sx={{ display: { xs: "none", sm: "inline-flex" } }}
+              >
+                {router.locale === "en-US" ? "EN" : "ES"}
+              </Button>
+            </Tooltip>
           </Box>
         </>
       </Drawer>
