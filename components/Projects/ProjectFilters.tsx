@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { FC, useContext, useRef, useState } from "react";
 
 import { CSSTransition } from "react-transition-group";
 
@@ -32,7 +32,11 @@ interface Technology {
   color: "secondary" | "info" | "warning";
 }
 
-const ProjectFilters = () => {
+interface Props {
+  title: string;
+}
+
+const ProjectFilters: FC<Props> = (props: Props) => {
   const cardContentRef = useRef<HTMLDivElement>(null);
   const theme = useTheme();
   const activeFilters = useContext(FiltersContext).filters;
@@ -102,7 +106,7 @@ const ProjectFilters = () => {
         sx={{ border: theme.border.default }}
       >
         <CardHeader
-          title="Filters"
+          title={props.title}
           titleTypographyProps={{ variant: "h6", color: "white" }}
           action={
             <IconButton onClick={toggleExpanded}>
