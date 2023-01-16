@@ -23,7 +23,11 @@ import { ArrowBack, GitHub } from "@mui/icons-material";
 
 import MainContent from "../../../components/UI/MainContent";
 
-import { loadProject, loadProjects } from "../../../lib/loadProjects";
+import {
+  loadProject,
+  loadProjectDisplay,
+  loadProjects,
+} from "../../../lib/loadProjects";
 
 import { Project } from "../../../models/Project";
 
@@ -34,7 +38,14 @@ interface IParams extends ParsedUrlQuery {
   projId: string;
 }
 
+interface Display {
+  repo: string;
+  images: string;
+  noImages: string;
+}
+
 interface Props {
+  display: Display;
   project: Project;
 }
 
@@ -68,7 +79,7 @@ const ProjectDetailsPage: FC<Props> = (props: Props) => {
 
   let projectImages = (
     <Typography variant="body1" textAlign="center">
-      No images found 😔
+      {props.display.noImages}
     </Typography>
   );
 
@@ -104,19 +115,7 @@ const ProjectDetailsPage: FC<Props> = (props: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainContent
-        title={name}
-        avatar={
-          <Tooltip title="Back">
-            <IconButton
-              onClick={() => router.push("/projects")}
-              sx={{ color: iconColor }}
-            >
-              <ArrowBack />
-            </IconButton>
-          </Tooltip>
-        }
-      >
+      <MainContent title={name} avatar={true}>
         <Box component="section" className={classes["page-content"]}>
           <Typography variant="body1" textAlign="justify">
             {description}
@@ -144,12 +143,12 @@ const ProjectDetailsPage: FC<Props> = (props: Props) => {
               target="_blank"
               variant="contained"
               endIcon={<GitHub />}
-              sx={{ textTransform: "none" }}
+              sx={{ textTransform: "none", fontWeight: "bold" }}
             >
-              Repository
+              {props.display.repo}
             </Button>
           </Box>
-          <Typography variant="h5">Images</Typography>
+          <Typography variant="h5">{props.display.images}</Typography>
           <CardActionArea LinkComponent="button" onClick={openModalHandler}>
             {projectImages}
           </CardActionArea>
@@ -165,13 +164,22 @@ const ProjectDetailsPage: FC<Props> = (props: Props) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   const data = await loadProjects();
-  const projectIds = data.projects.map((project) => project.id);
+  const projectIds = data["en-US"].projects.map((project) => project.id);
 
   return {
     fallback: false,
-    paths: projectIds.map((id) => ({ params: { projId: id.toString() } })),
+    paths: [
+      ...projectIds.map((id) => ({
+        params: { projId: id.toString() },
+        locale: "en-US",
+      })),
+      ...projectIds.map((id) => ({
+        params: { projId: id.toString() },
+        locale: "es-MX",
+      })),
+    ],
   };
 };
 
@@ -179,10 +187,12 @@ export const getStaticProps: GetStaticProps<{ project: Project }> = async (
   context
 ) => {
   const { projId } = context.params as IParams;
-  const project = await loadProject(projId);
+  const display = await loadProjectDisplay(context.locale!);
+  const project = await loadProject(projId, context.locale!);
 
   return {
     props: {
+      display: display,
       project: project,
     },
   };
