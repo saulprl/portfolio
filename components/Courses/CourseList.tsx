@@ -5,8 +5,15 @@ import type { Course } from "../../models/Course";
 import ImageViewer from "../UI/ImageViewer";
 import CourseItem from "./CourseItem";
 
+interface Dictionary {
+  courseCompleted: string;
+  courseOngoing: string;
+  showCertificate: string;
+}
+
 interface Props {
   courses: Course[];
+  dictionary: Dictionary;
 }
 
 const CourseList: FC<Props> = (props: Props) => {
@@ -51,6 +58,7 @@ const CourseList: FC<Props> = (props: Props) => {
               course.name,
               course.certificate
             )}
+            dictionary={props.dictionary}
           />
         ))}
       </List>
