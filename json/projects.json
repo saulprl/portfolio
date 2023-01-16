@@ -1,238 +1,498 @@
 {
-  "projects": [
-    {
-      "id": 1,
-      "name": "Moody Notes",
-      "excerpt": "Moody Notes is not your typical notes app. This is a personal project I started for people struggling with anxiety like myself. Moody Notes allows...",
-      "description": "Moody Notes is not your typical notes app. This is a personal project I started for people struggling with anxiety like myself. Moody Notes allows the user to submit notes, and also attach up to 72 emotions to each one. The notes are then displayed on the main screen and the user can choose to sort by oldest, newest, and even filter the list by group of emotions. Lastly, Moody Notes includes a calendar which lets the user keep track of the notes submitted each day.",
-      "languages": "Dart",
-      "frameworks": "Flutter",
-      "database": "SQLite",
-      "images": [
-        "/images/moody-notes/mn_main_screen.jpeg",
-        "/images/moody-notes/mn_drawer.jpeg",
-        "/images/moody-notes/mn_light_mode.jpeg",
-        "/images/moody-notes/mn_caption.jpeg",
-        "/images/moody-notes/mn_basic_emotions.jpeg",
-        "/images/moody-notes/mn_derived_emotions.jpeg",
-        "/images/moody-notes/mn_specific_emotions.jpeg",
-        "/images/moody-notes/mn_calendar_1.jpeg",
-        "/images/moody-notes/mn_calendar_2.jpeg",
-        "/images/moody-notes/mn_filters.jpeg",
-        "/images/moody-notes/mn_main_with_filters.jpeg"
-      ],
-      "repo": "https://github.com/saulprl/moody_notes"
+  "en-US": {
+    "page": {
+      "title": "Projects",
+      "description": "A page dedicated to saulprl's projects."
     },
-    {
-      "id": 2,
-      "name": "Candy Sun Web",
-      "excerpt": "Candy Sun Web is the latest iteration of my Candy Sun project. It consists of a React web app directed to managing a real microbusiness. It keeps...",
-      "description": "Candy Sun Web is the latest iteration of my Candy Sun project. It consists of a React web app directed to managing a real microbusiness. It keeps track of products, employees (app users, authentication), and sales, even though it's not a point-of-sale per se.",
-      "languages": "JavaScript",
-      "frameworks": "React",
-      "database": "Firebase",
-      "images": [
-        "/images/candy-sun-react/csun-dashboard.jpeg",
-        "/images/candy-sun-react/csun-products.jpeg",
-        "/images/candy-sun-react/csun-products-mobile.jpeg",
-        "/images/candy-sun-react/csun-search.jpeg",
-        "/images/candy-sun-react/csun-employees.jpeg",
-        "/images/candy-sun-react/csun-sales.jpeg",
-        "/images/candy-sun-react/csun-sales-mobile.jpeg"
-      ],
-      "repo": "https://github.com/saulprl/candy_sun_react"
+    "display": {
+      "filters": "Filters",
+      "repo": "Repository",
+      "images": "Images",
+      "noImages": "No images found 😔"
     },
-    {
-      "id": 3,
-      "name": "Candy Sun Mobile",
-      "excerpt": "Candy Sun Mobile is the mobile version for my Candy Sun project. It was built while I was learning Flutter and it allowed me to practice a lot of...",
-      "description": "Candy Sun Mobile is the mobile version for my Candy Sun project. It was built while I was learning Flutter and it allowed me to practice a lot of the new stuff I was learning since I had never worked on mobile applications before.",
-      "languages": "Dart",
-      "frameworks": "Flutter",
-      "database": "Firebase",
-      "images": [
-        "/images/candy-sun-mobile/login-screen.jpg",
-        "/images/candy-sun-mobile/error-validation.jpg",
-        "/images/candy-sun-mobile/signup-screen.jpg",
-        "/images/candy-sun-mobile/app-drawer.jpg",
-        "/images/candy-sun-mobile/products-list.jpg",
-        "/images/candy-sun-mobile/products-list-expanded.jpg",
-        "/images/candy-sun-mobile/product-details.jpg",
-        "/images/candy-sun-mobile/add-product.jpg",
-        "/images/candy-sun-mobile/add-product-validation.jpg",
-        "/images/candy-sun-mobile/edit-product-form.jpg",
-        "/images/candy-sun-mobile/sales-list.jpg",
-        "/images/candy-sun-mobile/sales-list-expanded.jpg"
-      ],
-      "repo": "https://github.com/saulprl/candy_sun"
+    "projects": [
+      {
+        "id": 1,
+        "name": "Moody Notes",
+        "excerpt": "Moody Notes is not your typical notes app. This is a personal project I started for people struggling with anxiety like myself. Moody Notes allows...",
+        "description": "Moody Notes is not your typical notes app. This is a personal project I started for people struggling with anxiety like myself. Moody Notes allows the user to submit notes, and also attach up to 72 emotions to each one. The notes are then displayed on the main screen and the user can choose to sort by oldest, newest, and even filter the list by group of emotions. Lastly, Moody Notes includes a calendar which lets the user keep track of the notes submitted each day.",
+        "languages": "Dart",
+        "frameworks": "Flutter",
+        "database": "SQLite",
+        "images": [
+          "/images/moody-notes/mn_main_screen.jpeg",
+          "/images/moody-notes/mn_drawer.jpeg",
+          "/images/moody-notes/mn_light_mode.jpeg",
+          "/images/moody-notes/mn_caption.jpeg",
+          "/images/moody-notes/mn_basic_emotions.jpeg",
+          "/images/moody-notes/mn_derived_emotions.jpeg",
+          "/images/moody-notes/mn_specific_emotions.jpeg",
+          "/images/moody-notes/mn_calendar_1.jpeg",
+          "/images/moody-notes/mn_calendar_2.jpeg",
+          "/images/moody-notes/mn_filters.jpeg",
+          "/images/moody-notes/mn_main_with_filters.jpeg"
+        ],
+        "repo": "https://github.com/saulprl/moody_notes"
+      },
+      {
+        "id": 2,
+        "name": "Candy Sun Web",
+        "excerpt": "Candy Sun Web is the latest iteration of my Candy Sun project. It consists of a React web app directed to managing a real microbusiness. It keeps...",
+        "description": "Candy Sun Web is the latest iteration of my Candy Sun project. It consists of a React web app directed to managing a real microbusiness. It keeps track of products, employees (app users, authentication), and sales, even though it's not a point-of-sale per se.",
+        "languages": "JavaScript",
+        "frameworks": "React",
+        "database": "Firebase",
+        "images": [
+          "/images/candy-sun-react/csun-dashboard.jpeg",
+          "/images/candy-sun-react/csun-products.jpeg",
+          "/images/candy-sun-react/csun-products-mobile.jpeg",
+          "/images/candy-sun-react/csun-search.jpeg",
+          "/images/candy-sun-react/csun-employees.jpeg",
+          "/images/candy-sun-react/csun-sales.jpeg",
+          "/images/candy-sun-react/csun-sales-mobile.jpeg"
+        ],
+        "repo": "https://github.com/saulprl/candy_sun_react"
+      },
+      {
+        "id": 3,
+        "name": "Candy Sun Mobile",
+        "excerpt": "Candy Sun Mobile is the mobile version for my Candy Sun project. It was built while I was learning Flutter and it allowed me to practice a lot of...",
+        "description": "Candy Sun Mobile is the mobile version for my Candy Sun project. It was built while I was learning Flutter and it allowed me to practice a lot of the new stuff I was learning since I had never worked on mobile applications before.",
+        "languages": "Dart",
+        "frameworks": "Flutter",
+        "database": "Firebase",
+        "images": [
+          "/images/candy-sun-mobile/login-screen.jpg",
+          "/images/candy-sun-mobile/error-validation.jpg",
+          "/images/candy-sun-mobile/signup-screen.jpg",
+          "/images/candy-sun-mobile/app-drawer.jpg",
+          "/images/candy-sun-mobile/products-list.jpg",
+          "/images/candy-sun-mobile/products-list-expanded.jpg",
+          "/images/candy-sun-mobile/product-details.jpg",
+          "/images/candy-sun-mobile/add-product.jpg",
+          "/images/candy-sun-mobile/add-product-validation.jpg",
+          "/images/candy-sun-mobile/edit-product-form.jpg",
+          "/images/candy-sun-mobile/sales-list.jpg",
+          "/images/candy-sun-mobile/sales-list-expanded.jpg"
+        ],
+        "repo": "https://github.com/saulprl/candy_sun"
+      },
+      {
+        "id": 4,
+        "name": "Flutter Calculator",
+        "excerpt": "Flutter Calculator was a small project I started just for practicing. It was based on the Windows 10 standard calculator and it used in-fix to...",
+        "description": "Flutter Calculator was a small project I started just for practicing. It was based on the Windows 10 standard calculator and it used in-fix to post-fix conversion and resolution, so it would be able to take operator precedence into account.",
+        "languages": "Dart",
+        "frameworks": "Flutter",
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/flutter_calculator"
+      },
+      {
+        "id": 5,
+        "name": "Kubergames",
+        "excerpt": "Kubergames is a React web app which holds 4 different games written in JavaScript with the p5.js library. Kubergames was created to be deployed on...",
+        "description": "Kubergames is a React web app which holds 4 different games written in JavaScript with the p5.js library. Kubergames was created to be deployed on a kubernetes environment, along with its API and a MySQL database for game scores.",
+        "languages": "JavaScript",
+        "frameworks": "React",
+        "database": "MySQL",
+        "images": [
+          "/images/kubergames/home-page.jpeg",
+          "/images/kubergames/space-invaders.jpeg",
+          "/images/kubergames/snake-game.jpeg",
+          "/images/kubergames/minesweeper.jpeg",
+          "/images/kubergames/flappy-bird.jpeg",
+          "/images/kubergames/kubernetes.jpeg",
+          "/images/kubergames/api-response.jpeg"
+        ],
+        "repo": "https://github.com/saulprl/kubergames-js"
+      },
+      {
+        "id": 6,
+        "name": "Kubergames API",
+        "excerpt": "This is the API for Kubergames. It was written on Node.js with Express and, just like the client, it was created to deploy on a kubernetes environment.",
+        "description": "This is the API for Kubergames. It was written on Node.js with Express and, just like the client, it was created to deploy on a kubernetes environment.",
+        "languages": "JavaScript",
+        "frameworks": "Node.js",
+        "database": "MySQl",
+        "images": [
+          "/images/kubergames/api-response.jpeg",
+          "/images/kubergames/kubernetes.jpeg"
+        ],
+        "repo": "https://github.com/McFlyZero/api-kubergames"
+      },
+      {
+        "id": 7,
+        "name": "Candy Sun v1",
+        "excerpt": "This is Candy Sun's first iteration back in 2020 when I was learning Angular (MEAN Stack). It was also my first approach to full-stack web development.",
+        "description": "This is Candy Sun's first iteration back in 2020 when I was learning Angular (MEAN Stack). It was also my first approach to full-stack web development.",
+        "languages": "TypeScript",
+        "frameworks": "Angular",
+        "database": "MongoDB",
+        "images": [
+          "/images/candy-sun-angular/starting-page.png",
+          "/images/candy-sun-angular/login-screen.png",
+          "/images/candy-sun-angular/logged-in.png",
+          "/images/candy-sun-angular/products-grid.png",
+          "/images/candy-sun-angular/products-filter.png",
+          "/images/candy-sun-angular/products-grid-menu.png",
+          "/images/candy-sun-angular/add-product.png",
+          "/images/candy-sun-angular/edit-product-form.png",
+          "/images/candy-sun-angular/delete-product.png",
+          "/images/candy-sun-angular/category-grid.png",
+          "/images/candy-sun-angular/add-category.png",
+          "/images/candy-sun-angular/edit-category.png",
+          "/images/candy-sun-angular/delete-category.png",
+          "/images/candy-sun-angular/add-employee-form.png"
+        ],
+        "repo": "https://github.com/saulprl/candy-sun-angular"
+      },
+      {
+        "id": 8,
+        "name": "Candy Sun v1 API",
+        "excerpt": "This is the API Candy Sun's first iteration used. It was written on Node.js with Express and used a MongoDB cluster as database.",
+        "description": "This is the API Candy Sun's first iteration used. It was written on Node.js with Express and used a MongoDB cluster as database.",
+        "languages": "JavaScript",
+        "frameworks": "Node.js",
+        "database": "MongoDB",
+        "images": [],
+        "repo": "https://github.com/saulprl/candy-sun-angular"
+      },
+      {
+        "id": 9,
+        "name": "Ventas DS3",
+        "excerpt": "VentasDS3 was my first full-stack desktop application. It consists of a point-of-sale app for a fictional business...",
+        "description": "VentasDS3 was my first full-stack desktop application. It consists of a point-of-sale app for a fictional business, built on JavaFX with a PostgreSQL database.",
+        "languages": "Java",
+        "frameworks": "JavaFX",
+        "database": "PostgreSQL",
+        "images": [],
+        "repo": "https://github.com/saulprl/VentasDS3"
+      },
+      {
+        "id": 10,
+        "name": "Library for Teachers",
+        "excerpt": "Library for Teachers was one of my first JavaFX projects. It's basically a client for a teacher library, which manages authors, their books,...",
+        "description": "Library for Teachers was one of my first JavaFX projects. It's basically a client for a teacher library, which manages authors, their books, teachers, and book loans. It was created to demonstrate an app's workflow with a PostgreSQL database.",
+        "languages": "Java",
+        "frameworks": "JavaFX",
+        "database": "PostgreSQL",
+        "images": [],
+        "repo": "https://github.com/saulprl/Library-for-Teachers"
+      },
+      {
+        "id": 11,
+        "name": "ChatFX",
+        "excerpt": "ChatFX consists of a JavaFX app divided into a client, a server, and a database. It's sort of inspired by the classic Microsoft Messenger:...",
+        "description": "ChatFX consists of a JavaFX app divided into a client, a server, and a database. It's sort of inspired by the classic Microsoft Messenger: you could see all of the users connected to the server and start up a conversation with any of them, or even create a group chat.",
+        "languages": "Java",
+        "frameworks": "JavaFX",
+        "database": "MySQL",
+        "images": [],
+        "repo": "https://github.com/saulprl/ChatFX"
+      },
+      {
+        "id": 12,
+        "name": "Styper",
+        "excerpt": "Styper is a desktop game based off of TypeRacer. The challenge was to enter the words displayed on screen without grammar mistakes; the more...",
+        "description": "Styper is a desktop game based off of TypeRacer. The challenge was to enter the words displayed on screen without grammar mistakes; the more in a row, the faster you go. It had three different game modes, audio, and a scores table stored in files.",
+        "languages": "C#",
+        "frameworks": null,
+        "database": "Files",
+        "images": [
+          "/images/styper/home.jpeg",
+          "/images/styper/name-prompt.jpeg",
+          "/images/styper/car-selection.jpeg",
+          "/images/styper/game-menu.jpeg",
+          "/images/styper/mode-selection.jpeg",
+          "/images/styper/race-start.jpeg",
+          "/images/styper/race-end.jpeg",
+          "/images/styper/scores.jpeg",
+          "/images/styper/volume-slider.jpeg"
+        ],
+        "repo": "https://github.com/saulprl/Styper"
+      },
+      {
+        "id": 13,
+        "name": "Maze Generator",
+        "excerpt": "Maze generator was one of my first approaches to JavaScript (and p5.js). It consists of a simple maze generator, and nothing else. Pretty visually satisfying.",
+        "description": "Maze generator was one of my first approaches to JavaScript (and p5.js). It consists of a simple maze generator, and nothing else. Pretty visually satisfying.",
+        "languages": "JavaScript",
+        "frameworks": null,
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/Maze-generator"
+      },
+      {
+        "id": 14,
+        "name": "Space Invaders",
+        "excerpt": "Space Invaders is a simple JavaScript game built on the p5.js library.",
+        "description": "Space Invaders is a simple JavaScript game built on the p5.js library.",
+        "languages": "JavaScript",
+        "frameworks": null,
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/Space-Invaders"
+      },
+      {
+        "id": 15,
+        "name": "Snake Game",
+        "excerpt": "Snake Game was the first project I created with JavaScript. And that's it, just the Snake Game.",
+        "description": "Snake Game was the first project I created with JavaScript. And that's it, just the Snake Game.",
+        "languages": "JavaScript",
+        "frameworks": null,
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/Snake-game"
+      }
+    ]
+  },
+  "es-MX": {
+    "page": {
+      "title": "Proyectos",
+      "description": "Página dedicada a mis proyectos."
     },
-    {
-      "id": 4,
-      "name": "Flutter Calculator",
-      "excerpt": "Flutter Calculator was a small project I started just for practicing. It was based on the Windows 10 standard calculator and it used in-fix to...",
-      "description": "Flutter Calculator was a small project I started just for practicing. It was based on the Windows 10 standard calculator and it used in-fix to post-fix conversion and resolution, so it would be able to take operand hierarchy into account.",
-      "languages": "Dart",
-      "frameworks": "Flutter",
-      "database": null,
-      "images": [],
-      "repo": "https://github.com/saulprl/flutter_calculator"
+    "display": {
+      "filters": "Filtros",
+      "repo": "Repositorio",
+      "images": "Imágenes",
+      "noImages": "No se encontraron imágenes 😔"
     },
-    {
-      "id": 5,
-      "name": "Kubergames",
-      "excerpt": "Kubergames is a React web app which holds 4 different games written in JavaScript with the p5.js library. Kubergames was created to be deployed on...",
-      "description": "Kubergames is a React web app which holds 4 different games written in JavaScript with the p5.js library. Kubergames was created to be deployed on a kubernetes environment, along with its API and a MySQL database for game scores.",
-      "languages": "JavaScript",
-      "frameworks": "React",
-      "database": "MySQL",
-      "images": [
-        "/images/kubergames/home-page.jpeg",
-        "/images/kubergames/space-invaders.jpeg",
-        "/images/kubergames/snake-game.jpeg",
-        "/images/kubergames/minesweeper.jpeg",
-        "/images/kubergames/flappy-bird.jpeg",
-        "/images/kubergames/kubernetes.jpeg",
-        "/images/kubergames/api-response.jpeg"
-      ],
-      "repo": "https://github.com/saulprl/kubergames-js"
-    },
-    {
-      "id": 6,
-      "name": "Kubergames API",
-      "excerpt": "This is the API for Kubergames. It was written on Node.js with Express and, just like the client, it was created to deploy on a kubernetes environment.",
-      "description": "This is the API for Kubergames. It was written on Node.js with Express and, just like the client, it was created to deploy on a kubernetes environment.",
-      "languages": "JavaScript",
-      "frameworks": "Node.js",
-      "database": "MySQl",
-      "images": [
-        "/images/kubergames/api-response.jpeg",
-        "/images/kubergames/kubernetes.jpeg"
-      ],
-      "repo": "https://github.com/McFlyZero/api-kubergames"
-    },
-    {
-      "id": 7,
-      "name": "Candy Sun v1",
-      "excerpt": "This  is Candy Sun's first iteration back in 2020 when I was learning Angular (MEAN Stack). It was also my first approach to full-stack web development.",
-      "description": "This  is Candy Sun's first iteration back in 2020 when I was learning Angular (MEAN Stack). It was also my first approach to full-stack web development.",
-      "languages": "TypeScript",
-      "frameworks": "Angular",
-      "database": "MongoDB",
-      "images": [
-        "/images/candy-sun-angular/starting-page.png",
-        "/images/candy-sun-angular/login-screen.png",
-        "/images/candy-sun-angular/logged-in.png",
-        "/images/candy-sun-angular/products-grid.png",
-        "/images/candy-sun-angular/products-filter.png",
-        "/images/candy-sun-angular/products-grid-menu.png",
-        "/images/candy-sun-angular/add-product.png",
-        "/images/candy-sun-angular/edit-product-form.png",
-        "/images/candy-sun-angular/delete-product.png",
-        "/images/candy-sun-angular/category-grid.png",
-        "/images/candy-sun-angular/add-category.png",
-        "/images/candy-sun-angular/edit-category.png",
-        "/images/candy-sun-angular/delete-category.png",
-        "/images/candy-sun-angular/add-employee-form.png"
-      ],
-      "repo": "https://github.com/saulprl/candy-sun-angular"
-    },
-    {
-      "id": 8,
-      "name": "Candy Sun v1 API",
-      "excerpt": "This is the API Candy Sun's first iteration used. It was written on Node.js with Express and used a MongoDB cluster as database.",
-      "description": "This is the API Candy Sun's first iteration used. It was written on Node.js with Express and used a MongoDB cluster as database.",
-      "languages": "JavaScript",
-      "frameworks": "Node.js",
-      "database": "MongoDB",
-      "images": [],
-      "repo": "https://github.com/saulprl/candy-sun-angular"
-    },
-    {
-      "id": 9,
-      "name": "Ventas DS3",
-      "excerpt": "VentasDS3 was my first full-stack desktop application. It consists of a point-of-sale app for a fictional business...",
-      "description": "VentasDS3 was my first full-stack desktop application. It consists of a point-of-sale app for a fictional business, built on JavaFX with a PostgreSQL database.",
-      "languages": "Java",
-      "frameworks": "JavaFX",
-      "database": "PostgreSQL",
-      "images": [],
-      "repo": "https://github.com/saulprl/VentasDS3"
-    },
-    {
-      "id": 10,
-      "name": "Library for Teachers",
-      "excerpt": "Library for Teachers was one of my first JavaFX projects. It's basically a client for a teacher library, which manages authors, their books,...",
-      "description": "Library for Teachers was one of my first JavaFX projects. It's basically a client for a teacher library, which manages authors, their books, teachers, and book loans. It was created to demonstrate an app's workflow with a PostgreSQL database.",
-      "languages": "Java",
-      "frameworks": "JavaFX",
-      "database": "PostgreSQL",
-      "images": [],
-      "repo": "https://github.com/saulprl/Library-for-Teachers"
-    },
-    {
-      "id": 11,
-      "name": "ChatFX",
-      "excerpt": "ChatFX consists of a JavaFX app divided into a client, a server, and a database. It's sort of inspired by the classic Microsoft Messenger:...",
-      "description": "ChatFX consists of a JavaFX app divided into a client, a server, and a database. It's sort of inspired by the classic Microsoft Messenger: you could see all of the users connected to the server and start up a conversation with any of them, or even create a group chat.",
-      "languages": "Java",
-      "frameworks": "JavaFX",
-      "database": "MySQL",
-      "images": [],
-      "repo": "https://github.com/saulprl/ChatFX"
-    },
-    {
-      "id": 12,
-      "name": "Styper",
-      "excerpt": "Styper is a desktop game based off of TypeRacer. The challenge was to enter the words displayed on screen without grammar mistakes; the more...",
-      "description": "Styper is a desktop game based off of TypeRacer. The challenge was to enter the words displayed on screen without grammar mistakes; the more in a row, the faster you go. It had three different game modes, audio, and a scores table stored in files.",
-      "languages": "C#",
-      "frameworks": null,
-      "database": "Files",
-      "images": [
-        "/images/styper/home.jpeg",
-        "/images/styper/name-prompt.jpeg",
-        "/images/styper/car-selection.jpeg",
-        "/images/styper/game-menu.jpeg",
-        "/images/styper/mode-selection.jpeg",
-        "/images/styper/race-start.jpeg",
-        "/images/styper/race-end.jpeg",
-        "/images/styper/scores.jpeg",
-        "/images/styper/volume-slider.jpeg"
-      ],
-      "repo": "https://github.com/saulprl/Styper"
-    },
-    {
-      "id": 13,
-      "name": "Maze Generator",
-      "excerpt": "Maze generator was one of my first approaches to JavaScript (and p5.js). It consists of a simple maze generator, and nothing else. Pretty visually satisfying.",
-      "description": "Maze generator was one of my first approaches to JavaScript (and p5.js). It consists of a simple maze generator, and nothing else. Pretty visually satisfying.",
-      "languages": "JavaScript",
-      "frameworks": null,
-      "database": null,
-      "images": [],
-      "repo": "https://github.com/saulprl/Maze-generator"
-    },
-    {
-      "id": 14,
-      "name": "Space Invaders",
-      "excerpt": "Space Invaders is a simple JavaScript game built on the p5.js library.",
-      "description": "Space Invaders is a simple JavaScript game built on the p5.js library.",
-      "languages": "JavaScript",
-      "frameworks": null,
-      "database": null,
-      "images": [],
-      "repo": "https://github.com/saulprl/Space-Invaders"
-    },
-    {
-      "id": 15,
-      "name": "Snake Game",
-      "excerpt": "Snake Game was the first project I created with JavaScript. And that's it, just the Snake Game.",
-      "description": "Snake Game was the first project I created with JavaScript. And that's it, just the Snake Game.",
-      "languages": "JavaScript",
-      "frameworks": null,
-      "database": null,
-      "images": [],
-      "repo": "https://github.com/saulprl/Snake-game"
-    }
-  ]
+    "projects": [
+      {
+        "id": 1,
+        "name": "Moody Notes",
+        "excerpt": "Moody Notes no es la típica aplicación de notas; se trata de una aplicación que creé para gente que padece de ansiedad al igual que yo. Moody Notes permite...",
+        "description": "Moody Notes no es la típica aplicación de notas; se trata de una aplicación que creé para gente que padece de ansiedad al igual que yo. Moody Notes permite al usuario guardar notas y la posibilidad de vincularlas con hasta 72 emociones diferentes. Las notas se listan en la pantalla principal, donde el usuario las puede filtrar por emociones y order según su fecha de creación. Por último, Moody Notes incluye un calendario, el cual permite al usuario darle seguimiento a las emociones guardadas cada día.",
+        "languages": "Dart",
+        "frameworks": "Flutter",
+        "database": "SQLite",
+        "images": [
+          "/images/moody-notes/mn_main_screen.jpeg",
+          "/images/moody-notes/mn_drawer.jpeg",
+          "/images/moody-notes/mn_light_mode.jpeg",
+          "/images/moody-notes/mn_caption.jpeg",
+          "/images/moody-notes/mn_basic_emotions.jpeg",
+          "/images/moody-notes/mn_derived_emotions.jpeg",
+          "/images/moody-notes/mn_specific_emotions.jpeg",
+          "/images/moody-notes/mn_calendar_1.jpeg",
+          "/images/moody-notes/mn_calendar_2.jpeg",
+          "/images/moody-notes/mn_filters.jpeg",
+          "/images/moody-notes/mn_main_with_filters.jpeg"
+        ],
+        "repo": "https://github.com/saulprl/moody_notes"
+      },
+      {
+        "id": 2,
+        "name": "Candy Sun Web",
+        "excerpt": "Candy Sun Web es la versión más reciente de mi proyecto Candy Sun. Se trata de una aplicación web en React pensada para administrar una microempresa real...",
+        "description": "Candy Sun Web es la versión más reciente de mi proyecto Candy Sun. Se trata de una aplicación web en React pensada para administrar una microempresa real. Esta aplicación permite el amacenamiento de productos, empleados (con autenticación) y ventas, aunque no se trata de un punto de venta.",
+        "languages": "JavaScript",
+        "frameworks": "React",
+        "database": "Firebase",
+        "images": [
+          "/images/candy-sun-react/csun-dashboard.jpeg",
+          "/images/candy-sun-react/csun-products.jpeg",
+          "/images/candy-sun-react/csun-products-mobile.jpeg",
+          "/images/candy-sun-react/csun-search.jpeg",
+          "/images/candy-sun-react/csun-employees.jpeg",
+          "/images/candy-sun-react/csun-sales.jpeg",
+          "/images/candy-sun-react/csun-sales-mobile.jpeg"
+        ],
+        "repo": "https://github.com/saulprl/candy_sun_react"
+      },
+      {
+        "id": 3,
+        "name": "Candy Sun Mobile",
+        "excerpt": "Candy Sun Mobile es la versión móvil de mi proyecto Candy Sun. Fue desarrollada mientras aprendía Flutter y me permitió poner en práctica...",
+        "description": "Candy Sun Mobile es la versión móvil de mi proyecto Candy Sun. Fue desarrollada mientras aprendía Flutter y me permitió poner en práctica muchos de los conceptos que vi en el curso, ya que nunca había trabajado en aplicaciones móviles.",
+        "languages": "Dart",
+        "frameworks": "Flutter",
+        "database": "Firebase",
+        "images": [
+          "/images/candy-sun-mobile/login-screen.jpg",
+          "/images/candy-sun-mobile/error-validation.jpg",
+          "/images/candy-sun-mobile/signup-screen.jpg",
+          "/images/candy-sun-mobile/app-drawer.jpg",
+          "/images/candy-sun-mobile/products-list.jpg",
+          "/images/candy-sun-mobile/products-list-expanded.jpg",
+          "/images/candy-sun-mobile/product-details.jpg",
+          "/images/candy-sun-mobile/add-product.jpg",
+          "/images/candy-sun-mobile/add-product-validation.jpg",
+          "/images/candy-sun-mobile/edit-product-form.jpg",
+          "/images/candy-sun-mobile/sales-list.jpg",
+          "/images/candy-sun-mobile/sales-list-expanded.jpg"
+        ],
+        "repo": "https://github.com/saulprl/candy_sun"
+      },
+      {
+        "id": 4,
+        "name": "Flutter Calculator",
+        "excerpt": "Flutter Calculator es un pequeño proyecto que inicié con la intención de seguir practicando Flutter. El diseño está basado en la calculadora de Windows 10; en cuanto al funcionamiento...",
+        "description": "Flutter Calculator es un pequeño proyecto que inicié con la intención de seguir practicando Flutter. El diseño está basado en la calculadora de Windows 10; en cuanto al funcionamiento, utiliza conversión de infijo a postfijo para evaluar las expresiones y resolverlas, por lo que es capaz de tomar en cuenta la jerarquía de operadores.",
+        "languages": "Dart",
+        "frameworks": "Flutter",
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/flutter_calculator"
+      },
+      {
+        "id": 5,
+        "name": "Kubergames",
+        "excerpt": "Kubergames es una aplicación web en React la cual contiene cuatro juegos diferentes creados en JavaScript con la librería p5.js...",
+        "description": "Kubergames es una aplicación web en React la cual contiene cuatro juegos diferentes creados en JavaScript con la librería p5.js. Kubergames, como el nombre alude, fue creada para ser distribuida en un entorno Kubernetes, junto a una RESTful API y base de datos MySQL para almacenar puntuaciones de usuarios.",
+        "languages": "JavaScript",
+        "frameworks": "React",
+        "database": "MySQL",
+        "images": [
+          "/images/kubergames/home-page.jpeg",
+          "/images/kubergames/space-invaders.jpeg",
+          "/images/kubergames/snake-game.jpeg",
+          "/images/kubergames/minesweeper.jpeg",
+          "/images/kubergames/flappy-bird.jpeg",
+          "/images/kubergames/kubernetes.jpeg",
+          "/images/kubergames/api-response.jpeg"
+        ],
+        "repo": "https://github.com/saulprl/kubergames-js"
+      },
+      {
+        "id": 6,
+        "name": "Kubergames API",
+        "excerpt": "Esta es la API utilizada en Kubergames. Fue escrita en Node.js con Express y, al igual que el cliente, fue creada para ser distribuida en un entorno Kubernetes.",
+        "description": "Esta es la API utilizada en Kubergames. Fue escrita en Node.js con Express y, al igual que el cliente, fue creada para ser distribuida en un entorno Kubernetes.",
+        "languages": "JavaScript",
+        "frameworks": "Node.js",
+        "database": "MySQl",
+        "images": [
+          "/images/kubergames/api-response.jpeg",
+          "/images/kubergames/kubernetes.jpeg"
+        ],
+        "repo": "https://github.com/McFlyZero/api-kubergames"
+      },
+      {
+        "id": 7,
+        "name": "Candy Sun v1",
+        "excerpt": "Esta es la versión original de mi proyecto Candy Sun. Fue creada en 2020 mientras aprendía Angular (más específicamente, la arquitectura MEAN). Fue también mi primer acercamiento al desarrollo full-stack web.",
+        "description": "Esta es la versión original de mi proyecto Candy Sun. Fue creada en 2020 mientras aprendía Angular (más específicamente, la arquitectura MEAN). Fue también mi primer acercamiento al desarrollo full-stack web.",
+        "languages": "TypeScript",
+        "frameworks": "Angular",
+        "database": "MongoDB",
+        "images": [
+          "/images/candy-sun-angular/starting-page.png",
+          "/images/candy-sun-angular/login-screen.png",
+          "/images/candy-sun-angular/logged-in.png",
+          "/images/candy-sun-angular/products-grid.png",
+          "/images/candy-sun-angular/products-filter.png",
+          "/images/candy-sun-angular/products-grid-menu.png",
+          "/images/candy-sun-angular/add-product.png",
+          "/images/candy-sun-angular/edit-product-form.png",
+          "/images/candy-sun-angular/delete-product.png",
+          "/images/candy-sun-angular/category-grid.png",
+          "/images/candy-sun-angular/add-category.png",
+          "/images/candy-sun-angular/edit-category.png",
+          "/images/candy-sun-angular/delete-category.png",
+          "/images/candy-sun-angular/add-employee-form.png"
+        ],
+        "repo": "https://github.com/saulprl/candy-sun-angular"
+      },
+      {
+        "id": 8,
+        "name": "Candy Sun v1 API",
+        "excerpt": "Esta es la API de la versión original de Candy Sun. Fue escrita en Node.js con Express y utilizaba un cluster de MongoDB como base de datos.",
+        "description": "Esta es la API de la versión original de Candy Sun. Fue escrita en Node.js con Express y utilizaba un cluster de MongoDB como base de datos.",
+        "languages": "JavaScript",
+        "frameworks": "Node.js",
+        "database": "MongoDB",
+        "images": [],
+        "repo": "https://github.com/saulprl/candy-sun-angular"
+      },
+      {
+        "id": 9,
+        "name": "Ventas DS3",
+        "excerpt": "VentasDS3 fue mi primera aplicación de escritorio full-stack. Se trata de un punto de venta para un negocio ficticio, creado mientras aprendía JavaFX y el manejador de base de datos PostgreSQL.",
+        "description": "VentasDS3 fue mi primera aplicación de escritorio full-stack. Se trata de un punto de venta para un negocio ficticio, creado mientras aprendía JavaFX y el manejador de base de datos PostgreSQL.",
+        "languages": "Java",
+        "frameworks": "JavaFX",
+        "database": "PostgreSQL",
+        "images": [],
+        "repo": "https://github.com/saulprl/VentasDS3"
+      },
+      {
+        "id": 10,
+        "name": "Library for Teachers",
+        "excerpt": "Library for Teachers fue uno de mis primeros proyectos con JavaFX. Tal como dice su nombre, se trata de un cliente para una biblioteca de profesores...",
+        "description": "Library for Teachers fue uno de mis primeros proyectos con JavaFX. Tal como dice su nombre, se trata de un cliente para una biblioteca de profesores, permitiendo el control de autores, sus libros, préstamos y profesores. Fue creada para demostrar la comunicación entre una aplicación y PostgreSQL.",
+        "languages": "Java",
+        "frameworks": "JavaFX",
+        "database": "PostgreSQL",
+        "images": [],
+        "repo": "https://github.com/saulprl/Library-for-Teachers"
+      },
+      {
+        "id": 11,
+        "name": "ChatFX",
+        "excerpt": "ChatFX es una aplicación en JavaFX dividida en un cliente, servidor y base de datos. En cuanto al cliente, está levemente inspirada en Microsoft Messenger...",
+        "description": "ChatFX es una aplicación en JavaFX dividida en un cliente, servidor y base de datos. En cuanto al cliente, está levemente inspirada en Microsoft Messenger, permitiendo al usuario ver a todos aquellos conectados al servidor e iniciar conversación con cualquiera de ellos, o incluso crear grupos.",
+        "languages": "Java",
+        "frameworks": "JavaFX",
+        "database": "MySQL",
+        "images": [],
+        "repo": "https://github.com/saulprl/ChatFX"
+      },
+      {
+        "id": 12,
+        "name": "Styper",
+        "excerpt": "Styper es un juego de escritorio basado en TypeRacer. El objetivo del juego es ingresar tantas palabras correctas como sea posible sin errores gramaticales...",
+        "description": "Styper es un juego de escritorio basado en TypeRacer. El objetivo del juego es ingresar tantas palabras correctas como sea posible sin errores gramaticales. Cuenta con tres modos de juego, dificultades, audio, y puntuaciones guardadas en archivos locales.",
+        "languages": "C#",
+        "frameworks": null,
+        "database": "Files",
+        "images": [
+          "/images/styper/home.jpeg",
+          "/images/styper/name-prompt.jpeg",
+          "/images/styper/car-selection.jpeg",
+          "/images/styper/game-menu.jpeg",
+          "/images/styper/mode-selection.jpeg",
+          "/images/styper/race-start.jpeg",
+          "/images/styper/race-end.jpeg",
+          "/images/styper/scores.jpeg",
+          "/images/styper/volume-slider.jpeg"
+        ],
+        "repo": "https://github.com/saulprl/Styper"
+      },
+      {
+        "id": 13,
+        "name": "Maze Generator",
+        "excerpt": "Maze generator fue uno de mis primeros proyectos en JavaScript (y p5.js). Simplemente es un generador de laberintos visualmente satisfactorio.",
+        "description": "Maze generator fue uno de mis primeros proyectos en JavaScript (y p5.js). Simplemente es un generador de laberintos visualmente satisfactorio.",
+        "languages": "JavaScript",
+        "frameworks": null,
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/Maze-generator"
+      },
+      {
+        "id": 14,
+        "name": "Space Invaders",
+        "excerpt": "Space Invaders es un juego sencillo en JavaScript y p5.js.",
+        "description": "Space Invaders es un juego sencillo en JavaScript y p5.js.",
+        "languages": "JavaScript",
+        "frameworks": null,
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/Space-Invaders"
+      },
+      {
+        "id": 15,
+        "name": "Snake Game",
+        "excerpt": "Snake Game fue mi primer proyecto en JavaScript y p5.js.",
+        "description": "Snake Game fue mi primer proyecto en JavaScript y p5.js.",
+        "languages": "JavaScript",
+        "frameworks": null,
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/Snake-game"
+      }
+    ]
+  }
 }

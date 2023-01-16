@@ -1,19 +1,48 @@
 {
-  "about": {
-    "title": "About me",
-    "content": [
-      "I am a Software/Web Developer based in Sonora, México. At the beginning of my journey, I mainly focused on desktop apps and back-end, but have since branched out to designing and building full-stack web/mobile apps.",
-      "I am passionate about learning, and I believe there is no better way to do it than through practice."
-    ]
+  "en-US": {
+    "page": {
+      "title": "Home",
+      "description": "Home page to saulprl's portfolio."
+    },
+    "about": {
+      "title": "About me",
+      "content": [
+        "I am a Software/Web Developer based in Sonora, México. At the beginning of my journey, I mainly focused on desktop apps and back-end, but have since branched out to designing and building full-stack web/mobile apps.",
+        "I am passionate about learning, and I believe there is no better way to do it than through practice."
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "content": [
+        "I have mainly worked on personal and school projects built on Angular, Flutter, React, and Java, while also exploring languages such as Python, C#, and Visual Basic.",
+        "Regarding database engines, I've worked with MySQL, SQL Server, PostgreSQL, Firebase RTDB, Firebase Firestore, and MongoDB."
+      ]
+    },
+    "technologies": {
+      "title": "Technologies & languages"
+    }
   },
-  "experience": {
-    "title": "Experience",
-    "content": [
-      "I have mainly worked on personal and school projects built on Angular, Flutter, React, and Java, while also exploring languages such as C# and Visual Basic.",
-      "Regarding database engines, I've worked with MySQL, SQL Server, PostgreSQL, Firebase RTDB, Firebase Firestore, and MongoDB."
-    ]
-  },
-  "technologies": {
-    "title": "Technologies & languages"
+  "es-MX": {
+    "page": {
+      "title": "Inicio",
+      "description": "Página de inicio de mi portafolio."
+    },
+    "about": {
+      "title": "Sobre mí",
+      "content": [
+        "Soy un desarrollador de software/desarrollador web de Sonora, México. Durante mis inicios en software, me centré principalmente en aplicaciones de escritorio y programación back-end. Sin embargo, actualmente me dedico al diseño y desarrollo de aplicaciones web y móviles.",
+        "Tengo pasión por el aprendizaje y pienso que no hay mejor manera de hacerlo que a través de la práctica."
+      ]
+    },
+    "experience": {
+      "title": "Experiencia",
+      "content": [
+        "He trabajado principalmente en proyectos personales y escolares con tecnologías como Angular, Flutter, React, y Java; asimismo, he explorado otros lenguajes como Python, C# y Visual Basic.",
+        "En cuanto a manejadores de bases de datos, he trabajado con MySQL, SQL Server, PostgreSQL, Firebase RTDB y Firestore, y MongoDB."
+      ]
+    },
+    "technologies": {
+      "title": "Tecnologías y lenguajes"
+    }
   }
 }
