@@ -1,10 +1,16 @@
 import path from "path";
 import { promises as fs } from "fs";
 
-interface Data {
+interface Content {
+  page: { title: string; description: string };
   about: { title: string; content: string[] };
   experience: { title: string; content: string[] };
   technologies: { title: string };
+}
+
+interface Data {
+  "en-US": Content;
+  "es-MX": Content;
 }
 
 export const loadHome = async (): Promise<Data> => {
