@@ -14,8 +14,8 @@ interface Data {
 }
 
 export const loadHome = async (): Promise<Data> => {
-  const jsonDirectory = path.join(process.cwd(), "json");
-  const fileContent = await fs.readFile(jsonDirectory + "/home.json", "utf8");
+  const jsonDirectory = path.join(process.cwd(), "json", "home.json");
+  const fileContent = await fs.readFile(jsonDirectory, "utf8");
 
   return JSON.parse(fileContent) as Data;
 };
