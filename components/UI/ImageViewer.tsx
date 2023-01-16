@@ -1,11 +1,12 @@
 import { FC, KeyboardEvent, useState } from "react";
 
+import { useRouter } from "next/router";
+import Image from "next/image";
+
 import { Box, IconButton, Modal, Tooltip, useTheme } from "@mui/material";
 import { ArrowBack, ArrowForward, Close } from "@mui/icons-material";
 
 import classes from "../../styles/ImageViewer.module.css";
-import Image from "next/image";
-import { useRouter } from "next/router";
 
 const DICTIONARY = {
   "en-US": {

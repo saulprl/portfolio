@@ -1,27 +1,27 @@
+import { ParsedUrlQuery } from "querystring";
+
 import { FC, useState } from "react";
 
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
-import { ParsedUrlQuery } from "querystring";
+import Image from "next/image";
 
 import {
   Box,
   Button,
   CardActionArea,
   Chip,
-  IconButton,
   ImageList,
   ImageListItem,
-  Tooltip,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { ArrowBack, GitHub } from "@mui/icons-material";
+import { GitHub } from "@mui/icons-material";
 
 import MainContent from "../../../components/UI/MainContent";
+import ImageViewer from "../../../components/UI/ImageViewer";
 
 import {
   loadProject,
@@ -32,7 +32,6 @@ import {
 import { Project } from "../../../models/Project";
 
 import classes from "../../../styles/ProjectDetails.module.css";
-import ImageViewer from "../../../components/UI/ImageViewer";
 
 interface IParams extends ParsedUrlQuery {
   projId: string;

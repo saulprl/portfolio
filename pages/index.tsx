@@ -1,11 +1,13 @@
-import { Box, Typography } from "@mui/material";
-import { GetStaticProps } from "next";
-import Head from "next/head";
 import { FC } from "react";
 
-import TechnologyGrid from "../components/Technology/TechnologyGrid";
+import { GetStaticProps } from "next";
+import Head from "next/head";
+
+import { Box, Typography } from "@mui/material";
 
 import MainContent from "../components/UI/MainContent";
+import TechnologyGrid from "../components/Technology/TechnologyGrid";
+
 import { loadHome } from "../lib/loadHome";
 
 import classes from "../styles/Home.module.css";

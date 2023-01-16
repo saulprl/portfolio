@@ -1,5 +1,7 @@
 import { FC, ReactNode } from "react";
 
+import { useRouter } from "next/router";
+
 import {
   Box,
   Card,
@@ -13,7 +15,6 @@ import {
 import { ArrowBack, Article } from "@mui/icons-material";
 
 import classes from "../../styles/MainContent.module.css";
-import { useRouter } from "next/router";
 
 const DICTIONARY = {
   "en-US": {

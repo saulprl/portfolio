@@ -1,7 +1,9 @@
-import { List } from "@mui/material";
 import { FC, useState } from "react";
 
+import { List } from "@mui/material";
+
 import type { Course } from "../../models/Course";
+
 import ImageViewer from "../UI/ImageViewer";
 import CourseItem from "./CourseItem";
 

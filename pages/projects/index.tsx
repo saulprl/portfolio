@@ -1,18 +1,19 @@
 import { FC } from "react";
 
+import { GetStaticProps } from "next";
 import Head from "next/head";
 
-import ProjectList from "../../components/Projects/ProjectList";
+import { Box } from "@mui/material";
+
 import MainContent from "../../components/UI/MainContent";
+import ProjectList from "../../components/Projects/ProjectList";
+import ProjectFilters from "../../components/Projects/ProjectFilters";
 
 import { loadProjects } from "../../lib/loadProjects";
 
 import type { Project } from "../../models/Project";
-import ProjectFilters from "../../components/Projects/ProjectFilters";
 
 import classes from "../../styles/Projects.module.css";
-import { Box } from "@mui/material";
-import { GetStaticProps } from "next";
 
 interface ProjectData {
   page: { title: string; description: string };

@@ -1,6 +1,9 @@
 import { FC } from "react";
 
+import { GetStaticProps } from "next";
 import Head from "next/head";
+
+import { Box } from "@mui/material";
 
 import MainContent from "../../components/UI/MainContent";
 import CourseList from "../../components/Courses/CourseList";
@@ -8,10 +11,8 @@ import CourseList from "../../components/Courses/CourseList";
 import { loadCourses } from "../../lib/loadCourses";
 
 import type { Course } from "../../models/Course";
-import { Box } from "@mui/material";
 
 import classes from "../../styles/Courses.module.css";
-import { GetStaticProps } from "next";
 
 interface CourseData {
   page: { title: string; description: string };
@@ -38,7 +39,10 @@ const CoursesPage: FC<Props> = (props: Props) => {
       </Head>
       <MainContent title={props.data.page.title}>
         <Box component="section" className={classes["page-content"]}>
-          <CourseList courses={props.data.courses} dictionary={props.data.display} />
+          <CourseList
+            courses={props.data.courses}
+            dictionary={props.data.display}
+          />
         </Box>
       </MainContent>
     </>

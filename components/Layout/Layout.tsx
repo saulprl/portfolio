@@ -1,12 +1,13 @@
 import { FC } from "react";
 
+import { useRouter } from "next/router";
+
 import { useMediaQuery, useTheme } from "@mui/material";
 
 import MainAppBar from "../UI/MainAppBar";
 import MainDrawer from "../UI/MainDrawer";
 
 import dictionary from "./layout-dic";
-import { useRouter } from "next/router";
 
 interface Props {
   onToggleTheme: () => void;

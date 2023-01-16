@@ -1,12 +1,14 @@
 import { FC, useContext } from "react";
 
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 import { List, useMediaQuery, useTheme } from "@mui/material";
+
+import { FiltersContext } from "../../context/FiltersContext";
 
 import ProjectItem from "./ProjectItem";
 
 import type { Project } from "../../models/Project";
-import { FiltersContext } from "../../context/FiltersContext";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import classes from "../../styles/Projects.module.css";
 

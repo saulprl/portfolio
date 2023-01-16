@@ -1,6 +1,7 @@
 import { FC, useContext } from "react";
 
 import { Chip, useTheme } from "@mui/material";
+
 import { FiltersContext } from "../../context/FiltersContext";
 
 interface Props {

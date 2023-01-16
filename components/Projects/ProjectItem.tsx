@@ -1,5 +1,7 @@
 import { FC } from "react";
 
+import Link from "next/link";
+
 import {
   Card,
   CardActionArea,
@@ -10,7 +12,6 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import Link from "next/link";
 
 import classes from "../../styles/Projects.module.css";
 
