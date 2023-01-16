@@ -21,7 +21,7 @@ const handler = async (
   res: NextApiResponse<Result<Data, Error>>
 ) => {
   try {
-    const jsonPath = path.join(process.cwd(), "json", "technologies.jsn");
+    const jsonPath = path.join(process.cwd(), "json", "technologies.json");
 
     const fileContents = await fs.readFile(jsonPath, "utf8");
 
