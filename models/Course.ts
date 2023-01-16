@@ -4,7 +4,7 @@ export interface Course {
   platform: "Udemy";
   link: string;
   totalHours: number;
-  status: "Completed" | "In progress";
+  status: "Completed" | "Concluido" | "In progress" | "En progreso";
   description: string;
   certificate: string | null;
 }
