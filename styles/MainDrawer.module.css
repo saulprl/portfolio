@@ -3,6 +3,14 @@
   /* margin-bottom: 6px; */
 }
 
+.locale-btn {
+  position: absolute;
+  text-transform: none;
+  font-weight: bold;
+  left: 8px;
+  bottom: 8px;
+}
+
 .theme-icon {
   animation: scaleIn 350ms cubic-bezier(.07, .49, .61, 1.3) forwards;
   will-change: transform;
