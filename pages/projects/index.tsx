@@ -36,7 +36,7 @@ const ProjectsPage: FC<Props> = (props: Props) => {
       </Head>
       <MainContent title={props.data.page.title}>
         <Box component="section" className={classes["page-content"]}>
-          {/* <ProjectFilters title={props.data.display.filters} /> */}
+          <ProjectFilters title={props.data.display.filters} />
           <ProjectList projects={props.data.projects} />
         </Box>
       </MainContent>
