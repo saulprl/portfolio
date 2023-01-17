@@ -24,6 +24,7 @@ import TechnologyChip from "../Technology/TechnologyChip";
 import type { Technologies as TechData } from "../../models/Technology";
 
 import classes from "../../styles/Projects.module.css";
+import { Result } from "ts-results/result";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -43,7 +44,7 @@ const ProjectFilters: FC<Props> = (props: Props) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [expanded, setExpanded] = useState(!isMobile);
 
-  const { data, error, isLoading } = useSWR<TechData, Error>(
+  const { data, error, isLoading } = useSWR<Result<TechData, any>>(
     "/api/technologies",
     fetcher
   );
@@ -65,38 +66,48 @@ const ProjectFilters: FC<Props> = (props: Props) => {
     );
   }
 
-  if (!isLoading && error) {
+  if (!isLoading && data && data.err) {
+    let errorMessage: string;
+    switch (data.val.code) {
+      case "ENOENT":
+        errorMessage = "File not found.";
+        break;
+      default:
+        errorMessage = `Unexpected error: ${data.val.code}`;
+        break;
+    }
+
     content = (
-      <Alert variant="outlined" severity="error">
-        {error.message}
+      <Alert variant="standard" severity="error">
+        {errorMessage}
       </Alert>
     );
   }
 
-  if (!isLoading && data) {
+  if (!isLoading && data && data.ok) {
     const chips: Technology[] = [];
 
-    for (const tech of data.languages.main) {
+    for (const tech of data.val.languages.main) {
       chips.push({ name: tech, color: "secondary" });
     }
 
-    for (const tech of data.languages.additional) {
+    for (const tech of data.val.languages.additional) {
       chips.push({ name: tech, color: "secondary" });
     }
 
-    for (const tech of data.frameworks.main) {
+    for (const tech of data.val.frameworks.main) {
       chips.push({ name: tech, color: "info" });
     }
 
-    for (const tech of data.frameworks.additional) {
+    for (const tech of data.val.frameworks.additional) {
       chips.push({ name: tech, color: "info" });
     }
 
-    for (const tech of data.databases.main) {
+    for (const tech of data.val.databases.main) {
       chips.push({ name: tech, color: "warning" });
     }
 
-    for (const tech of data.databases.additional) {
+    for (const tech of data.val.databases.additional) {
       chips.push({ name: tech, color: "warning" });
     }
 
