@@ -4,8 +4,6 @@ import { CSSTransition } from "react-transition-group";
 
 import useSWR from "swr";
 
-import { FiltersContext } from "../../context/FiltersContext";
-
 import {
   Alert,
   alpha,
@@ -19,14 +17,17 @@ import {
 } from "@mui/material";
 import { ExpandLess } from "@mui/icons-material";
 
+import { FiltersContext } from "../../context/FiltersContext";
+
 import TechnologyChip from "../Technology/TechnologyChip";
+
+import { fetcher } from "../../utils/fetcher";
 
 import type { Technologies as TechData } from "../../models/Technology";
 
 import classes from "../../styles/Projects.module.css";
-import { Result } from "ts-results/result";
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+// const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 interface Technology {
   name: string;
@@ -44,7 +45,7 @@ const ProjectFilters: FC<Props> = (props: Props) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [expanded, setExpanded] = useState(!isMobile);
 
-  const { data, error, isLoading } = useSWR<Result<TechData, any>>(
+  const { data, error, isLoading } = useSWR<TechData, Error>(
     "/api/technologies",
     fetcher
   );
@@ -66,48 +67,38 @@ const ProjectFilters: FC<Props> = (props: Props) => {
     );
   }
 
-  if (!isLoading && data && data.err) {
-    let errorMessage: string;
-    switch (data.val.code) {
-      case "ENOENT":
-        errorMessage = "File not found.";
-        break;
-      default:
-        errorMessage = `Unexpected error: ${data.val.code}`;
-        break;
-    }
-
+  if (!isLoading && error) {
     content = (
-      <Alert variant="standard" severity="error">
-        {errorMessage}
+      <Alert variant="filled" severity="error" sx={{ mb: "8px" }}>
+        {error.message}
       </Alert>
     );
   }
 
-  if (!isLoading && data && data.ok) {
+  if (!isLoading && !error && data) {
     const chips: Technology[] = [];
 
-    for (const tech of data.val.languages.main) {
+    for (const tech of data.languages.main) {
       chips.push({ name: tech, color: "secondary" });
     }
 
-    for (const tech of data.val.languages.additional) {
+    for (const tech of data.languages.additional) {
       chips.push({ name: tech, color: "secondary" });
     }
 
-    for (const tech of data.val.frameworks.main) {
+    for (const tech of data.frameworks.main) {
       chips.push({ name: tech, color: "info" });
     }
 
-    for (const tech of data.val.frameworks.additional) {
+    for (const tech of data.frameworks.additional) {
       chips.push({ name: tech, color: "info" });
     }
 
-    for (const tech of data.val.databases.main) {
+    for (const tech of data.databases.main) {
       chips.push({ name: tech, color: "warning" });
     }
 
-    for (const tech of data.val.databases.additional) {
+    for (const tech of data.databases.additional) {
       chips.push({ name: tech, color: "warning" });
     }
 

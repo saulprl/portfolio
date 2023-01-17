@@ -1,5 +1,3 @@
-import { Result } from "ts-results/result";
-
 import useSWR from "swr";
 
 import {
@@ -31,6 +29,7 @@ import {
 import { TbCSharp } from "react-icons/tb";
 
 import classes from "../../styles/Technology.module.css";
+import { fetcher } from "../../utils/fetcher";
 
 interface Technology {
   main: string[];
@@ -48,7 +47,7 @@ interface TechData {
   databases: Technology;
 }
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+// const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const getTechIcon = (techName: string) => {
   switch (techName) {
@@ -88,34 +87,29 @@ const getTechIcon = (techName: string) => {
 
 const TechnologyGrid = () => {
   const theme = useTheme();
-  const { data } = useSWR<Result<TechData, any>>("/api/technologies", fetcher);
+  const { data, error, isLoading } = useSWR<TechData, Error>(
+    "/api/technologies",
+    fetcher
+  );
   const themeMode = theme.palette.mode;
   const iconColor = themeMode === "dark" ? "#FFFFFF" : "#FFFFFF";
 
-  let content = <Skeleton animation="wave" variant="rounded" height={100} />;
+  if (isLoading) {
+    return <Skeleton animation="wave" variant="rounded" height={100} />;
+  }
 
-  if (data && data.err) {
-    let errorMessage: string;
-    switch (data.val.code) {
-      case "ENOENT":
-        errorMessage = "File not found.";
-        break;
-      default:
-        errorMessage = `Unexpected error: ${data.val.code}`;
-        break;
-    }
-
-    content = (
-      <Alert severity="error" variant="standard">
-        {errorMessage}
+  if (!isLoading && error) {
+    return (
+      <Alert severity="error" variant="filled">
+        {error.message}
       </Alert>
     );
   }
 
-  if (data && data.ok) {
+  if (!isLoading && data && !error) {
     const technologies: TechnologyItem[] = [];
 
-    for (const lang of (data.val as TechData).languages.main) {
+    for (const lang of data.languages.main) {
       technologies.push({
         name: lang,
         color: theme.palette.secondary.main,
@@ -123,7 +117,7 @@ const TechnologyGrid = () => {
       });
     }
 
-    for (const framework of (data.val as TechData).frameworks.main) {
+    for (const framework of data.frameworks.main) {
       technologies.push({
         name: framework,
         color: theme.palette.info.main,
@@ -131,7 +125,7 @@ const TechnologyGrid = () => {
       });
     }
 
-    for (const db of (data.val as TechData).databases.main) {
+    for (const db of data.databases.main) {
       technologies.push({
         name: db,
         color: theme.palette.warning.main,
@@ -139,7 +133,7 @@ const TechnologyGrid = () => {
       });
     }
 
-    content = (
+    return (
       <Card
         variant="outlined"
         className={classes["tech-card"]}
@@ -172,7 +166,7 @@ const TechnologyGrid = () => {
     );
   }
 
-  return content;
+  // return content;
 };
 
 export default TechnologyGrid;
