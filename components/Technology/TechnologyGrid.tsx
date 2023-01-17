@@ -94,12 +94,14 @@ const TechnologyGrid = () => {
   const themeMode = theme.palette.mode;
   const iconColor = themeMode === "dark" ? "#FFFFFF" : "#FFFFFF";
 
+  let content = <></>;
+
   if (isLoading) {
-    return <Skeleton animation="wave" variant="rounded" height={100} />;
+    content = <Skeleton animation="wave" variant="rounded" height={100} />;
   }
 
   if (!isLoading && error) {
-    return (
+    content = (
       <Alert severity="error" variant="filled">
         {error.message}
       </Alert>
@@ -133,7 +135,7 @@ const TechnologyGrid = () => {
       });
     }
 
-    return (
+    content = (
       <Card
         variant="outlined"
         className={classes["tech-card"]}
@@ -166,7 +168,7 @@ const TechnologyGrid = () => {
     );
   }
 
-  // return content;
+  return content;
 };
 
 export default TechnologyGrid;
