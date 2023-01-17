@@ -11,6 +11,7 @@ import {
 import Socials from "./Socials";
 
 import classes from "../../styles/Presentation.module.css";
+import { memo } from "react";
 
 const Presentation = () => {
   const theme = useTheme();
@@ -67,4 +68,4 @@ const Presentation = () => {
   );
 };
 
-export default Presentation;
+export default memo(Presentation);

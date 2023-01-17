@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC, useContext, useMemo } from "react";
 
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
@@ -22,13 +22,17 @@ const ProjectList: FC<Props> = (props: Props) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const { projects } = props;
 
-  const filteredProjects = projects.filter((proj) =>
-    filters.every(
-      (filter) =>
-        proj.languages === filter ||
-        proj.frameworks === filter ||
-        proj.database === filter
-    )
+  const filteredProjects = useMemo(
+    () =>
+      projects.filter((proj) =>
+        filters.every(
+          (filter) =>
+            proj.languages === filter ||
+            proj.frameworks === filter ||
+            proj.database === filter
+        )
+      ),
+    [projects, filters]
   );
 
   return (

@@ -1,4 +1,4 @@
-import { FC, useContext, useRef, useState } from "react";
+import { FC, memo, useContext, useRef, useState } from "react";
 
 import { CSSTransition } from "react-transition-group";
 
@@ -166,4 +166,4 @@ const ProjectFilters: FC<Props> = (props: Props) => {
   return content;
 };
 
-export default ProjectFilters;
+export default memo(ProjectFilters);

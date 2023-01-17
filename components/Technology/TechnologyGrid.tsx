@@ -30,6 +30,7 @@ import { TbCSharp } from "react-icons/tb";
 
 import classes from "../../styles/Technology.module.css";
 import { fetcher } from "../../utils/fetcher";
+import { memo, useMemo, useRef } from "react";
 
 interface Technology {
   main: string[];
@@ -91,84 +92,87 @@ const TechnologyGrid = () => {
     "/api/technologies",
     fetcher
   );
-  const themeMode = theme.palette.mode;
-  const iconColor = themeMode === "dark" ? "#FFFFFF" : "#FFFFFF";
+  const iconColor = "#FFFFFF";
 
-  let content = <></>;
+  const content = useRef(<></>);
 
   if (isLoading) {
-    content = <Skeleton animation="wave" variant="rounded" height={100} />;
+    content.current = (
+      <Skeleton animation="wave" variant="rounded" height={100} />
+    );
   }
 
   if (!isLoading && error) {
-    content = (
+    content.current = (
       <Alert severity="error" variant="filled">
         {error.message}
       </Alert>
     );
   }
 
-  if (!isLoading && data && !error) {
-    const technologies: TechnologyItem[] = [];
+  useMemo(() => {
+    if (!isLoading && data && !error) {
+      const technologies: TechnologyItem[] = [];
 
-    for (const lang of data.languages.main) {
-      technologies.push({
-        name: lang,
-        color: theme.palette.secondary.main,
-        icon: getTechIcon(lang),
-      });
-    }
+      for (const lang of data.languages.main) {
+        technologies.push({
+          name: lang,
+          color: theme.palette.secondary.main,
+          icon: getTechIcon(lang),
+        });
+      }
 
-    for (const framework of data.frameworks.main) {
-      technologies.push({
-        name: framework,
-        color: theme.palette.info.main,
-        icon: getTechIcon(framework),
-      });
-    }
+      for (const framework of data.frameworks.main) {
+        technologies.push({
+          name: framework,
+          color: theme.palette.info.main,
+          icon: getTechIcon(framework),
+        });
+      }
 
-    for (const db of data.databases.main) {
-      technologies.push({
-        name: db,
-        color: theme.palette.warning.main,
-        icon: getTechIcon(db),
-      });
-    }
+      for (const db of data.databases.main) {
+        technologies.push({
+          name: db,
+          color: theme.palette.warning.main,
+          icon: getTechIcon(db),
+        });
+      }
 
-    content = (
-      <Card
-        variant="outlined"
-        className={classes["tech-card"]}
-        sx={{ background: theme.palette.background.default }}
-      >
-        <Grid
-          container
-          spacing={1}
-          justifyContent="center"
-          sx={{ ml: { xs: "-8px", sm: 0 } }}
+      content.current = (
+        <Card
+          variant="outlined"
+          className={classes["tech-card"]}
+          sx={{ background: theme.palette.background.default }}
         >
-          {technologies.map((tech) => (
-            <Grid item key={tech.name} sm={1.5}>
-              <Tooltip title={tech.name} placement="top">
-                <Avatar
-                  sx={{
-                    bgcolor: tech.color,
-                    transition: "all 250ms linear",
-                  }}
-                >
-                  <IconContext.Provider value={{ color: iconColor }}>
-                    {tech.icon}
-                  </IconContext.Provider>
-                </Avatar>
-              </Tooltip>
-            </Grid>
-          ))}
-        </Grid>
-      </Card>
-    );
-  }
+          <Grid
+            container
+            spacing={1}
+            justifyContent="center"
+            sx={{ ml: { xs: "-8px", sm: 0 } }}
+          >
+            {technologies.map((tech) => (
+              <Grid item key={tech.name} sm={1.5}>
+                <Tooltip title={tech.name} placement="top">
+                  <Avatar
+                    sx={{
+                      bgcolor: tech.color,
+                      transition: "all 250ms linear",
+                    }}
+                  >
+                    <IconContext.Provider value={{ color: iconColor }}>
+                      {tech.icon}
+                    </IconContext.Provider>
+                  </Avatar>
+                </Tooltip>
+              </Grid>
+            ))}
+          </Grid>
+        </Card>
+      );
+    }
+  }, [isLoading, data, error, iconColor, theme, content]);
 
-  return content;
+  return content.current;
 };
 
-export default TechnologyGrid;
+export default memo(TechnologyGrid);
