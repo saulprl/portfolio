@@ -4,11 +4,10 @@
 }
 
 .locale-btn {
-  position: absolute;
+  position: relative;
   text-transform: none;
   font-weight: bold;
-  left: 8px;
-  bottom: 8px;
+  margin: auto 0 8px 8px;
 }
 
 .theme-icon {
