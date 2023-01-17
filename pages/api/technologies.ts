@@ -2,7 +2,6 @@
 
 import path from "path";
 import { promises as fs } from "fs";
-import { Ok, Err, Result } from "ts-results";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -16,18 +15,27 @@ interface Data {
   databases: Technology;
 }
 
+interface Exception extends Error {
+  status: number;
+  err: any;
+}
+
 const handler = async (
   req: NextApiRequest,
-  res: NextApiResponse<Result<Data, Error>>
+  res: NextApiResponse<Data | Exception>
 ) => {
   try {
     const jsonPath = path.join(process.cwd(), "json", "technologies.json");
     const fileContents = await fs.readFile(jsonPath, "utf8");
 
-    res.status(200).json(Ok(JSON.parse(fileContents) as Data));
+    res.status(200).json(JSON.parse(fileContents) as Data);
   } catch (error) {
-    console.log(error);
-    res.status(500).json(Err(error as Error));
+    res.status(404).json({
+      message: error instanceof Error ? error.message : "File not found.",
+      status: 404,
+      err: error,
+      name: error instanceof Error ? error.name : "API Error",
+    });
   }
 };
 
