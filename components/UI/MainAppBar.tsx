@@ -29,6 +29,8 @@ const MainAppBar: FC<Props> = (props: Props) => {
   const router = useRouter();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  const { locale, pathname, asPath, query } = router;
+
   const openDrawerHandler = () => {
     setDrawerOpen(true);
   };
@@ -64,8 +66,8 @@ const MainAppBar: FC<Props> = (props: Props) => {
             variant="text"
             endIcon={<Language />}
             onClick={() =>
-              router.push(router.pathname, undefined, {
-                locale: router.locale === "en-US" ? "es-MX" : "en-US",
+              router.push({ pathname, query }, asPath, {
+                locale: locale === "en-US" ? "es-MX" : "en-US",
               })
             }
             sx={{
@@ -75,7 +77,7 @@ const MainAppBar: FC<Props> = (props: Props) => {
               right: "16px",
             }}
           >
-            {router.locale === "en-US" ? "EN" : "ES"}
+            {locale === "en-US" ? "EN" : "ES"}
           </Button>
         </Toolbar>
       </AppBar>
