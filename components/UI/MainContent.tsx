@@ -51,14 +51,19 @@ const MainContent: FC<Props> = (props: Props) => {
       className={classes["main-container"]}
       sx={{
         width: { sm: "calc(100% - 280px)" },
-        ml: { sm: "280px" },
         height: { xs: "calc(100vh - 48px)", sm: "100vh" },
+        ml: { sm: "280px" },
+        padding: { xs: "0px", sm: "8px" },
       }}
     >
       <Card
         variant="outlined"
         className={classes["main-card"]}
-        sx={{ border: border, width: { xs: "100%", md: "540px" } }}
+        sx={{
+          width: { xs: "100%", md: "540px" },
+          borderRadius: { xs: "0px", sm: "16px" },
+          border: theme.border.default,
+        }}
       >
         <CardHeader
           title={title}

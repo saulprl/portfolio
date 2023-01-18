@@ -2,7 +2,7 @@
   /* height: 100vh; */
   /* width: calc(100% - 280px); */
   /* margin-left: 280px; */
-  padding: 8px;
+  /* padding: 8px; */
   overflow: auto;
 }
 
@@ -10,6 +10,6 @@
   min-height: 100%;
   max-width: 540px;
   margin: auto auto auto 0;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   transition: background-color 250ms linear, border 250ms linear;
 }
