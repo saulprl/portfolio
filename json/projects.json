@@ -32,7 +32,8 @@
           "/images/moody-notes/mn_filters.jpeg",
           "/images/moody-notes/mn_main_with_filters.jpeg"
         ],
-        "repo": "https://github.com/saulprl/moody_notes"
+        "repo": "https://github.com/saulprl/moody_notes",
+        "live-demo": null
       },
       {
         "id": 2,
@@ -51,7 +52,8 @@
           "/images/candy-sun-react/csun-sales.jpeg",
           "/images/candy-sun-react/csun-sales-mobile.jpeg"
         ],
-        "repo": "https://github.com/saulprl/candy_sun_react"
+        "repo": "https://github.com/saulprl/candy_sun_react",
+        "live-demo": null
       },
       {
         "id": 3,
@@ -75,7 +77,8 @@
           "/images/candy-sun-mobile/sales-list.jpg",
           "/images/candy-sun-mobile/sales-list-expanded.jpg"
         ],
-        "repo": "https://github.com/saulprl/candy_sun"
+        "repo": "https://github.com/saulprl/candy_sun",
+        "live-demo": null
       },
       {
         "id": 4,
@@ -86,7 +89,8 @@
         "frameworks": "Flutter",
         "database": null,
         "images": [],
-        "repo": "https://github.com/saulprl/flutter_calculator"
+        "repo": "https://github.com/saulprl/flutter_calculator",
+        "live-demo": null
       },
       {
         "id": 5,
@@ -105,7 +109,8 @@
           "/images/kubergames/kubernetes.jpeg",
           "/images/kubergames/api-response.jpeg"
         ],
-        "repo": "https://github.com/saulprl/kubergames-js"
+        "repo": "https://github.com/saulprl/kubergames-js",
+        "live-demo": "https://kubergames-js.vercel.app/"
       },
       {
         "id": 6,
@@ -119,7 +124,8 @@
           "/images/kubergames/api-response.jpeg",
           "/images/kubergames/kubernetes.jpeg"
         ],
-        "repo": "https://github.com/McFlyZero/api-kubergames"
+        "repo": "https://github.com/McFlyZero/api-kubergames",
+        "live-demo": "https://kubergames-js.vercel.app/"
       },
       {
         "id": 7,
@@ -145,7 +151,8 @@
           "/images/candy-sun-angular/delete-category.png",
           "/images/candy-sun-angular/add-employee-form.png"
         ],
-        "repo": "https://github.com/saulprl/candy-sun-angular"
+        "repo": "https://github.com/saulprl/candy-sun-angular",
+        "live-demo": null
       },
       {
         "id": 8,
@@ -156,7 +163,8 @@
         "frameworks": "Node.js",
         "database": "MongoDB",
         "images": [],
-        "repo": "https://github.com/saulprl/candy-sun-angular"
+        "repo": "https://github.com/saulprl/candy-sun-angular",
+        "live-demo": null
       },
       {
         "id": 9,
@@ -167,7 +175,8 @@
         "frameworks": "JavaFX",
         "database": "PostgreSQL",
         "images": [],
-        "repo": "https://github.com/saulprl/VentasDS3"
+        "repo": "https://github.com/saulprl/VentasDS3",
+        "live-demo": null
       },
       {
         "id": 10,
@@ -178,7 +187,8 @@
         "frameworks": "JavaFX",
         "database": "PostgreSQL",
         "images": [],
-        "repo": "https://github.com/saulprl/Library-for-Teachers"
+        "repo": "https://github.com/saulprl/Library-for-Teachers",
+        "live-demo": null
       },
       {
         "id": 11,
@@ -189,7 +199,8 @@
         "frameworks": "JavaFX",
         "database": "MySQL",
         "images": [],
-        "repo": "https://github.com/saulprl/ChatFX"
+        "repo": "https://github.com/saulprl/ChatFX",
+        "live-demo": null
       },
       {
         "id": 12,
@@ -210,7 +221,8 @@
           "/images/styper/scores.jpeg",
           "/images/styper/volume-slider.jpeg"
         ],
-        "repo": "https://github.com/saulprl/Styper"
+        "repo": "https://github.com/saulprl/Styper",
+        "live-demo": null
       },
       {
         "id": 13,
@@ -221,7 +233,8 @@
         "frameworks": null,
         "database": null,
         "images": [],
-        "repo": "https://github.com/saulprl/Maze-generator"
+        "repo": "https://github.com/saulprl/Maze-generator",
+        "live-demo": null
       },
       {
         "id": 14,
@@ -232,7 +245,8 @@
         "frameworks": null,
         "database": null,
         "images": [],
-        "repo": "https://github.com/saulprl/Space-Invaders"
+        "repo": "https://github.com/saulprl/Space-Invaders",
+        "live-demo": "https://kubergames-js.vercel.app/space-invaders"
       },
       {
         "id": 15,
@@ -243,7 +257,8 @@
         "frameworks": null,
         "database": null,
         "images": [],
-        "repo": "https://github.com/saulprl/Snake-game"
+        "repo": "https://github.com/saulprl/Snake-game",
+        "live-demo": "https://kubergames-js.vercel.app/snake-game"
       }
     ]
   },
@@ -280,7 +295,8 @@
           "/images/moody-notes/mn_filters.jpeg",
           "/images/moody-notes/mn_main_with_filters.jpeg"
         ],
-        "repo": "https://github.com/saulprl/moody_notes"
+        "repo": "https://github.com/saulprl/moody_notes",
+        "live-demo": null
       },
       {
         "id": 2,
@@ -299,7 +315,8 @@
           "/images/candy-sun-react/csun-sales.jpeg",
           "/images/candy-sun-react/csun-sales-mobile.jpeg"
         ],
-        "repo": "https://github.com/saulprl/candy_sun_react"
+        "repo": "https://github.com/saulprl/candy_sun_react",
+        "live-demo": null
       },
       {
         "id": 3,
@@ -323,7 +340,8 @@
           "/images/candy-sun-mobile/sales-list.jpg",
           "/images/candy-sun-mobile/sales-list-expanded.jpg"
         ],
-        "repo": "https://github.com/saulprl/candy_sun"
+        "repo": "https://github.com/saulprl/candy_sun",
+        "live-demo": null
       },
       {
         "id": 4,
@@ -334,7 +352,8 @@
         "frameworks": "Flutter",
         "database": null,
         "images": [],
-        "repo": "https://github.com/saulprl/flutter_calculator"
+        "repo": "https://github.com/saulprl/flutter_calculator",
+        "live-demo": null
       },
       {
         "id": 5,
@@ -353,7 +372,8 @@
           "/images/kubergames/kubernetes.jpeg",
           "/images/kubergames/api-response.jpeg"
         ],
-        "repo": "https://github.com/saulprl/kubergames-js"
+        "repo": "https://github.com/saulprl/kubergames-js",
+        "live-demo": "https://kubergames-js.vercel.app/"
       },
       {
         "id": 6,
@@ -367,7 +387,8 @@
           "/images/kubergames/api-response.jpeg",
           "/images/kubergames/kubernetes.jpeg"
         ],
-        "repo": "https://github.com/McFlyZero/api-kubergames"
+        "repo": "https://github.com/McFlyZero/api-kubergames",
+        "live-demo": "https://kubergames-js.vercel.app/"
       },
       {
         "id": 7,
@@ -393,7 +414,8 @@
           "/images/candy-sun-angular/delete-category.png",
           "/images/candy-sun-angular/add-employee-form.png"
         ],
-        "repo": "https://github.com/saulprl/candy-sun-angular"
+        "repo": "https://github.com/saulprl/candy-sun-angular",
+        "live-demo": null
       },
       {
         "id": 8,
@@ -404,7 +426,8 @@
         "frameworks": "Node.js",
         "database": "MongoDB",
         "images": [],
-        "repo": "https://github.com/saulprl/candy-sun-angular"
+        "repo": "https://github.com/saulprl/candy-sun-angular",
+        "live-demo": null
       },
       {
         "id": 9,
@@ -415,7 +438,8 @@
         "frameworks": "JavaFX",
         "database": "PostgreSQL",
         "images": [],
-        "repo": "https://github.com/saulprl/VentasDS3"
+        "repo": "https://github.com/saulprl/VentasDS3",
+        "live-demo": null
       },
       {
         "id": 10,
@@ -426,7 +450,8 @@
         "frameworks": "JavaFX",
         "database": "PostgreSQL",
         "images": [],
-        "repo": "https://github.com/saulprl/Library-for-Teachers"
+        "repo": "https://github.com/saulprl/Library-for-Teachers",
+        "live-demo": null
       },
       {
         "id": 11,
@@ -437,7 +462,8 @@
         "frameworks": "JavaFX",
         "database": "MySQL",
         "images": [],
-        "repo": "https://github.com/saulprl/ChatFX"
+        "repo": "https://github.com/saulprl/ChatFX",
+        "live-demo": null
       },
       {
         "id": 12,
@@ -458,7 +484,8 @@
           "/images/styper/scores.jpeg",
           "/images/styper/volume-slider.jpeg"
         ],
-        "repo": "https://github.com/saulprl/Styper"
+        "repo": "https://github.com/saulprl/Styper",
+        "live-demo": null
       },
       {
         "id": 13,
@@ -469,7 +496,8 @@
         "frameworks": null,
         "database": null,
         "images": [],
-        "repo": "https://github.com/saulprl/Maze-generator"
+        "repo": "https://github.com/saulprl/Maze-generator",
+        "live-demo": null
       },
       {
         "id": 14,
@@ -480,7 +508,8 @@
         "frameworks": null,
         "database": null,
         "images": [],
-        "repo": "https://github.com/saulprl/Space-Invaders"
+        "repo": "https://github.com/saulprl/Space-Invaders",
+        "live-demo": "https://kubergames-js.vercel.app/space-invaders"
       },
       {
         "id": 15,
@@ -491,7 +520,8 @@
         "frameworks": null,
         "database": null,
         "images": [],
-        "repo": "https://github.com/saulprl/Snake-game"
+        "repo": "https://github.com/saulprl/Snake-game",
+        "live-demo": "https://kubergames-js.vercel.app/snake-game"
       }
     ]
   }
