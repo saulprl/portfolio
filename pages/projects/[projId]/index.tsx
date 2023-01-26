@@ -18,7 +18,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { GitHub } from "@mui/icons-material";
+import { GitHub, OpenInNew } from "@mui/icons-material";
 
 import MainContent from "../../../components/UI/MainContent";
 import ImageViewer from "../../../components/UI/ImageViewer";
@@ -64,6 +64,7 @@ const ProjectDetailsPage: FC<Props> = (props: Props) => {
     database,
     images,
     repo,
+    "live-demo": liveDemo,
   } = props.project;
 
   const openModalHandler = () => {
@@ -126,7 +127,7 @@ const ProjectDetailsPage: FC<Props> = (props: Props) => {
             <Box
               className={classes.technologies}
               sx={{
-                mb: { xs: "8px", sm: "none" },
+                mb: { xs: "8px", sm: "0" },
                 // flexDirection: { sm: "row" },
                 // justifyContent: { xs: "flex-start", sm: "flex-start" },
                 // alignItems: { xs: "flex-start", sm: "center" },
@@ -141,11 +142,38 @@ const ProjectDetailsPage: FC<Props> = (props: Props) => {
               href={repo}
               target="_blank"
               variant="contained"
-              endIcon={<GitHub />}
+              endIcon={
+                <GitHub
+                  sx={{
+                    display: {
+                      xs: "inline-block",
+                      sm: "none",
+                      md: "inline-block",
+                    },
+                  }}
+                />
+              }
               sx={{ textTransform: "none", fontWeight: "bold" }}
             >
               {props.display.repo}
             </Button>
+            {liveDemo && (
+              <Button
+                LinkComponent="a"
+                href={liveDemo}
+                target="_blank"
+                variant="contained"
+                endIcon={<OpenInNew />}
+                sx={{
+                  textTransform: "none",
+                  fontWeight: "bold",
+                  mt: { xs: "8px", sm: "0" },
+                  ml: { xs: "0", sm: "4px" },
+                }}
+              >
+                Demo
+              </Button>
+            )}
           </Box>
           <Typography variant="h5">{props.display.images}</Typography>
           <CardActionArea LinkComponent="button" onClick={openModalHandler}>
