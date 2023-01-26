@@ -8,4 +8,5 @@ export interface Project {
   database: string | null;
   images: string[];
   repo: string;
+  "live-demo": string | null;
 }
