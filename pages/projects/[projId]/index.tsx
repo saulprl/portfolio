@@ -68,7 +68,9 @@ const ProjectDetailsPage: FC<Props> = (props: Props) => {
   } = props.project;
 
   const openModalHandler = () => {
-    setOpenModal(true);
+    if (images.length > 0) {
+      setOpenModal(true);
+    }
   };
 
   const closeModalHandler = () => {
