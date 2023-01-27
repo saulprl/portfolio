@@ -1,14 +1,14 @@
 {
   "languages": {
-    "main": ["Dart", "JavaScript", "TypeScript", "Java", "C#"],
-    "additional": []
+    "main": ["Dart", "JavaScript", "TypeScript", "Java"],
+    "additional": ["C#"]
   },
   "frameworks": {
-    "main": ["Flutter", "React", "Angular", "Node.js", "JavaFX"],
-    "additional": []
+    "main": ["Flutter", "React", "JavaFX"],
+    "additional": ["Angular", "Node.js"]
   },
   "databases": {
-    "main": ["MySQL", "PostgreSQL", "SQL Server", "MongoDB", "Firebase"],
-    "additional": ["SQLite", "Files"]
+    "main": ["MySQL", "PostgreSQL", "MongoDB", "Firebase"],
+    "additional": ["SQL Server", "SQLite", "Files"]
   }
 }
