@@ -36,6 +36,18 @@
         "live-demo": null
       },
       {
+        "id": 16,
+        "name": "Portfolio",
+        "excerpt": "Portfolio is, well, the website you're looking at right now. I started this project with the purpose of showcasing my work while practicing the frameworks...",
+        "description": "Portfolio is, well, the website you're looking at right now. I started this project with the purpose of showcasing my work while practicing the frameworks I was learning at the time: React and Next.js; as well as derusting my TypeScript a little. However, this is actually my portfolio's second iteration, since the original was a Create React App with JavaScript and hosted as a static website on GitHub Pages. I wanted to migrate to Next.js, but couldn't help making some UI improvements as well.",
+        "languages": "TypeScript",
+        "frameworks": "React",
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/portfolio",
+        "live-demo": null
+      },
+      {
         "id": 2,
         "name": "Candy Sun Web",
         "excerpt": "Candy Sun Web is the latest iteration of my Candy Sun project. It consists of a React web app directed to managing a real microbusiness. It keeps...",
@@ -296,6 +308,18 @@
           "/images/moody-notes/mn_main_with_filters.jpeg"
         ],
         "repo": "https://github.com/saulprl/moody_notes",
+        "live-demo": null
+      },
+      {
+        "id": 16,
+        "name": "Portfolio",
+        "excerpt": "Portfolio es el sitio que estás viendo ahora mismo. Inicié este proyecto con el propósito de mostrar mi trabajo mientras practicaba los frameworks que aprendía en ese momento:...",
+        "description": "Portfolio es el sitio que estás viendo ahora mismo. Inicié este proyecto con el propósito de mostrar mi trabajo mientras practicaba los frameworks que aprendía en ese momento: React y Next.js; así como para desempolvar mi TypeScript. En realidad, esta es la segunda iteración de mi portafolio web, ya que el original fue creado con Create React App, JavaScript y hosteado como web estática en GitHub Pages. El plan era migrar a Next.js, pero no pude evitar hacerle mejoras en el apartado visual.",
+        "languages": "TypeScript",
+        "frameworks": "React",
+        "database": null,
+        "images": [],
+        "repo": "https://github.com/saulprl/portfolio",
         "live-demo": null
       },
       {
