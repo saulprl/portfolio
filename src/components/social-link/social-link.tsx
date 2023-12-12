@@ -4,6 +4,7 @@ import { IconContext } from "react-icons";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa6";
+import { Button } from "../ui/button";
 
 interface SocialLinkProps {
   variant: "github" | "linkedin" | "email";
@@ -52,12 +53,8 @@ const LinkWrapper: FC<LinkProps & HTMLAttributes<HTMLAnchorElement>> = ({
   ...props
 }) => {
   return (
-    <Link
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex rounded-md bg-muted p-2"
-      {...props}
-    />
+    <Button asChild className="rounded-none bg-muted p-2">
+      <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />
+    </Button>
   );
 };
