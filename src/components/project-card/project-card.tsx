@@ -1,6 +1,8 @@
 import { FC, HTMLAttributes } from "react";
-import { Card, CardContent, CardFooter } from "../ui/card";
+
 import { cn } from "@/lib/utils";
+
+import { Card, CardContent, CardFooter } from "../ui/card";
 
 export const ProjectCard: FC<HTMLAttributes<HTMLDivElement>> = ({
   className,
