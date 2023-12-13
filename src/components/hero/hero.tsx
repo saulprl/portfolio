@@ -1,17 +1,9 @@
-import { FC } from "react";
-import { Contact } from "../contact/contact";
 import Image from "next/image";
-import { Media } from "@/payload/collections/media";
+
+import { Contact } from "../contact/contact";
 import { Section } from "../section/section";
-import { Social } from "@/payload/collections/social";
-import { Page, SocialArray } from "@/payload/collections/page";
 
-interface Props {
-  image?: Media;
-  socials?: SocialArray;
-}
-
-export const Hero: FC<Props> = ({ image, socials }) => {
+export const Hero = () => {
   return (
     <Section>
       <div className="flex w-full flex-col justify-center gap-4 rounded-md border-2 border-muted p-4 text-center md:text-start">
@@ -28,13 +20,13 @@ export const Hero: FC<Props> = ({ image, socials }) => {
         </h2>
         <div className="flex flex-grow" />
         <div className="flex w-full items-center justify-center md:justify-start">
-          <Contact socials={socials} />
+          <Contact />
         </div>
       </div>
       <div className="relative flex h-80 overflow-hidden rounded-md">
         <Image
-          src={image?.url ?? ""}
-          alt={image?.title ?? "Hero image placeholder"}
+          src="/images/csipro-access-conf.jpg"
+          alt="Saúl Ramos at Encuentro Nacional en ISI 2023"
           fill
           className="object-cover"
         />
