@@ -24,7 +24,7 @@ export const Navbar: FC<Props> = ({ orientation = "horizontal" }) => {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#" legacyBehavior passHref>
+          <Link href="/projects" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Projects
             </NavigationMenuLink>

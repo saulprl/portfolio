@@ -16,7 +16,7 @@ export const Footer = () => {
               Home
             </Link>
             <Link
-              href="#"
+              href="/projects"
               className="transition-all hover:font-bold hover:text-primary"
             >
               Projects
