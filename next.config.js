@@ -2,6 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["geist"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

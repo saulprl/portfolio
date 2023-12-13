@@ -11,7 +11,7 @@ export const ProjectCard: FC<HTMLAttributes<HTMLDivElement>> = ({
   return (
     <Card
       className={cn(
-        "relative w-fit overflow-hidden border-muted bg-primary",
+        "relative aspect-square w-full overflow-hidden border-muted bg-primary",
         className,
       )}
       {...props}

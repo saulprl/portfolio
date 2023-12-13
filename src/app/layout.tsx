@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { Metadata } from "next";
 
 import "@/styles/globals.css";
+import { Header } from "@/components/header/header";
 
 export const metadata: Metadata = {
   title: "Home | saulprl's portfolio",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
