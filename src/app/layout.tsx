@@ -4,6 +4,7 @@ import { Metadata } from "next";
 
 import "@/styles/globals.css";
 import { Header } from "@/components/header/header";
+import { Footer } from "@/components/footer/footer";
 
 export const metadata: Metadata = {
   title: "Home | saulprl's portfolio",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

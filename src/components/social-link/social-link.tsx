@@ -55,7 +55,7 @@ const LinkWrapper: FC<LinkProps & HTMLAttributes<HTMLAnchorElement>> = ({
   return (
     <Button
       asChild
-      className="rounded-none bg-muted text-sm sm:text-lg md:text-xl"
+      className="rounded-none bg-transparent text-sm sm:text-lg md:text-xl"
     >
       <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />
     </Button>
