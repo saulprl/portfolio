@@ -7,21 +7,19 @@ import { FaEnvelope } from "react-icons/fa6";
 import { Button } from "../ui/button";
 
 interface SocialLinkProps {
-  variant: "github" | "linkedin" | "email";
+  variant: string;
 }
 
 export const SocialLink: FC<SocialLinkProps> = ({ variant }) => {
-  const socials = {
+  const socials: Record<SocialLinkProps["variant"], JSX.Element> = {
     github: <GitHubLink />,
     linkedin: <LinkedInLink />,
     email: <EmailLink />,
   };
 
-  return (
-    <IconContext.Provider value={{ className: "text-white text-2xl" }}>
-      {socials[variant]}
-    </IconContext.Provider>
-  );
+  if (!socials[variant]) return null;
+
+  return socials[variant];
 };
 
 const GitHubLink = () => {
@@ -53,7 +51,10 @@ const LinkWrapper: FC<LinkProps & HTMLAttributes<HTMLAnchorElement>> = ({
   ...props
 }) => {
   return (
-    <Button asChild className="rounded-none bg-muted p-2">
+    <Button
+      asChild
+      className="rounded-none bg-muted text-sm sm:text-lg md:text-xl"
+    >
       <Link href={href} target="_blank" rel="noopener noreferrer" {...props} />
     </Button>
   );

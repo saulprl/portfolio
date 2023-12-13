@@ -3,6 +3,9 @@ import { buildConfig } from "payload/config";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { slateEditor } from "@payloadcms/richtext-slate";
 import { webpackBundler } from "@payloadcms/bundler-webpack";
+import { MediaCollection } from "./collections/media";
+import { PageCollection } from "./collections/page";
+import { SocialCollection } from "./collections/social";
 
 export default buildConfig({
   db: mongooseAdapter({
@@ -14,6 +17,9 @@ export default buildConfig({
   },
   collections: [
     // Your collections here
+    MediaCollection,
+    PageCollection,
+    SocialCollection,
   ],
   globals: [
     // Your globals here
