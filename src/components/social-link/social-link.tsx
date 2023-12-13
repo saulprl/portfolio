@@ -23,7 +23,7 @@ export const SocialLink: FC<SocialLinkProps> = ({ variant }) => {
 
 const GitHubLink = () => {
   return (
-    <LinkWrapper href="https://github.com/saulprl">
+    <LinkWrapper href="https://github.com/saulprl" aria-label="GitHub profile">
       <FaGithub />
     </LinkWrapper>
   );
@@ -31,7 +31,10 @@ const GitHubLink = () => {
 
 const LinkedInLink = () => {
   return (
-    <LinkWrapper href="https://www.linkedin.com/in/sa%C3%BAl-ramos-labor%C3%ADn-82b8291a1/">
+    <LinkWrapper
+      href="https://www.linkedin.com/in/sa%C3%BAl-ramos-labor%C3%ADn-82b8291a1/"
+      aria-label="LinkedIn profile"
+    >
       <FaLinkedinIn />
     </LinkWrapper>
   );
@@ -39,7 +42,7 @@ const LinkedInLink = () => {
 
 const EmailLink = () => {
   return (
-    <LinkWrapper href="mailto:saulramos378@gmail.com">
+    <LinkWrapper href="mailto:saulramos378@gmail.com" aria-label="Email">
       <FaEnvelope />
     </LinkWrapper>
   );

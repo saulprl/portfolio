@@ -11,7 +11,7 @@ export const Hero = () => {
           Hello, my name is{" "}
           <strong className="font-mono text-primary">Saúl</strong> and I&apos;m
           a{" "}
-          <span className="bg-accent font-mono font-bold text-white">
+          <span className="bg-secondary font-mono font-bold text-white">
             software developer
           </span>
         </h1>
