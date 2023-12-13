@@ -3,7 +3,6 @@ import { FC, HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 import { Card, CardContent } from "../ui/card";
-import { IconContext } from "react-icons";
 
 export const ToolCard: FC<HTMLAttributes<HTMLDivElement>> = ({
   className,
@@ -33,15 +32,13 @@ export const ToolIcon: FC<HTMLAttributes<HTMLDivElement>> = ({
   ...props
 }) => {
   return (
-    <IconContext.Provider value={{ className: "text-muted text-2xl" }}>
-      <div
-        className={cn(
-          "flex items-center justify-center rounded-full bg-white p-2",
-          className,
-        )}
-        {...props}
-      />
-    </IconContext.Provider>
+    <div
+      className={cn(
+        "flex items-center justify-center rounded-full bg-white p-2 text-2xl text-muted",
+        className,
+      )}
+      {...props}
+    />
   );
 };
 

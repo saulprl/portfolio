@@ -1,6 +1,5 @@
 import Link, { LinkProps } from "next/link";
 import { FC, HTMLAttributes } from "react";
-import { IconContext } from "react-icons";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa6";

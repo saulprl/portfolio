@@ -1,7 +1,5 @@
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+"use client";
 
-import { IconContext } from "react-icons";
 import { IoMenu } from "react-icons/io5";
 
 import { Sheet, SheetContent, SheetPortal, SheetTrigger } from "../ui/sheet";
@@ -32,10 +30,7 @@ export const Header = () => {
         </div>
       </header>
       <SheetPortal>
-        <SheetContent
-          side="left"
-          className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}
-        >
+        <SheetContent side="left">
           <Navbar orientation="vertical" />
         </SheetContent>
       </SheetPortal>
