@@ -31,7 +31,7 @@ export const ProjectsSection = () => {
         <ProjectCardContent className="relative h-full w-full">
           <Image
             src="/images/projects/cpc/CPC-cover.png"
-            alt="Cover image for Culto al Perro Café landing page"
+            alt="Cover image for Culto al Perro Café landing page project card"
             fill
             className="fit-cover h-full w-full"
           />
@@ -46,8 +46,8 @@ export const ProjectsSection = () => {
       <ProjectCard className="rounded-2xl">
         <ProjectCardContent className="relative h-full w-full">
           <Image
-            src="https://placehold.co/1080x1080/00C792/FFF.png?text=SISLAB"
-            alt="Placeholder"
+            src="/images/projects/sislab/sislab-cover.png"
+            alt="Cover image for SISLAB project card"
             fill
             className="fit-cover h-full w-full"
           />
@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
         <ProjectCardFooter>
           <CardTitle>SISLAB</CardTitle>
           <CardDescription>
-            Web application for improving workflow and communication within a
+            Full-stack web app for improving workflow and communication within a
             laboratory.
           </CardDescription>
         </ProjectCardFooter>
@@ -63,8 +63,8 @@ export const ProjectsSection = () => {
       <ProjectCard className="rounded-2xl">
         <ProjectCardContent className="relative h-full w-full">
           <Image
-            src="https://placehold.co/1080x1080/7145d6/FFF.png?text=CSI+PRO+POST+GENERATOR"
-            alt="Placeholder"
+            src="/images/projects/post-generator/pg-cover.png"
+            alt="CSI PRO Post Generator project card cover image"
             fill
             className="fit-cover h-full w-full"
           />
@@ -72,7 +72,7 @@ export const ProjectsSection = () => {
         <ProjectCardFooter>
           <CardTitle>CSI PRO Post Generator</CardTitle>
           <CardDescription>
-            Web application that allows creating posters and banners with
+            Web application for the creation of posters and banners with
             predefined guidelines.
           </CardDescription>
         </ProjectCardFooter>
