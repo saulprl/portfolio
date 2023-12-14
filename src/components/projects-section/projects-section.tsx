@@ -30,8 +30,8 @@ export const ProjectsSection = () => {
       <ProjectCard className="rounded-2xl">
         <ProjectCardContent className="relative h-full w-full">
           <Image
-            src="https://placehold.co/1080x1080/F1774C/000000.png?text=CULTO+AL+PERRO+CAFÉ"
-            alt="Placeholder"
+            src="/images/projects/cpc/CPC-cover.png"
+            alt="Cover image for Culto al Perro Café landing page"
             fill
             className="fit-cover h-full w-full"
           />
