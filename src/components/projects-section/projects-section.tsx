@@ -14,7 +14,7 @@ export const ProjectsSection = () => {
       <ProjectCard className="rounded-2xl">
         <ProjectCardContent className="relative h-full w-full">
           <Image
-            src="https://placehold.co/1080x1080/7145d6/FFF.png?text=CSI+PRO+ACCESS"
+            src="/images/projects/csipro-access/access-cover.png"
             alt="Placeholder"
             fill
             className="fit-cover h-full w-full"
