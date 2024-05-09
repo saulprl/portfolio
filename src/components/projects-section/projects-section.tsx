@@ -10,14 +10,14 @@ import { CardDescription, CardTitle } from "../ui/card";
 
 export const ProjectsSection = () => {
   return (
-    <Section className="md:gap-4">
-      <ProjectCard className="rounded-2xl">
-        <ProjectCardContent className="relative h-full w-full">
+    <Section className="md:grid-cols-3 md:gap-2">
+      <ProjectCard>
+        <ProjectCardContent className="relative w-full">
           <Image
             src="/images/projects/csipro-access/access-cover.png"
             alt="Placeholder"
             fill
-            className="fit-cover h-full w-full"
+            className="fit-cover h-full w-full rounded"
           />
         </ProjectCardContent>
         <ProjectCardFooter>
@@ -27,13 +27,13 @@ export const ProjectsSection = () => {
           </CardDescription>
         </ProjectCardFooter>
       </ProjectCard>
-      <ProjectCard className="rounded-2xl">
-        <ProjectCardContent className="relative h-full w-full">
+      <ProjectCard>
+        <ProjectCardContent className="relative w-full">
           <Image
             src="/images/projects/cpc/CPC-cover.png"
             alt="Cover image for Culto al Perro Café landing page project card"
             fill
-            className="fit-cover h-full w-full"
+            className="fit-cover h-full w-full rounded"
           />
         </ProjectCardContent>
         <ProjectCardFooter>
@@ -43,13 +43,13 @@ export const ProjectsSection = () => {
           </CardDescription>
         </ProjectCardFooter>
       </ProjectCard>
-      <ProjectCard className="rounded-2xl">
-        <ProjectCardContent className="relative h-full w-full">
+      <ProjectCard>
+        <ProjectCardContent className="relative w-full">
           <Image
             src="/images/projects/sislab/sislab-cover.png"
             alt="Cover image for SISLAB project card"
             fill
-            className="fit-cover h-full w-full"
+            className="fit-cover h-full w-full rounded"
           />
         </ProjectCardContent>
         <ProjectCardFooter>
@@ -60,13 +60,13 @@ export const ProjectsSection = () => {
           </CardDescription>
         </ProjectCardFooter>
       </ProjectCard>
-      <ProjectCard className="rounded-2xl">
-        <ProjectCardContent className="relative h-full w-full">
+      <ProjectCard>
+        <ProjectCardContent className="relative w-full">
           <Image
             src="/images/projects/post-generator/pg-cover.png"
             alt="CSI PRO Post Generator project card cover image"
             fill
-            className="fit-cover h-full w-full"
+            className="fit-cover h-full w-full rounded"
           />
         </ProjectCardContent>
         <ProjectCardFooter>
