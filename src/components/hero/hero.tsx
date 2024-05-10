@@ -11,7 +11,7 @@ export const Hero = () => {
           Hello, my name is{" "}
           <strong className="font-mono text-primary">Saúl</strong> and I&apos;m
           a{" "}
-          <span className="bg-secondary font-mono font-bold text-white">
+          <span className="bg-primary font-mono font-bold text-background">
             software developer
           </span>
         </h1>
@@ -25,7 +25,7 @@ export const Hero = () => {
           <Contact />
         </div>
       </div>
-      <div className="relative flex h-80 overflow-hidden rounded-md">
+      <div className="relative flex h-80 overflow-hidden rounded-md bg-muted p-2">
         <Image
           src="/images/csipro-access-conf.jpg"
           alt="Saúl Ramos at Encuentro Nacional en ISI 2023"

@@ -12,7 +12,7 @@ export const ToolCard: FC<HTMLAttributes<HTMLDivElement>> = ({
   return (
     <Card
       className={cn(
-        "relative w-full overflow-hidden rounded-md border-2 border-secondary bg-transparent",
+        "relative w-full overflow-hidden rounded-md border-0 bg-muted",
         className,
       )}
       {...props}
@@ -34,7 +34,7 @@ export const ToolIcon: FC<HTMLAttributes<HTMLDivElement>> = ({
   return (
     <div
       className={cn(
-        "flex items-center justify-center rounded-full border-2 border-primary bg-transparent p-2 text-2xl text-primary",
+        "flex items-center justify-center rounded-full bg-primary p-2 text-3xl text-background",
         className,
       )}
       {...props}
@@ -44,7 +44,7 @@ export const ToolIcon: FC<HTMLAttributes<HTMLDivElement>> = ({
 
 export const ToolTitle: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <h3 className="font-mono text-xl font-bold tracking-wide text-secondary">
+    <h3 className="font-mono text-xl font-bold tracking-wide text-background">
       {children}
     </h3>
   );

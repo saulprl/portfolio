@@ -11,7 +11,7 @@ export const ProjectCard: FC<HTMLAttributes<HTMLDivElement>> = ({
   return (
     <Card
       className={cn(
-        "relative flex w-full flex-col gap-4 overflow-hidden rounded-md border-muted bg-muted p-1",
+        "relative flex w-full flex-col gap-2 overflow-hidden rounded-md border-muted bg-muted p-1",
         className,
       )}
       {...props}
@@ -23,7 +23,12 @@ export const ProjectCardContent: FC<HTMLAttributes<HTMLDivElement>> = ({
   className,
   ...props
 }) => {
-  return <CardContent className={cn("h-72 p-0", className)} {...props} />;
+  return (
+    <CardContent
+      className={cn("relative aspect-square w-full p-0", className)}
+      {...props}
+    />
+  );
 };
 
 export const ProjectCardFooter: FC<HTMLAttributes<HTMLDivElement>> = ({
@@ -33,7 +38,22 @@ export const ProjectCardFooter: FC<HTMLAttributes<HTMLDivElement>> = ({
   return (
     <CardFooter
       className={cn(
-        "flex-col items-start gap-2 px-4 pb-2 text-white",
+        "relative flex-col items-start gap-2 px-4 py-2 text-white",
+        className,
+      )}
+      {...props}
+    />
+  );
+};
+
+export const ProjectCardFooterHighlight: FC<HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  ...props
+}) => {
+  return (
+    <span
+      className={cn(
+        "absolute bottom-2 left-1 top-2 w-1 rounded-full bg-background",
         className,
       )}
       {...props}
