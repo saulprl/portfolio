@@ -4,8 +4,13 @@ import { cn } from "@/lib/utils";
 
 import { Card, CardContent } from "../ui/card";
 
-export const ToolCard: FC<HTMLAttributes<HTMLDivElement>> = ({
+interface Props extends HTMLAttributes<HTMLDivElement> {
+  contentClassName?: HTMLAttributes<HTMLDivElement>["className"];
+}
+
+export const ToolCard: FC<Props> = ({
   className,
+  contentClassName,
   children,
   ...props
 }) => {
@@ -18,7 +23,7 @@ export const ToolCard: FC<HTMLAttributes<HTMLDivElement>> = ({
       {...props}
     >
       <CardContent
-        className={cn("flex flex-row items-center gap-4 p-2", className)}
+        className={cn("flex flex-row items-center gap-4 p-2", contentClassName)}
         {...props}
       >
         {children}
