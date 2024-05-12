@@ -29,8 +29,8 @@ export default function AccessPage() {
       <p className="text-center">
         Fully featured security and access-control system.
       </p>
-      <div className="flex w-full flex-col gap-2">
-        <div className="flex w-full flex-col gap-1 rounded border-2 border-muted p-2">
+      <div className="flex w-full flex-col gap-2 md:flex-row-reverse md:items-start">
+        <div className="flex w-full flex-col gap-1 rounded border-2 border-muted p-2 md:basis-1/3">
           <SpecsTitle>Tech stack</SpecsTitle>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
@@ -93,30 +93,26 @@ export default function AccessPage() {
           </div>
           <SpecsTitle>Period</SpecsTitle>
           <p>
-            <b>February 2023</b> -{" "}
-            <b>
-              <i>Present</i>
-            </b>
+            February 2023 - <i>Present</i>
           </p>
         </div>
-      </div>
-      <div>
-        <SpecsTitle>Project Background</SpecsTitle>
-        <p>
-          <MonoHighlight>CSI PRO ACCESS</MonoHighlight> is a{" "}
-          <strong>security and access-control system</strong> developed within
-          the <b>CSI PRO Laboratory</b> in <i>Universidad de Sonora</i>.
-        </p>
-        <p>
-          This project started as an experiment to attempt to build a system
-          that allowed us to open the laboratory&apos;s door without having to
-          use a key, since <b>CSI PRO</b> was steadily growing at the time and
-          we didn&apos;t really have the resources to provide everyone with a
-          key. Additionally, achieving this would make it more convenient to
-          access the laboratory and would provide us with a reliable way of
-          tracking who has entered.
-        </p>
-        {/* <SpecsTitle>First iteration</SpecsTitle>
+        <div className="basis-2/3">
+          <SpecsTitle>Project Background</SpecsTitle>
+          <p>
+            <MonoHighlight>CSI PRO ACCESS</MonoHighlight> is a{" "}
+            <strong>security and access-control system</strong> developed within
+            the <b>CSI PRO Laboratory</b> in <i>Universidad de Sonora</i>.
+          </p>
+          <p>
+            This project started as an experiment to attempt to build a system
+            that allowed us to open the laboratory&apos;s door without having to
+            use a key, since <b>CSI PRO</b> was steadily growing at the time and
+            we didn&apos;t really have the resources to provide everyone with a
+            key. Additionally, achieving this would make it more convenient to
+            access the laboratory and would provide us with a reliable way of
+            tracking who has entered.
+          </p>
+          {/* <SpecsTitle>First iteration</SpecsTitle>
         <p>
           <MonoHighlight>CSI PRO ACCESS</MonoHighlight>&apos; first iteration
           was built by a team that consisted of <b>Javier Chávez</b>,{" "}
@@ -142,114 +138,105 @@ export default function AccessPage() {
           (running on the Raspberry Pi), and the{" "}
           <MonoHighlight>RESTful API</MonoHighlight> previously mentioned.
         </p> */}
-        <SpecsTitle>How it works</SpecsTitle>
-        <p>
-          <MonoHighlight>CSI PRO ACCESS</MonoHighlight> consists of many
-          different scripts and apps. Firstly, a{" "}
-          <MonoHighlight>Python</MonoHighlight> script that handles the user
-          input coming from a keypad and controls the door&apos;s electric lock.
-          The script communicates with a <MonoHighlight>Node.js</MonoHighlight>{" "}
-          RESTful API which, in turn, communicates with the{" "}
-          <MonoHighlight>Firebase</MonoHighlight> services to validate the user
-          input.
-        </p>
-        <p>
-          I developed a <MonoHighlight>Next.js</MonoHighlight> webapp that
-          displays the 20 latest access logs in real-time for us to see from
-          inside the laboratory.
-        </p>
-        <p>
-          After the keypad method was stable, I coded a new{" "}
-          <MonoHighlight>Python</MonoHighlight> script that leveraged{" "}
-          <MonoHighlight>Bluetooth</MonoHighlight> to authenticate and access
-          the lab. To take advantage of it, I developed the{" "}
-          <MonoHighlight>CSI PRO ACCESS</MonoHighlight> mobile app with{" "}
-          <MonoHighlight>Flutter</MonoHighlight> with OAuth authentication via
-          Firebase and a more sophisticated data layer.
-        </p>
-        <p>
-          As the project grew, I decided to migrate the mobile experience to{" "}
-          <MonoHighlight>React Native</MonoHighlight> because I wanted to
-          explore it as a Flutter alternative, leading to providing a better
-          user experience overall. At the same time, I developed a PWA with{" "}
-          <MonoHighlight>Vite</MonoHighlight> for iOS users.
-        </p>
-        <SpecsTitle>App features</SpecsTitle>
-        <ul className="list-inside list-disc">
-          <li>Login with Google or GitHub</li>
-          <li>Real-time access logs</li>
-          <li>Support for multiple rooms</li>
-          <li>Role-based permissions</li>
-          <li>Ability to grant or remove access to specific users</li>
-        </ul>
-        <SpecsTitle>Gallery</SpecsTitle>
-        <Carousel>
-          <CarouselContent>
-            <CarouselItem className="aspect-square">
-              <div className="relative h-full w-full p-2">
-                <Image
-                  src="/images/projects/csipro-access/access-cover.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
-                  fill
-                  className="fit-cover h-full w-full rounded"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="aspect-square">
-              <div className="relative h-full w-full p-2">
-                <Image
-                  src="/images/projects/csipro-access/access-dashboard.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
-                  fill
-                  className="h-full rounded"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="aspect-square">
-              <div className="relative h-full w-full p-2">
-                <Image
-                  src="/images/projects/csipro-access/access-logs.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
-                  fill
-                  className="h-full rounded"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="aspect-square">
-              <div className="relative h-full w-full p-2">
-                <Image
-                  src="/images/projects/csipro-access/access-members.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
-                  fill
-                  className="h-full rounded"
-                />
-              </div>
-            </CarouselItem>
-            <CarouselItem className="aspect-square">
-              <div className="relative h-full w-full p-2">
-                <Image
-                  src="/images/projects/csipro-access/access-requests.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
-                  fill
-                  className="fit-cover h-full rounded"
-                />
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-      {/* <div className="flex w-full items-center justify-center rounded bg-muted md:p-2">
-        <div className="relative aspect-square w-full md:w-1/2 md:max-w-2xl">
-          <Image
-            src="/images/projects/csipro-access/access-cover.png"
-            alt="Cover image for CSI PRO ACCESS project card"
-            fill
-            className="fit-cover h-full w-full rounded"
-          />
+          <SpecsTitle>How it works</SpecsTitle>
+          <p>
+            <MonoHighlight>CSI PRO ACCESS</MonoHighlight> consists of many
+            different scripts and apps. Firstly, a{" "}
+            <MonoHighlight>Python</MonoHighlight> script that handles the user
+            input coming from a keypad and controls the door&apos;s electric
+            lock. The script communicates with a{" "}
+            <MonoHighlight>Node.js</MonoHighlight> RESTful API which, in turn,
+            communicates with the <MonoHighlight>Firebase</MonoHighlight>{" "}
+            services to validate the user input.
+          </p>
+          <p>
+            I developed a <MonoHighlight>Next.js</MonoHighlight> webapp that
+            displays the 20 latest access logs in real-time for us to see from
+            inside the laboratory.
+          </p>
+          <p>
+            After the keypad method was stable, I coded a new{" "}
+            <MonoHighlight>Python</MonoHighlight> script that leveraged{" "}
+            <MonoHighlight>Bluetooth</MonoHighlight> to authenticate and access
+            the lab. To take advantage of it, I developed the{" "}
+            <MonoHighlight>CSI PRO ACCESS</MonoHighlight> mobile app with{" "}
+            <MonoHighlight>Flutter</MonoHighlight> with OAuth authentication via
+            Firebase and a more sophisticated data layer.
+          </p>
+          <p>
+            As the project grew, I decided to migrate the mobile experience to{" "}
+            <MonoHighlight>React Native</MonoHighlight> because I wanted to
+            explore it as a Flutter alternative, leading to providing a better
+            user experience overall. At the same time, I developed a PWA with{" "}
+            <MonoHighlight>Vite</MonoHighlight> for iOS users.
+          </p>
+          <SpecsTitle>App features</SpecsTitle>
+          <ul className="list-inside list-disc">
+            <li>Login with Google or GitHub</li>
+            <li>Real-time access logs</li>
+            <li>Support for multiple rooms</li>
+            <li>Role-based permissions</li>
+            <li>Ability to grant or remove access to specific users</li>
+          </ul>
+          <SpecsTitle>Gallery</SpecsTitle>
+          <Carousel>
+            <CarouselContent>
+              <CarouselItem className="aspect-square md:basis-1/3">
+                <div className="relative h-full w-full p-2 md:p-1">
+                  <Image
+                    src="/images/projects/csipro-access/access-cover.png"
+                    alt="Cover image for CSI PRO ACCESS project card"
+                    fill
+                    className="fit-cover h-full w-full rounded"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="aspect-square md:basis-1/3">
+                <div className="relative h-full w-full p-2 md:p-1">
+                  <Image
+                    src="/images/projects/csipro-access/access-dashboard.png"
+                    alt="Cover image for CSI PRO ACCESS project card"
+                    fill
+                    className="h-full rounded"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="aspect-square md:basis-1/3">
+                <div className="relative h-full w-full p-2 md:p-1">
+                  <Image
+                    src="/images/projects/csipro-access/access-logs.png"
+                    alt="Cover image for CSI PRO ACCESS project card"
+                    fill
+                    className="h-full rounded"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="aspect-square md:basis-1/3">
+                <div className="relative h-full w-full p-2 md:p-1">
+                  <Image
+                    src="/images/projects/csipro-access/access-members.png"
+                    alt="Cover image for CSI PRO ACCESS project card"
+                    fill
+                    className="h-full rounded"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="aspect-square md:basis-1/3">
+                <div className="relative h-full w-full p-2 md:p-1">
+                  <Image
+                    src="/images/projects/csipro-access/access-requests.png"
+                    alt="Cover image for CSI PRO ACCESS project card"
+                    fill
+                    className="fit-cover h-full rounded"
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious variant="default" />
+            <CarouselNext variant="default" />
+          </Carousel>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
