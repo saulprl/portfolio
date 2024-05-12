@@ -160,7 +160,21 @@ export default function AccessPage() {
           <MonoHighlight>Flutter</MonoHighlight> with OAuth authentication via
           Firebase and a more sophisticated data layer.
         </p>
-        <p>As the project grew, I decided to migrate the mobile experience to <MonoHighlight>React Native</MonoHighlight></p>
+        <p>
+          As the project grew, I decided to migrate the mobile experience to{" "}
+          <MonoHighlight>React Native</MonoHighlight> because I wanted to
+          explore it as a Flutter alternative, leading to providing a better
+          user experience overall. At the same time, I developed a PWA with{" "}
+          <MonoHighlight>Vite</MonoHighlight> for iOS users.
+        </p>
+        <SpecsTitle>App features</SpecsTitle>
+        <ul className="list-inside list-disc">
+          <li>Login with Google or GitHub</li>
+          <li>Real-time access logs</li>
+          <li>Support for multiple rooms</li>
+          <li>Role-based permissions</li>
+          <li>Ability to grant or remove access to specific users</li>
+        </ul>
       </div>
       {/* <div className="flex w-full items-center justify-center rounded bg-muted md:p-2">
         <div className="relative aspect-square w-full md:w-1/2 md:max-w-2xl">
