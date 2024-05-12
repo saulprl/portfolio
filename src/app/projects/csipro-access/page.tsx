@@ -1,6 +1,13 @@
 import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
 import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
 import { SectionTitle } from "@/components/section-title/section-title";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FC, HTMLAttributes } from "react";
@@ -175,6 +182,63 @@ export default function AccessPage() {
           <li>Role-based permissions</li>
           <li>Ability to grant or remove access to specific users</li>
         </ul>
+        <SpecsTitle>Gallery</SpecsTitle>
+        <Carousel>
+          <CarouselContent>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2">
+                <Image
+                  src="/images/projects/csipro-access/access-cover.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="fit-cover h-full w-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2">
+                <Image
+                  src="/images/projects/csipro-access/access-dashboard.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="h-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2">
+                <Image
+                  src="/images/projects/csipro-access/access-logs.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="h-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2">
+                <Image
+                  src="/images/projects/csipro-access/access-members.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="h-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2">
+                <Image
+                  src="/images/projects/csipro-access/access-requests.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="fit-cover h-full rounded"
+                />
+              </div>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
       {/* <div className="flex w-full items-center justify-center rounded bg-muted md:p-2">
         <div className="relative aspect-square w-full md:w-1/2 md:max-w-2xl">
