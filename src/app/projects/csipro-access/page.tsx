@@ -1,21 +1,19 @@
+import { Carousel } from "@/components/carousel/carousel";
 import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
+import { H3 } from "@/components/heading/heading";
 import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
 import { SectionTitle } from "@/components/section-title/section-title";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
-import { FC, HTMLAttributes } from "react";
+import Link from "next/link";
+import { FaLink } from "react-icons/fa";
 import {
   SiDart,
   SiExpo,
   SiFirebase,
   SiFlutter,
+  SiGithub,
   SiJavascript,
   SiReact,
   SiTypescript,
@@ -31,7 +29,7 @@ export default function AccessPage() {
       </p>
       <div className="flex w-full flex-col gap-2 md:flex-row-reverse md:items-start">
         <div className="flex w-full flex-col gap-1 rounded border-2 border-muted p-2 md:basis-1/3">
-          <SpecsTitle>Tech stack</SpecsTitle>
+          <H3 mono>Tech stack</H3>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -76,7 +74,7 @@ export default function AccessPage() {
               <ChipLabel>Expo</ChipLabel>
             </Chip>
           </div>
-          <SpecsTitle>Additional technologies</SpecsTitle>
+          <H3 mono>Additional technologies</H3>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -91,13 +89,38 @@ export default function AccessPage() {
               <ChipLabel>Flutter</ChipLabel>
             </Chip>
           </div>
-          <SpecsTitle>Period</SpecsTitle>
+          <H3 mono>Period</H3>
           <p>
             February 2023 - <i>Present</i>
           </p>
+          <H3 mono>Links</H3>
+          <Button asChild>
+            <Link href="https://github.com/CSIPro/native-access">
+              <span className="inline-flex items-center gap-2 text-base">
+                <SiGithub />
+                Mobile app repo
+              </span>
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link href="https://github.com/CSIPro/access-web">
+              <span className="inline-flex items-center gap-2 text-base">
+                <SiGithub />
+                Web app repo
+              </span>
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link href="https://access.csipro.isi.unison.mx">
+              <span className="inline-flex items-center gap-2 text-base">
+                <FaLink />
+                CSI PRO ACCESS
+              </span>
+            </Link>
+          </Button>
         </div>
-        <div className="basis-2/3">
-          <SpecsTitle>Project Background</SpecsTitle>
+        <div className="flex basis-2/3 flex-col gap-2">
+          <H3 mono>Project Background</H3>
           <p>
             <MonoHighlight>CSI PRO ACCESS</MonoHighlight> is a{" "}
             <strong>security and access-control system</strong> developed within
@@ -112,7 +135,7 @@ export default function AccessPage() {
             access the laboratory and would provide us with a reliable way of
             tracking who has entered.
           </p>
-          {/* <SpecsTitle>First iteration</SpecsTitle>
+          {/* <H3 mono>First iteration</H3>
         <p>
           <MonoHighlight>CSI PRO ACCESS</MonoHighlight>&apos; first iteration
           was built by a team that consisted of <b>Javier Chávez</b>,{" "}
@@ -138,7 +161,15 @@ export default function AccessPage() {
           (running on the Raspberry Pi), and the{" "}
           <MonoHighlight>RESTful API</MonoHighlight> previously mentioned.
         </p> */}
-          <SpecsTitle>How it works</SpecsTitle>
+          <H3 mono>App features</H3>
+          <ul className="list-inside list-disc">
+            <li>Login with Google or GitHub</li>
+            <li>Real-time access logs</li>
+            <li>Support for multiple rooms</li>
+            <li>Role-based permissions</li>
+            <li>Ability to grant or remove access to specific users</li>
+          </ul>
+          <H3 mono>How it works</H3>
           <p>
             <MonoHighlight>CSI PRO ACCESS</MonoHighlight> consists of many
             different scripts and apps. Firstly, a{" "}
@@ -170,85 +201,63 @@ export default function AccessPage() {
             user experience overall. At the same time, I developed a PWA with{" "}
             <MonoHighlight>Vite</MonoHighlight> for iOS users.
           </p>
-          <SpecsTitle>App features</SpecsTitle>
-          <ul className="list-inside list-disc">
-            <li>Login with Google or GitHub</li>
-            <li>Real-time access logs</li>
-            <li>Support for multiple rooms</li>
-            <li>Role-based permissions</li>
-            <li>Ability to grant or remove access to specific users</li>
-          </ul>
-          <SpecsTitle>Gallery</SpecsTitle>
-          <Carousel>
-            <CarouselContent>
-              <CarouselItem className="aspect-square md:basis-1/3">
-                <div className="relative h-full w-full p-2 md:p-1">
-                  <Image
-                    src="/images/projects/csipro-access/access-cover.png"
-                    alt="Cover image for CSI PRO ACCESS project card"
-                    fill
-                    className="fit-cover h-full w-full rounded"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="aspect-square md:basis-1/3">
-                <div className="relative h-full w-full p-2 md:p-1">
-                  <Image
-                    src="/images/projects/csipro-access/access-dashboard.png"
-                    alt="Cover image for CSI PRO ACCESS project card"
-                    fill
-                    className="h-full rounded"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="aspect-square md:basis-1/3">
-                <div className="relative h-full w-full p-2 md:p-1">
-                  <Image
-                    src="/images/projects/csipro-access/access-logs.png"
-                    alt="Cover image for CSI PRO ACCESS project card"
-                    fill
-                    className="h-full rounded"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="aspect-square md:basis-1/3">
-                <div className="relative h-full w-full p-2 md:p-1">
-                  <Image
-                    src="/images/projects/csipro-access/access-members.png"
-                    alt="Cover image for CSI PRO ACCESS project card"
-                    fill
-                    className="h-full rounded"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="aspect-square md:basis-1/3">
-                <div className="relative h-full w-full p-2 md:p-1">
-                  <Image
-                    src="/images/projects/csipro-access/access-requests.png"
-                    alt="Cover image for CSI PRO ACCESS project card"
-                    fill
-                    className="fit-cover h-full rounded"
-                  />
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious variant="default" />
-            <CarouselNext variant="default" />
+          <H3 mono>Gallery</H3>
+          <Carousel className="md:w-3/5 md:self-center">
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2 md:p-1">
+                <Image
+                  src="/images/projects/csipro-access/access-cover.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="fit-cover h-full w-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2 md:p-1">
+                <Image
+                  src="/images/projects/csipro-access/access-dashboard.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="h-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2 md:p-1">
+                <Image
+                  src="/images/projects/csipro-access/access-logs.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="h-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2 md:p-1">
+                <Image
+                  src="/images/projects/csipro-access/access-members.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="h-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem className="aspect-square">
+              <div className="relative h-full w-full p-2 md:p-1">
+                <Image
+                  src="/images/projects/csipro-access/access-requests.png"
+                  alt="Cover image for CSI PRO ACCESS project card"
+                  fill
+                  className="fit-cover h-full rounded"
+                />
+              </div>
+            </CarouselItem>
+            {/* <CarouselPrevious variant="default" />
+            <CarouselNext variant="default" /> */}
           </Carousel>
         </div>
       </div>
     </>
   );
 }
-
-const SpecsTitle: FC<HTMLAttributes<HTMLHeadingElement>> = ({
-  className,
-  children,
-  ...props
-}) => {
-  return (
-    <h3 className={cn("font-mono text-lg font-semibold", className)} {...props}>
-      {children}
-    </h3>
-  );
-};
