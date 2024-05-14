@@ -227,7 +227,7 @@ export default function AccessPage() {
                   src="/images/projects/csipro-access/access-cover.png"
                   alt="Cover image for CSI PRO ACCESS project card"
                   fill
-                  className="fit-cover h-full w-full rounded"
+                  className="rounded"
                 />
               </div>
             </CarouselItem>
@@ -235,9 +235,9 @@ export default function AccessPage() {
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
                   src="/images/projects/csipro-access/access-dashboard.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
+                  alt="Screenshot of CSI PRO ACCESS Dashboard screen"
                   fill
-                  className="h-full rounded"
+                  className="rounded"
                 />
               </div>
             </CarouselItem>
@@ -245,9 +245,9 @@ export default function AccessPage() {
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
                   src="/images/projects/csipro-access/access-logs.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
+                  alt="Screenshot of CSI PRO ACCESS Logs screen"
                   fill
-                  className="h-full rounded"
+                  className="rounded"
                 />
               </div>
             </CarouselItem>
@@ -255,9 +255,9 @@ export default function AccessPage() {
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
                   src="/images/projects/csipro-access/access-members.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
+                  alt="Screenshot of CSI PRO ACCESS Members screen for admins"
                   fill
-                  className="h-full rounded"
+                  className="rounded"
                 />
               </div>
             </CarouselItem>
@@ -265,9 +265,9 @@ export default function AccessPage() {
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
                   src="/images/projects/csipro-access/access-requests.png"
-                  alt="Cover image for CSI PRO ACCESS project card"
+                  alt="Screenshot of CSI PRO ACCESS Requests screen for admins"
                   fill
-                  className="fit-cover h-full rounded"
+                  className="rounded"
                 />
               </div>
             </CarouselItem>
