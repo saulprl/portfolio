@@ -1,10 +1,3 @@
-import { Carousel } from "@/components/carousel/carousel";
-import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
-import { H3 } from "@/components/heading/heading";
-import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
-import { SectionTitle } from "@/components/section-title/section-title";
-import { Button } from "@/components/ui/button";
-import { CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLink } from "react-icons/fa";
@@ -20,6 +13,19 @@ import {
   SiVite,
 } from "react-icons/si";
 
+import { Carousel } from "@/components/carousel/carousel";
+import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
+import { H3 } from "@/components/heading/heading";
+import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
+import {
+  ProjectDescriptionSection,
+  ProjectDetails,
+} from "@/components/project-details/project-details";
+import { TechSummary } from "@/components/project-details/tech-summary";
+import { SectionTitle } from "@/components/section-title/section-title";
+import { Button } from "@/components/ui/button";
+import { CarouselItem } from "@/components/ui/carousel";
+
 export default function AccessPage() {
   return (
     <>
@@ -27,8 +33,8 @@ export default function AccessPage() {
       <p className="text-center">
         Fully featured security and access-control system.
       </p>
-      <div className="flex w-full flex-col gap-2 md:flex-row-reverse md:items-start">
-        <div className="flex w-full flex-col gap-1 rounded border-2 border-muted p-2 md:basis-1/3">
+      <ProjectDetails>
+        <TechSummary>
           <H3 mono>Tech stack</H3>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
@@ -118,8 +124,8 @@ export default function AccessPage() {
               </span>
             </Link>
           </Button>
-        </div>
-        <div className="flex basis-2/3 flex-col gap-2">
+        </TechSummary>
+        <ProjectDescriptionSection>
           <H3 mono>Project Background</H3>
           <p>
             <MonoHighlight>CSI PRO ACCESS</MonoHighlight> is a{" "}
@@ -256,8 +262,8 @@ export default function AccessPage() {
             {/* <CarouselPrevious variant="default" />
             <CarouselNext variant="default" /> */}
           </Carousel>
-        </div>
-      </div>
+        </ProjectDescriptionSection>
+      </ProjectDetails>
     </>
   );
 }
