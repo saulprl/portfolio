@@ -11,7 +11,7 @@ export const ProjectCard: FC<HTMLAttributes<HTMLDivElement>> = ({
   return (
     <Card
       className={cn(
-        "relative flex w-full flex-col gap-2 overflow-hidden rounded-md border-muted bg-muted p-1",
+        "group relative flex w-full flex-col gap-2 overflow-hidden rounded-md border-0 bg-muted p-1 transition-all duration-300 hover:brightness-110 focus:brightness-110 active:brightness-110",
         className,
       )}
       {...props}
@@ -53,7 +53,7 @@ export const ProjectCardFooterHighlight: FC<HTMLAttributes<HTMLDivElement>> = ({
   return (
     <span
       className={cn(
-        "absolute bottom-2 left-1 top-2 w-1 rounded-full bg-background",
+        "absolute bottom-2 left-1 top-2 w-1 rounded-full bg-background transition-colors duration-300 group-hover:bg-primary group-focus:bg-primary group-active:bg-primary",
         className,
       )}
       {...props}

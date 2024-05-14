@@ -8,27 +8,30 @@ import {
 } from "../project-card/project-card";
 import { Section } from "../section/section";
 import { CardDescription, CardTitle } from "../ui/card";
+import Link from "next/link";
 
 export const ProjectsSection = () => {
   return (
     <Section className="md:grid-cols-3 md:gap-2">
-      <ProjectCard>
-        <ProjectCardContent>
-          <Image
-            src="/images/projects/csipro-access/access-cover.png"
-            alt="Cover image for CSI PRO ACCESS project card"
-            fill
-            className="fit-cover h-full w-full rounded"
-          />
-        </ProjectCardContent>
-        <ProjectCardFooter>
-          <ProjectCardFooterHighlight className="bg-[#7145d6]" />
-          <CardTitle>CSI PRO ACCESS</CardTitle>
-          <CardDescription>
-            Fully featured security and access-control system.
-          </CardDescription>
-        </ProjectCardFooter>
-      </ProjectCard>
+      <Link href="/projects/csipro-access">
+        <ProjectCard>
+          <ProjectCardContent>
+            <Image
+              src="/images/projects/csipro-access/access-cover.png"
+              alt="Cover image for CSI PRO ACCESS project card"
+              fill
+              className="fit-cover h-full w-full rounded"
+            />
+          </ProjectCardContent>
+          <ProjectCardFooter>
+            <ProjectCardFooterHighlight className="bg-[#7145d6]" />
+            <CardTitle>CSI PRO ACCESS</CardTitle>
+            <CardDescription>
+              Fully featured security and access-control system.
+            </CardDescription>
+          </ProjectCardFooter>
+        </ProjectCard>
+      </Link>
       <ProjectCard>
         <ProjectCardContent>
           <Image
