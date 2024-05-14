@@ -31,7 +31,7 @@ export default function AccessPage() {
     <>
       <SectionTitle>CSI PRO ACCESS</SectionTitle>
       <p className="text-center">
-        Fully featured security and access-control system.
+        Fully featured security and access-control system
       </p>
       <ProjectDetails>
         <TechSummary>
@@ -101,7 +101,11 @@ export default function AccessPage() {
           </p>
           <H3 mono>Links</H3>
           <Button asChild>
-            <Link href="https://github.com/CSIPro/native-access">
+            <Link
+              href="https://github.com/CSIPro/native-access"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="inline-flex items-center gap-2 text-base">
                 <SiGithub />
                 Mobile app repo
@@ -109,7 +113,11 @@ export default function AccessPage() {
             </Link>
           </Button>
           <Button asChild>
-            <Link href="https://github.com/CSIPro/access-web">
+            <Link
+              href="https://github.com/CSIPro/access-web"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="inline-flex items-center gap-2 text-base">
                 <SiGithub />
                 Web app repo
@@ -117,7 +125,11 @@ export default function AccessPage() {
             </Link>
           </Button>
           <Button asChild>
-            <Link href="https://access.csipro.isi.unison.mx">
+            <Link
+              href="https://access.csipro.isi.unison.mx"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="inline-flex items-center gap-2 text-base">
                 <FaLink />
                 CSI PRO ACCESS

@@ -32,23 +32,25 @@ export const ProjectsSection = () => {
           </ProjectCardFooter>
         </ProjectCard>
       </Link>
-      <ProjectCard>
-        <ProjectCardContent>
-          <Image
-            src="/images/projects/cpc/CPC-cover.png"
-            alt="Cover image for Culto al Perro Café landing page project card"
-            fill
-            className="fit-cover h-full w-full rounded"
-          />
-        </ProjectCardContent>
-        <ProjectCardFooter>
-          <ProjectCardFooterHighlight className="bg-[#f0774e]" />
-          <CardTitle>PERRO.CAFE</CardTitle>
-          <CardDescription>
-            Culto al Perro Café landing page integrated with Shopify.
-          </CardDescription>
-        </ProjectCardFooter>
-      </ProjectCard>
+      <Link href="/projects/cpc">
+        <ProjectCard>
+          <ProjectCardContent>
+            <Image
+              src="/images/projects/cpc/CPC-cover.png"
+              alt="Cover image for Culto al Perro Café landing page project card"
+              fill
+              className="fit-cover h-full w-full rounded"
+            />
+          </ProjectCardContent>
+          <ProjectCardFooter>
+            <ProjectCardFooterHighlight className="bg-[#f0774e]" />
+            <CardTitle>PERRO.CAFE</CardTitle>
+            <CardDescription>
+              Culto al Perro Café landing page integrated with Shopify.
+            </CardDescription>
+          </ProjectCardFooter>
+        </ProjectCard>
+      </Link>
       <ProjectCard>
         <ProjectCardContent>
           <Image
