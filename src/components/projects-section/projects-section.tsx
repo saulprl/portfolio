@@ -51,24 +51,26 @@ export const ProjectsSection = () => {
           </ProjectCardFooter>
         </ProjectCard>
       </Link>
-      <ProjectCard>
-        <ProjectCardContent>
-          <Image
-            src="/images/projects/sislab/sislab-cover.png"
-            alt="Cover image for SISLAB project card"
-            fill
-            className="fit-cover h-full w-full rounded"
-          />
-        </ProjectCardContent>
-        <ProjectCardFooter>
-          <ProjectCardFooterHighlight className="bg-[#00c892]" />
-          <CardTitle>SISLAB</CardTitle>
-          <CardDescription>
-            Full-stack web app for improving workflow and communication within a
-            laboratory.
-          </CardDescription>
-        </ProjectCardFooter>
-      </ProjectCard>
+      <Link href="/projects/sislab">
+        <ProjectCard>
+          <ProjectCardContent>
+            <Image
+              src="/images/projects/sislab/sislab-cover.png"
+              alt="Cover image for SISLAB project card"
+              fill
+              className="fit-cover h-full w-full rounded"
+            />
+          </ProjectCardContent>
+          <ProjectCardFooter>
+            <ProjectCardFooterHighlight className="bg-[#00c892]" />
+            <CardTitle>SISLAB</CardTitle>
+            <CardDescription>
+              Full-stack web app for improving workflow and communication within
+              a laboratory.
+            </CardDescription>
+          </ProjectCardFooter>
+        </ProjectCard>
+      </Link>
       <Link href="/projects/post-generator">
         <ProjectCard>
           <ProjectCardContent>
