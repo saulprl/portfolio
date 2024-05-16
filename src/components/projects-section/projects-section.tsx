@@ -69,24 +69,26 @@ export const ProjectsSection = () => {
           </CardDescription>
         </ProjectCardFooter>
       </ProjectCard>
-      <ProjectCard>
-        <ProjectCardContent>
-          <Image
-            src="/images/projects/post-generator/pg-cover.png"
-            alt="CSI PRO Post Generator project card cover image"
-            fill
-            className="fit-cover h-full w-full rounded"
-          />
-        </ProjectCardContent>
-        <ProjectCardFooter>
-          <ProjectCardFooterHighlight className="bg-[#7145d6]" />
-          <CardTitle>CSI PRO Post Generator</CardTitle>
-          <CardDescription>
-            Web application for the creation of posters and banners with
-            predefined guidelines.
-          </CardDescription>
-        </ProjectCardFooter>
-      </ProjectCard>
+      <Link href="/projects/post-generator">
+        <ProjectCard>
+          <ProjectCardContent>
+            <Image
+              src="/images/projects/post-generator/pg-cover.png"
+              alt="CSI PRO Post Generator project card cover image"
+              fill
+              className="fit-cover h-full w-full rounded"
+            />
+          </ProjectCardContent>
+          <ProjectCardFooter>
+            <ProjectCardFooterHighlight className="bg-[#7145d6]" />
+            <CardTitle>CSI PRO Post Generator</CardTitle>
+            <CardDescription>
+              Web application for the creation of posters and banners with
+              predefined guidelines.
+            </CardDescription>
+          </ProjectCardFooter>
+        </ProjectCard>
+      </Link>
     </Section>
   );
 };

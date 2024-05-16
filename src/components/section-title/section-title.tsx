@@ -10,7 +10,7 @@ export const SectionTitle: FC<Props> = ({ children, className }) => {
   return (
     <h2
       className={cn(
-        "rounded border-2 border-muted bg-primary px-2 py-1 font-mono text-3xl font-semibold tracking-wide text-background",
+        "rounded border-2 border-muted bg-primary px-2 py-1 text-center font-mono text-3xl font-semibold tracking-wide text-background",
         className,
       )}
     >
