@@ -16,6 +16,7 @@ export const Navbar: FC<Props> = ({ orientation = "horizontal" }) => {
   return (
     <NavigationMenu orientation={orientation}>
       <NavigationMenuList>
+        {orientation === "vertical" ? <div className="py-2"></div> : null}
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
