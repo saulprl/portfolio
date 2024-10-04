@@ -153,32 +153,6 @@ export default function AccessPage() {
             access the laboratory and would provide us with a reliable way of
             tracking who has entered.
           </p>
-          {/* <H3 mono>First iteration</H3>
-        <p>
-          <MonoHighlight>CSI PRO ACCESS</MonoHighlight>&apos; first iteration
-          was built by a team that consisted of <b>Javier Chávez</b>,{" "}
-          <b>Enrique Córdova</b>, <b>Mariel Cota</b>, <b>Brandon Pérez</b>, and{" "}
-          <i>me</i>. We leveraged a microcontroller to build a keypad from
-          scratch, as well as a <b>Raspberry Pi</b> to control the door&apos;s
-          electric lock.
-        </p>
-        <p>
-          My teammates were mainly involved in the hardware side of the project,
-          while I focused more on the software. I leveraged my experience with{" "}
-          <MonoHighlight>Firebase</MonoHighlight> and{" "}
-          <MonoHighlight>Node.js</MonoHighlight> to build a{" "}
-          <MonoHighlight>RESTful API</MonoHighlight> in order to securely
-          interact with the database, which would store all user data such as
-          name and access passcode.
-        </p>
-        <p>
-          By the end of February 2023, we got the whole system working. It
-          consisted of a <MonoHighlight>CLI</MonoHighlight> app I created for
-          adding users, a <MonoHighlight>Next.js</MonoHighlight> app to display
-          the access logs in real time, a script that validates the user input
-          (running on the Raspberry Pi), and the{" "}
-          <MonoHighlight>RESTful API</MonoHighlight> previously mentioned.
-        </p> */}
           <H3 mono>App features</H3>
           <ul className="list-inside list-disc">
             <li>Login with Google or GitHub</li>
@@ -215,9 +189,10 @@ export default function AccessPage() {
           <p>
             As the project grew, I decided to migrate the mobile experience to{" "}
             <MonoHighlight>React Native</MonoHighlight> because I wanted to
-            explore it as a Flutter alternative, leading to providing a better
-            user experience overall. At the same time, I developed a PWA with{" "}
-            <MonoHighlight>Vite</MonoHighlight> for iOS users.
+            explore it as a <MonoHighlight>Flutter</MonoHighlight> alternative,
+            leading to providing a better user experience overall. At the same
+            time, I developed a PWA with <MonoHighlight>Vite</MonoHighlight> for
+            iOS users.
           </p>
           <H3 mono>Gallery</H3>
           <Carousel className="md:w-3/5 md:self-center">
