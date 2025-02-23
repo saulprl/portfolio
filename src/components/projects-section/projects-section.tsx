@@ -17,7 +17,7 @@ export const ProjectsSection = () => {
         <ProjectCard>
           <ProjectCardContent>
             <Image
-              src="/images/projects/csipro-access/access-cover.png"
+              src="/images/projects/csipro-access/access-cover.webp"
               alt="Cover image for CSI PRO ACCESS project card"
               fill
               className="fit-cover h-full w-full rounded"
@@ -36,7 +36,7 @@ export const ProjectsSection = () => {
         <ProjectCard>
           <ProjectCardContent>
             <Image
-              src="/images/projects/cpc/CPC-cover.png"
+              src="/images/projects/cpc/CPC-cover.webp"
               alt="Cover image for Culto al Perro Café landing page project card"
               fill
               className="fit-cover h-full w-full rounded"
@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
         <ProjectCard>
           <ProjectCardContent>
             <Image
-              src="/images/projects/sislab/sislab-cover.png"
+              src="/images/projects/sislab/sislab-cover.webp"
               alt="Cover image for SISLAB project card"
               fill
               className="fit-cover h-full w-full rounded"
@@ -75,7 +75,7 @@ export const ProjectsSection = () => {
         <ProjectCard>
           <ProjectCardContent>
             <Image
-              src="/images/projects/post-generator/pg-cover.png"
+              src="/images/projects/post-generator/pg-cover.webp"
               alt="CSI PRO Post Generator project card cover image"
               fill
               className="fit-cover h-full w-full rounded"

@@ -105,7 +105,7 @@ export default function PostGenerator() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/post-generator/pg-cover.png"
+                  src="/images/projects/post-generator/pg-cover.webp"
                   alt="Cover image for CSI PRO Post Generator project card"
                   fill
                   className="rounded"
@@ -115,7 +115,7 @@ export default function PostGenerator() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/post-generator/pg-landing-m.png"
+                  src="/images/projects/post-generator/pg-landing-m.webp"
                   alt="CSI PRO Post Generator's main screen on mobile"
                   fill
                   className="rounded"
@@ -125,7 +125,7 @@ export default function PostGenerator() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/post-generator/pg-templates-m.png"
+                  src="/images/projects/post-generator/pg-templates-m.webp"
                   alt="CSI PRO Post Generator's template selection on mobile"
                   fill
                   className="rounded"
@@ -135,7 +135,7 @@ export default function PostGenerator() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/post-generator/pg-poster-m.png"
+                  src="/images/projects/post-generator/pg-poster-m.webp"
                   alt="CSI PRO Post Generator's Poster on mobile"
                   fill
                   className="rounded"
@@ -145,7 +145,7 @@ export default function PostGenerator() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/post-generator/pg-posterrev-m.png"
+                  src="/images/projects/post-generator/pg-posterrev-m.webp"
                   alt="CSI PRO Post Generator's Poster 2.0 on mobile"
                   fill
                   className="rounded"
@@ -155,7 +155,7 @@ export default function PostGenerator() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/post-generator/pg-templates-d.png"
+                  src="/images/projects/post-generator/pg-templates-d.webp"
                   alt="CSI PRO Post Generator's template selection on desktop"
                   fill
                   className="rounded"
@@ -165,7 +165,7 @@ export default function PostGenerator() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/post-generator/pg-poster-d.png"
+                  src="/images/projects/post-generator/pg-poster-d.webp"
                   alt="CSI PRO Post Generator's Poster on desktop"
                   fill
                   className="rounded"
@@ -175,7 +175,7 @@ export default function PostGenerator() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/post-generator/pg-posterrev-d.png"
+                  src="/images/projects/post-generator/pg-posterrev-d.webp"
                   alt="CSI PRO Post Generator's Poster 2.0 on desktop"
                   fill
                   className="rounded"

@@ -151,7 +151,7 @@ export default function Sislab() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/sislab/sislab-cover.png"
+                  src="/images/projects/sislab/sislab-cover.webp"
                   alt="Cover image for SISLAB project card"
                   fill
                   className="rounded"
@@ -161,7 +161,7 @@ export default function Sislab() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/sislab/sislab-newreq-m.png"
+                  src="/images/projects/sislab/sislab-newreq-m.webp"
                   alt="Screenshot of CSI PRO ACCESS Dashboard screen"
                   fill
                   className="rounded"
@@ -171,7 +171,7 @@ export default function Sislab() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/sislab/sislab-form-m.png"
+                  src="/images/projects/sislab/sislab-form-m.webp"
                   alt="Screenshot of CSI PRO ACCESS Logs screen"
                   fill
                   className="rounded"
@@ -181,7 +181,7 @@ export default function Sislab() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/sislab/sislab-login-d.png"
+                  src="/images/projects/sislab/sislab-login-d.webp"
                   alt="Screenshot of CSI PRO ACCESS Members screen for admins"
                   fill
                   className="rounded"
@@ -191,7 +191,7 @@ export default function Sislab() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/sislab/sislab-requests-d.png"
+                  src="/images/projects/sislab/sislab-requests-d.webp"
                   alt="Screenshot of CSI PRO ACCESS Requests screen for admins"
                   fill
                   className="rounded"
@@ -201,7 +201,7 @@ export default function Sislab() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/sislab/sislab-users-d.png"
+                  src="/images/projects/sislab/sislab-users-d.webp"
                   alt="Screenshot of CSI PRO ACCESS Requests screen for admins"
                   fill
                   className="rounded"

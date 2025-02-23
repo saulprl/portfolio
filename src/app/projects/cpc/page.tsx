@@ -140,7 +140,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/CPC-cover.png"
+                  src="/images/projects/cpc/CPC-cover.webp"
                   alt="Cover image for Culto al Perro Café landing page project card"
                   fill
                   className="rounded"
@@ -150,7 +150,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/cpc-landing-m.png"
+                  src="/images/projects/cpc/cpc-landing-m.webp"
                   alt="Screenshot of Culto al Perro Café landing page on mobile"
                   fill
                   className="rounded"
@@ -160,7 +160,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/cpc-menu-m.png"
+                  src="/images/projects/cpc/cpc-menu-m.webp"
                   alt="Screenshot of Culto al Perro Café Menu section on mobile"
                   fill
                   className="rounded"
@@ -170,7 +170,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/cpc-cult-m.png"
+                  src="/images/projects/cpc/cpc-cult-m.webp"
                   alt="Screenshot of Culto al Perro Café Cult section on mobile"
                   fill
                   className="rounded"
@@ -180,7 +180,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/cpc-footer-m.png"
+                  src="/images/projects/cpc/cpc-footer-m.webp"
                   alt="Screenshot of Culto al Perro Café footer on mobile"
                   fill
                   className="rounded"
@@ -190,7 +190,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/cpc-landing-d.png"
+                  src="/images/projects/cpc/cpc-landing-d.webp"
                   alt="Screenshot of Culto al Perro Café landing page on desktop"
                   fill
                   className="rounded"
@@ -200,7 +200,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/cpc-cult-d.png"
+                  src="/images/projects/cpc/cpc-cult-d.webp"
                   alt="Screenshot of Culto al Perro Café Cult section on desktop"
                   fill
                   className="rounded"
@@ -210,7 +210,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/cpc-temple-d.png"
+                  src="/images/projects/cpc/cpc-temple-d.webp"
                   alt="Screenshot of Culto al Perro Café Temple section on desktop"
                   fill
                   className="rounded"
@@ -220,7 +220,7 @@ export default function CPC() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/cpc/cpc-footer-d.png"
+                  src="/images/projects/cpc/cpc-footer-d.webp"
                   alt="Screenshot of Culto al Perro Café footer on desktop"
                   fill
                   className="rounded"

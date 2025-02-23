@@ -11,6 +11,7 @@ export default function Home() {
       <ProjectsSection />
       <SectionTitle>Frameworks & Tools</SectionTitle>
       <ToolsSection />
+      <div className="py-1" />
     </>
   );
 }

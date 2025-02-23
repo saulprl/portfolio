@@ -199,7 +199,7 @@ export default function AccessPage() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/csipro-access/access-cover.png"
+                  src="/images/projects/csipro-access/access-cover.webp"
                   alt="Cover image for CSI PRO ACCESS project card"
                   fill
                   className="rounded"
@@ -209,7 +209,7 @@ export default function AccessPage() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/csipro-access/access-dashboard.png"
+                  src="/images/projects/csipro-access/access-dashboard.webp"
                   alt="Screenshot of CSI PRO ACCESS Dashboard screen"
                   fill
                   className="rounded"
@@ -219,7 +219,7 @@ export default function AccessPage() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/csipro-access/access-logs.png"
+                  src="/images/projects/csipro-access/access-logs.webp"
                   alt="Screenshot of CSI PRO ACCESS Logs screen"
                   fill
                   className="rounded"
@@ -229,7 +229,7 @@ export default function AccessPage() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/csipro-access/access-members.png"
+                  src="/images/projects/csipro-access/access-members.webp"
                   alt="Screenshot of CSI PRO ACCESS Members screen for admins"
                   fill
                   className="rounded"
@@ -239,7 +239,7 @@ export default function AccessPage() {
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">
                 <Image
-                  src="/images/projects/csipro-access/access-requests.png"
+                  src="/images/projects/csipro-access/access-requests.webp"
                   alt="Screenshot of CSI PRO ACCESS Requests screen for admins"
                   fill
                   className="rounded"
