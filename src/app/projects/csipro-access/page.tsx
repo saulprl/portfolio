@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   keywords:
     "csi pro access, security, access-control, csi pro, unison, universidad de sonora, web development, mobile development, software development, react, vite, firebase, flutter, react native, dart, javascript, typescript",
   openGraph: {
-    images: "/images/projects/access/access-cover.png",
+    images: "/images/projects/csipro-access/access-cover.png",
     title: "CSI PRO Access | saulprl's portfolio",
     description: "Fully featured security and access-control system",
   },
