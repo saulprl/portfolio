@@ -1,6 +1,6 @@
 import { Carousel } from "@/components/carousel/carousel";
 import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
-import { H3 } from "@/components/heading/heading";
+import { H2 } from "@/components/heading/heading";
 import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
 import {
   ProjectDescriptionSection,
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
 export default function PostGenerator() {
   return (
     <>
-      <SectionTitle>CSI PRO Post Generator</SectionTitle>
+      <SectionTitle as="h1">CSI PRO Post Generator</SectionTitle>
       <p className="text-center">
         Web application for the creation of posters and banners with predefined
         guidelines.
       </p>
       <ProjectDetails>
         <TechSummary>
-          <H3 mono>Tech stack</H3>
+          <H2 mono>Tech stack</H2>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -60,9 +60,9 @@ export default function PostGenerator() {
               <ChipLabel>Next.js</ChipLabel>
             </Chip>
           </div>
-          <H3 mono>Period</H3>
+          <H2 mono>Period</H2>
           <span>August 2023 - September 2023</span>
-          <H3 mono>Links</H3>
+          <H2 mono>Links</H2>
           <Button asChild>
             <Link
               href="https://github.com/CSIPro/post-generator"
@@ -77,7 +77,7 @@ export default function PostGenerator() {
           </Button>
         </TechSummary>
         <ProjectDescriptionSection>
-          <H3 mono>Project Background</H3>
+          <H2 mono>Project Background</H2>
           <p>
             <MonoHighlight>CSI PRO Post Generator</MonoHighlight> is a web
             application created to aid <b>CSI PRO</b>&apos;s marketing team in
@@ -86,14 +86,14 @@ export default function PostGenerator() {
             but we decided to remake it from scratch given the significant
             changes made to the laboratory&apos;s branding.
           </p>
-          <H3 mono>Features</H3>
+          <H2 mono>Features</H2>
           <ul className="list-inside list-disc">
             <li>Creation of posters with predefined design guidelines</li>
             <li>Template selection</li>
             <li>Addition of custom assets</li>
             <li>High quality downloads for created images</li>
           </ul>
-          <H3 mono>How it works</H3>
+          <H2 mono>How it works</H2>
           <p>
             Although <MonoHighlight>Post Generator</MonoHighlight> was developed
             with <MonoHighlight>Next.js</MonoHighlight>, it mostly behaves as a
@@ -113,7 +113,7 @@ export default function PostGenerator() {
             The poster&apos;s output resolution depends on the original
             template, usually being <strong>1080x1080</strong>.
           </p>
-          <H3 mono>Gallery</H3>
+          <H2 mono>Gallery</H2>
           <Carousel className="md:w-3/5 md:self-center">
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">

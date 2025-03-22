@@ -57,7 +57,7 @@ export const ProjectsSection = () => {
           <ProjectCardContent>
             <Image
               src="/images/projects/cpc/CPC-cover.webp"
-              alt="Cover image for Culto al Perro Café landing page project card"
+              alt="Cover image for Culto al Perro Café storefront project card"
               fill
               className="fit-cover h-full w-full rounded"
             />
@@ -66,7 +66,7 @@ export const ProjectsSection = () => {
             <ProjectCardFooterHighlight className="bg-[#f0774e]" />
             <CardTitle>PERRO.CAFE</CardTitle>
             <CardDescription>
-              Culto al Perro Café landing page integrated with Shopify.
+              Culto al Perro Café storefront integrated with Shopify.
             </CardDescription>
           </ProjectCardFooter>
         </ProjectCard>

@@ -13,7 +13,7 @@ import {
 
 import { Carousel } from "@/components/carousel/carousel";
 import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
-import { H3 } from "@/components/heading/heading";
+import { H2 } from "@/components/heading/heading";
 import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
 import {
   ProjectDescriptionSection,
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
 export default function UmanaPage() {
   return (
     <>
-      <SectionTitle>UMANA APP</SectionTitle>
+      <SectionTitle as="h1">UMANA APP</SectionTitle>
       <p className="text-center">
         A mobile fitness app with on-demand workout videos for subscribed users.
       </p>
       <ProjectDetails>
         <TechSummary>
-          <H3 mono>Tech stack</H3>
+          <H2 mono>Tech stack</H2>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -82,7 +82,7 @@ export default function UmanaPage() {
               <ChipLabel>Vue.js</ChipLabel>
             </Chip>
           </div>
-          <H3 mono>Additional technologies</H3>
+          <H2 mono>Additional technologies</H2>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -97,9 +97,9 @@ export default function UmanaPage() {
               <ChipLabel>MySQL</ChipLabel>
             </Chip>
           </div>
-          <H3 mono>Period</H3>
+          <H2 mono>Period</H2>
           <span>October 2024 - January 2025</span>
-          <H3 mono>Links</H3>
+          <H2 mono>Links</H2>
           <Button asChild>
             <Link
               href="https://umana.com.mx"
@@ -138,7 +138,7 @@ export default function UmanaPage() {
           </Button>
         </TechSummary>
         <ProjectDescriptionSection>
-          <H3 mono>Project Background</H3>
+          <H2 mono>Project Background</H2>
           <p>
             <MonoHighlight>Umana</MonoHighlight> is a{" "}
             <strong>fitness app</strong> that provides a structured approach to
@@ -154,7 +154,7 @@ export default function UmanaPage() {
             stay engaged through interactive features like comments, likes, and
             live chat.
           </p>
-          <H3 mono>App features</H3>
+          <H2 mono>App features</H2>
           <ul className="list-inside list-disc">
             <li>
               <strong>Structured programs</strong> with sessions and multiple
@@ -185,7 +185,7 @@ export default function UmanaPage() {
               <strong>Like feature</strong> for programs, recipes, and classes
             </li>
           </ul>
-          <H3 mono>How it works</H3>
+          <H2 mono>How it works</H2>
           <p>
             Built with Flutter, <MonoHighlight>Umana</MonoHighlight> delivers{" "}
             <strong>high-quality video content via the Vimeo API</strong>.{" "}
@@ -208,7 +208,7 @@ export default function UmanaPage() {
             devices. With its seamless cross-platform experience, users can
             enjoy their workouts anytime, anywhere.
           </p>
-          <H3 mono>Gallery</H3>
+          <H2 mono>Gallery</H2>
           <Carousel className="md:w-3/5 md:self-center">
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">

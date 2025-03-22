@@ -12,7 +12,7 @@ import {
 
 import { Carousel } from "@/components/carousel/carousel";
 import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
-import { H3 } from "@/components/heading/heading";
+import { H2 } from "@/components/heading/heading";
 import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
 import {
   ProjectDescriptionSection,
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
 export default function Sislab() {
   return (
     <>
-      <SectionTitle>SISLAB</SectionTitle>
+      <SectionTitle as="h1">SISLAB</SectionTitle>
       <p className="text-center">
         Full-stack web app for improving workflow and communication within a
         laboratory
       </p>
       <ProjectDetails>
         <TechSummary>
-          <H3 mono>Tech stack</H3>
+          <H2 mono>Tech stack</H2>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -81,9 +81,9 @@ export default function Sislab() {
               <ChipLabel>MongoDB</ChipLabel>
             </Chip>
           </div>
-          <H3 mono>Period</H3>
+          <H2 mono>Period</H2>
           <span>February 2023 - July 2023</span>
-          <H3 mono>Links</H3>
+          <H2 mono>Links</H2>
           <Button asChild>
             <Link
               href="https://github.com/Sislab-Developers/sislab-frontend"
@@ -122,7 +122,7 @@ export default function Sislab() {
           </Button>
         </TechSummary>
         <ProjectDescriptionSection>
-          <H3 mono>Project Background</H3>
+          <H2 mono>Project Background</H2>
           <p>
             <MonoHighlight>SISLAB</MonoHighlight> is a{" "}
             <strong>full stack web application</strong> developed by{" "}
@@ -132,7 +132,7 @@ export default function Sislab() {
             <b>laboratory staff and professors</b> to organize and keep track of
             the activities carried out.
           </p>
-          <H3 mono>Features</H3>
+          <H2 mono>Features</H2>
           <ul className="list-inside list-disc">
             <li>
               User authentication and authorization with{" "}
@@ -146,7 +146,7 @@ export default function Sislab() {
             <li>User management for staff</li>
             <li>Export requests to PDF</li>
           </ul>
-          <H3 mono>Development</H3>
+          <H2 mono>Development</H2>
           <p>
             <MonoHighlight>SISLAB</MonoHighlight> was developed with{" "}
             <MonoHighlight>Vite</MonoHighlight> and{" "}
@@ -161,7 +161,7 @@ export default function Sislab() {
             <strong>Department of Chemical-Biological Sciences</strong> to
             ensure that they&apos;d get exactly the tool they needed.
           </p>
-          <H3 mono>Gallery</H3>
+          <H2 mono>Gallery</H2>
           <Carousel className="md:w-3/5 md:self-center">
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">

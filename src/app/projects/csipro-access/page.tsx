@@ -15,7 +15,7 @@ import {
 
 import { Carousel } from "@/components/carousel/carousel";
 import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
-import { H3 } from "@/components/heading/heading";
+import { H2 } from "@/components/heading/heading";
 import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
 import {
   ProjectDescriptionSection,
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
 export default function AccessPage() {
   return (
     <>
-      <SectionTitle>CSI PRO ACCESS</SectionTitle>
+      <SectionTitle as="h1">CSI PRO ACCESS</SectionTitle>
       <p className="text-center">
         Fully featured security and access-control system
       </p>
       <ProjectDetails>
         <TechSummary>
-          <H3 mono>Tech stack</H3>
+          <H2 mono>Tech stack</H2>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -93,7 +93,7 @@ export default function AccessPage() {
               <ChipLabel>Expo</ChipLabel>
             </Chip>
           </div>
-          <H3 mono>Additional technologies</H3>
+          <H2 mono>Additional technologies</H2>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -108,11 +108,11 @@ export default function AccessPage() {
               <ChipLabel>Flutter</ChipLabel>
             </Chip>
           </div>
-          <H3 mono>Period</H3>
+          <H2 mono>Period</H2>
           <span>
             February 2023 - <i>Present</i>
           </span>
-          <H3 mono>Links</H3>
+          <H2 mono>Links</H2>
           <Button asChild>
             <Link
               href="https://github.com/CSIPro/native-access"
@@ -151,7 +151,7 @@ export default function AccessPage() {
           </Button>
         </TechSummary>
         <ProjectDescriptionSection>
-          <H3 mono>Project Background</H3>
+          <H2 mono>Project Background</H2>
           <p>
             <MonoHighlight>CSI PRO ACCESS</MonoHighlight> is a{" "}
             <strong>security and access-control system</strong> developed within
@@ -166,7 +166,7 @@ export default function AccessPage() {
             access the laboratory and would provide us with a reliable way of
             tracking who has entered.
           </p>
-          <H3 mono>App features</H3>
+          <H2 mono>App features</H2>
           <ul className="list-inside list-disc">
             <li>Login with Google or GitHub</li>
             <li>Real-time access logs</li>
@@ -174,7 +174,7 @@ export default function AccessPage() {
             <li>Role-based permissions</li>
             <li>Ability to grant or remove access to specific users</li>
           </ul>
-          <H3 mono>How it works</H3>
+          <H2 mono>How it works</H2>
           <p>
             <MonoHighlight>CSI PRO ACCESS</MonoHighlight> consists of many
             different scripts and apps. Firstly, a{" "}
@@ -207,7 +207,7 @@ export default function AccessPage() {
             time, I developed a PWA with <MonoHighlight>Vite</MonoHighlight> for
             iOS users.
           </p>
-          <H3 mono>Gallery</H3>
+          <H2 mono>Gallery</H2>
           <Carousel className="md:w-3/5 md:self-center">
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">

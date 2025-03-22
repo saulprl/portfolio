@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <SectionTitle>Projects</SectionTitle>
+      <SectionTitle as="h1">Projects</SectionTitle>
       <ProjectsSection />
     </>
   );

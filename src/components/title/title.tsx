@@ -9,9 +9,9 @@ export const Title: FC<HTMLAttributes<HTMLDivElement>> = ({
 }) => (
   <Link href="/">
     <span className={cn("text-start", className)} {...props}>
-      <h1 className="relative font-sans text-lg font-medium text-white after:absolute after:-bottom-1 after:left-0 after:w-2/5 after:rounded-full after:border-2 after:border-primary after:transition-all after:duration-700 after:ease-in-out after:hover:w-4/5 after:focus:w-4/5">
+      <span className="relative font-sans text-lg font-medium text-white after:absolute after:-bottom-1 after:left-0 after:w-2/5 after:rounded-full after:border-2 after:border-primary after:transition-all after:duration-700 after:ease-in-out after:hover:w-4/5 after:focus:w-4/5">
         saulprl&apos;s portfolio
-      </h1>
+      </span>
     </span>
   </Link>
 );

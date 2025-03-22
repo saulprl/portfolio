@@ -1,6 +1,6 @@
 import { Carousel } from "@/components/carousel/carousel";
 import { Chip, ChipIcon, ChipLabel } from "@/components/chip/chip";
-import { H3 } from "@/components/heading/heading";
+import { H2 } from "@/components/heading/heading";
 import { MonoHighlight } from "@/components/mono-highlight/mono-highlight";
 import {
   ProjectDescriptionSection,
@@ -25,26 +25,26 @@ import {
 
 export const metadata: Metadata = {
   title: "Culto al Perro Café | saulprl's portfolio",
-  description: "Culto al Perro Café landing page integrated with Shopify",
+  description: "Culto al Perro Café storefront integrated with Shopify",
   keywords:
-    "cpc, culto al perro cafe, landing page, web development, software development, react, remix.run, shopify, hydrogen, typescript, graphql",
+    "cpc, culto al perro cafe, storefront, web development, software development, react, remix.run, shopify, hydrogen, typescript, graphql",
   openGraph: {
     images: "/images/projects/cpc/CPC-cover.png",
     title: "Culto al Perro Café | saulprl's portfolio",
-    description: "Culto al Perro Café landing page integrated with Shopify",
+    description: "Culto al Perro Café storefront integrated with Shopify",
   },
 };
 
 export default function CPC() {
   return (
     <>
-      <SectionTitle>Culto al Perro Café</SectionTitle>
+      <SectionTitle as="h1">Culto al Perro Café</SectionTitle>
       <p className="text-center">
-        Culto al Perro Café landing page integrated with Shopify
+        Culto al Perro Café storefront integrated with Shopify
       </p>
       <ProjectDetails>
         <TechSummary>
-          <H3 mono>Tech stack</H3>
+          <H2 mono>Tech stack</H2>
           <div className="flex w-full flex-wrap items-center gap-1">
             <Chip>
               <ChipIcon>
@@ -77,9 +77,9 @@ export default function CPC() {
               <ChipLabel>GraphQL</ChipLabel>
             </Chip>
           </div>
-          <H3 mono>Period</H3>
+          <H2 mono>Period</H2>
           <span>March 2023 - June 2023</span>
-          <H3 mono>Links</H3>
+          <H2 mono>Links</H2>
           <Button asChild>
             <Link
               href="https://github.com/tepachelabs/perro-cafe-storefront"
@@ -106,13 +106,13 @@ export default function CPC() {
           </Button>
         </TechSummary>
         <ProjectDescriptionSection>
-          <H3 mono>Project Description</H3>
+          <H2 mono>Project Description</H2>
           <p>
             <b>Culto al Perro Café</b> is a coffee shop located in Hermosillo,
             Sonora. This project consists of a landing page integrated with{" "}
             <MonoHighlight>Shopify</MonoHighlight> to showcase their products.
           </p>
-          <H3 mono>Responsibilities</H3>
+          <H2 mono>Responsibilities</H2>
           <p>
             I was involved in some of the decision making regarding the
             technologies to use, leveraging <b>Shopify&apos;s</b>{" "}
@@ -127,7 +127,7 @@ export default function CPC() {
             <li>Custom design implementation</li>
             <li>Shopify integration</li>
           </ul>
-          <H3 mono>Project Development</H3>
+          <H2 mono>Project Development</H2>
           <p>
             During development, I learned about{" "}
             <MonoHighlight>Remix.run</MonoHighlight>, <b>Shopify</b>,{" "}
@@ -148,7 +148,7 @@ export default function CPC() {
             to <MonoHighlight>Emotion Styled</MonoHighlight> in place of{" "}
             <MonoHighlight>Styled Components</MonoHighlight>.
           </p>
-          <H3 mono>Gallery</H3>
+          <H2 mono>Gallery</H2>
           <Carousel className="md:w-3/5 md:self-center">
             <CarouselItem className="aspect-square">
               <div className="relative h-full w-full p-2 md:p-1">

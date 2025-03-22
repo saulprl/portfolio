@@ -39,7 +39,7 @@ export const H2: FC<Props> = ({
     <h2
       {...props}
       className={cn(
-        "text-2xl font-semibold",
+        "text-xl font-semibold",
         className,
         mono && "font-mono",
         underline && "underline",
