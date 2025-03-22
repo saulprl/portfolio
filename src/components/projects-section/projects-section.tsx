@@ -32,6 +32,26 @@ export const ProjectsSection = () => {
           </ProjectCardFooter>
         </ProjectCard>
       </Link>
+      <Link href="/projects/umana-app">
+        <ProjectCard>
+          <ProjectCardContent>
+            <Image
+              src="/images/projects/umana/umana-1.webp"
+              alt="Umana project card cover image"
+              fill
+              className="fit-cover h-full w-full rounded"
+            />
+          </ProjectCardContent>
+          <ProjectCardFooter>
+            <ProjectCardFooterHighlight className="bg-[#ff00b8]" />
+            <CardTitle>UMANA APP</CardTitle>
+            <CardDescription>
+              A mobile fitness app with on-demand workout videos for subscribed
+              users.
+            </CardDescription>
+          </ProjectCardFooter>
+        </ProjectCard>
+      </Link>
       <Link href="/projects/cpc">
         <ProjectCard>
           <ProjectCardContent>
