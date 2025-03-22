@@ -43,7 +43,7 @@ export const ProjectsSection = () => {
             />
           </ProjectCardContent>
           <ProjectCardFooter>
-            <ProjectCardFooterHighlight className="bg-[#ff00b8]" />
+            <ProjectCardFooterHighlight className="bg-gradient-to-b from-[#ff00b8] from-0% via-[#b359f8] via-50% to-[#ff00b8] to-100% bg-[length:100%_300%] bg-[50%_82%] transition-all duration-1000 ease-in-out group-hover:bg-[50%_15%] group-focus:bg-[50%_15%] group-active:bg-[50%_15%]" />
             <CardTitle>UMANA APP</CardTitle>
             <CardDescription>
               A mobile fitness app with on-demand workout videos for subscribed
