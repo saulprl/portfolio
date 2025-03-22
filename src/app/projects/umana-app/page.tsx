@@ -3,16 +3,11 @@ import Link from "next/link";
 import { FaLink } from "react-icons/fa";
 import {
   SiDart,
-  SiExpo,
-  SiFirebase,
   SiFlutter,
-  SiGithub,
   SiJavascript,
   SiMysql,
-  SiReact,
   SiSqlite,
   SiTypescript,
-  SiVite,
   SiVuedotjs,
 } from "react-icons/si";
 
@@ -29,8 +24,23 @@ import { SectionTitle } from "@/components/section-title/section-title";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
 import { IoLogoAppleAppstore, IoLogoGooglePlaystore } from "react-icons/io5";
+import { Metadata } from "next";
 
-export default function AccessPage() {
+export const metadata: Metadata = {
+  title: "Umana App | saulprl's portfolio",
+  description:
+    "A mobile fitness app with on-demand workout videos for subscribed users.",
+  keywords:
+    "umana, fitness, app, flutter, dart, javascript, typescript, vue.js, sqlite, mysql, mobile, workout, video, on-demand, program, livestream, push notifications, firebase, play store, app store",
+  openGraph: {
+    images: "/images/projects/umana/umana-cover.png",
+    title: "Umana App | saulprl's portfolio",
+    description:
+      "A mobile fitness app with on-demand workout videos for subscribed users.",
+  },
+};
+
+export default function UmanaPage() {
   return (
     <>
       <SectionTitle>UMANA APP</SectionTitle>
