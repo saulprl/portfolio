@@ -25,6 +25,19 @@ import { TechSummary } from "@/components/project-details/tech-summary";
 import { SectionTitle } from "@/components/section-title/section-title";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CSI PRO Access | saulprl's portfolio",
+  description: "Fully featured security and access-control system",
+  keywords:
+    "csi pro access, security, access-control, csi pro, unison, universidad de sonora, web development, mobile development, software development, react, vite, firebase, flutter, react native, dart, javascript, typescript",
+  openGraph: {
+    images: "/images/projects/access/access-cover.png",
+    title: "CSI PRO Access | saulprl's portfolio",
+    description: "Fully featured security and access-control system",
+  },
+};
 
 export default function AccessPage() {
   return (
@@ -96,9 +109,9 @@ export default function AccessPage() {
             </Chip>
           </div>
           <H3 mono>Period</H3>
-          <p>
+          <span>
             February 2023 - <i>Present</i>
-          </p>
+          </span>
           <H3 mono>Links</H3>
           <Button asChild>
             <Link

@@ -22,6 +22,21 @@ import { TechSummary } from "@/components/project-details/tech-summary";
 import { SectionTitle } from "@/components/section-title/section-title";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SISLAB | saulprl's portfolio",
+  description:
+    "Full-stack web app for improving workflow and communication within a laboratory",
+  keywords:
+    "sislab, full-stack, web app, web development, software development, react, vite, node.js, mongodb, unison, csipro, universidad de sonora",
+  openGraph: {
+    images: "/images/projects/sislab/sislab-cover.png",
+    title: "SISLAB | saulprl's portfolio",
+    description:
+      "Full-stack web app for improving workflow and communication within a laboratory",
+  },
+};
 
 export default function Sislab() {
   return (
@@ -67,7 +82,7 @@ export default function Sislab() {
             </Chip>
           </div>
           <H3 mono>Period</H3>
-          <p>February 2023 - July 2023</p>
+          <span>February 2023 - July 2023</span>
           <H3 mono>Links</H3>
           <Button asChild>
             <Link
@@ -142,7 +157,7 @@ export default function Sislab() {
             Component Libraries like <MonoHighlight>Material UI</MonoHighlight>.
           </p>
           <p>
-            This project was developed in close collaboration with the
+            This project was developed in close collaboration with the{" "}
             <strong>Department of Chemical-Biological Sciences</strong> to
             ensure that they&apos;d get exactly the tool they needed.
           </p>

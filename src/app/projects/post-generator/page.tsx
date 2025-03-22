@@ -10,9 +10,24 @@ import { TechSummary } from "@/components/project-details/tech-summary";
 import { SectionTitle } from "@/components/section-title/section-title";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub, SiNextdotjs, SiReact, SiTypescript } from "react-icons/si";
+
+export const metadata: Metadata = {
+  title: "CSI PRO Post Generator | saulprl's portfolio",
+  description:
+    "Web application for the creation of posters and banners with predefined guidelines",
+  keywords:
+    "csi pro, post generator, web development, software development, react, nextjs, typescript, unison, universidad de sonora",
+  openGraph: {
+    images: "/images/projects/post-generator/pg-cover.png",
+    title: "CSI PRO Post Generator | saulprl's portfolio",
+    description:
+      "Web application for the creation of posters and banners with predefined guidelines",
+  },
+};
 
 export default function PostGenerator() {
   return (
@@ -46,9 +61,7 @@ export default function PostGenerator() {
             </Chip>
           </div>
           <H3 mono>Period</H3>
-          <p>
-            August 2023 - <i>Present</i>
-          </p>
+          <span>August 2023 - September 2023</span>
           <H3 mono>Links</H3>
           <Button asChild>
             <Link

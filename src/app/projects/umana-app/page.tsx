@@ -98,9 +98,7 @@ export default function UmanaPage() {
             </Chip>
           </div>
           <H3 mono>Period</H3>
-          <p>
-            October 2024 - <i>Present</i>
-          </p>
+          <span>October 2024 - January 2025</span>
           <H3 mono>Links</H3>
           <Button asChild>
             <Link

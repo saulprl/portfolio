@@ -10,6 +10,7 @@ import { TechSummary } from "@/components/project-details/tech-summary";
 import { SectionTitle } from "@/components/section-title/section-title";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLink } from "react-icons/fa";
@@ -21,6 +22,18 @@ import {
   SiShopify,
   SiTypescript,
 } from "react-icons/si";
+
+export const metadata: Metadata = {
+  title: "Culto al Perro Café | saulprl's portfolio",
+  description: "Culto al Perro Café landing page integrated with Shopify",
+  keywords:
+    "cpc, culto al perro cafe, landing page, web development, software development, react, remix.run, shopify, hydrogen, typescript, graphql",
+  openGraph: {
+    images: "/images/projects/cpc/CPC-cover.png",
+    title: "Culto al Perro Café | saulprl's portfolio",
+    description: "Culto al Perro Café landing page integrated with Shopify",
+  },
+};
 
 export default function CPC() {
   return (
@@ -65,7 +78,7 @@ export default function CPC() {
             </Chip>
           </div>
           <H3 mono>Period</H3>
-          <p>March 2023 - June 2023</p>
+          <span>March 2023 - June 2023</span>
           <H3 mono>Links</H3>
           <Button asChild>
             <Link
